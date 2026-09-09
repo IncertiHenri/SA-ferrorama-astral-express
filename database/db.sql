@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS sistema_ferroviario;
+CREATE DATABASE IF NOT EXISTS sistema_ferroviario_astral_express;
 
-USE sistema_ferroviario;
+USE sistema_ferroviario_astral_express;
 
 CREATE TABLE admin (
     id_admin INT PRIMARY KEY AUTO_INCREMENT,
