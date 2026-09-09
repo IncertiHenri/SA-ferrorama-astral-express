@@ -49,3 +49,11 @@ Caso esteja procurando desempenho em suas querys e não queira esquentar a cabe�
 
 ## Em quais situações o PDO pode ser uma boa escolha.
 O PDO (PHP Data Objects) pode ser uma boa escolha quando se busca portabilidade com o banco de dados, segurança nativa e padronização no desenvolvimento PHP. Ele funciona como uma camada de abstração, permitindo que você use o mesmo código para se conectar a diferentes sistemas de banco de dados, se tornando uma boa escolha quando o projeto pode mudar de banco de dados, como de MySQL, para PostgreSQL, SQLite, Oracle ou SQL Server. O PDO também pode ser útil quando se lida com dados inseridos por usuários, pois ele tem suporte nativo para Prepared Statements. 
+
+## Fontes: 
+- https://www.treinaweb.com.br/blog/o-que-e-pdo-no-php
+- https://www.locaweb.com.br/ajuda/wiki/tudo-sobre-o-php-data-object-pdo-hospedagem-de-sites/
+- https://pt.stackoverflow.com/questions/8302/mysqli-vs-pdo-qual-o-mais-recomendado-para-usar
+- https://www.devmedia.com.br/php-pdo-como-se-conectar-ao-banco-de-dados/37211
+- https://www.php.net/manual/pt_BR/book.pdo.php
+- https://www.turbosite.com.br/blog/pdo-ou-mysqli-qual-usar
