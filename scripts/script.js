@@ -3,27 +3,27 @@ function alerta() {
 }
 
 function telaInicial() {
-    window.location.href = "../public/tela_inicial.html";
+    window.location.href = "../public/tela_inicial.php";
 }
 
 function visualizacaoSensores() {
-    window.location.href = "../public/visualizacao_sensores.html";
+    window.location.href = "../public/visualizacao_sensores.php";
 }
 
 function monitoramentoTempoReal() {
-    window.location.href = "../public/monitoramento_tempo_real.html";
+    window.location.href = "../public/monitoramento_tempo_real.php";
 }
 
 function cadastroRelatorios() {
-    window.location.href = "../public/cadastro_relatorios.html";
+    window.location.href = "../public/cadastro_relatorios.php";
 }
 
 function usuariosCadastrados() {
-    window.location.href = "../public/usuarios_cadastrados.html";
+    window.location.href = "../public/usuarios_cadastrados.php";
 }
 
 function visualizacaoTrens() {
-    window.location.href = "../public/visualizacao_trens.html";
+    window.location.href = "../public/visualizacao_trens.php";
 }
 
 document.getElementById("login").onsubmit = (e) => {
@@ -46,7 +46,7 @@ document.getElementById("login").onsubmit = (e) => {
     if (email === emailCorreto && senha === senhaCorreta) {
         verificacao = true;
 
-        window.location.href = "public/tela_inicial.html";
+        window.location.href = "public/tela_inicial.php";
 
         alert("Login realizado com sucesso!");
     } else {
@@ -78,7 +78,7 @@ if (formularioCadastro) {
 
         alert("Cadastro realizado com sucesso!");
 
-        window.location.href = "index.html";
+        window.location.href = "index.php";
     };
 }
 

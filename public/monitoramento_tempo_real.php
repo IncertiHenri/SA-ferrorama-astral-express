@@ -1,4 +1,3 @@
-```html id="8p3k21"
 <html lang="en">
 
 <head>
@@ -40,23 +39,23 @@
             <div id="botoes_menu">
 
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                    <img class="imagem_botao_menu" src="../assets/img/tela-inicial.png" alt="tela_inicial"> Tela inicial
+                    <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro-sensores.png" alt="cadastro_sensores"> Visualização de Sensores
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_sensores.png" alt="cadastro_sensores"> Visualização de Sensores
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                    <img class="imagem_botao_menu" src="../assets/img/trem-botao.png" alt="trem_botao"> Visualização de trens
+                    <img class="imagem_botao_menu" src="../assets/img/trem_botao.png" alt="trem_botao"> Visualização de trens
                 </button>
 
                 <button class="botao_menu_atual" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    <img class="imagem_botao_menu" src="../assets/img/monitoramento-tempo.png" alt="monitoramento"> Monitoramento em tempo real
+                    <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento"> Monitoramento em tempo real
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro-relatorios.png" alt="cadastro_relatorios"> Cadastro de Relatórios
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios"> Cadastro de Relatórios
                 </button>
 
                 <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
@@ -150,7 +149,7 @@
             <div class="fundo_tabela_mapa">
 
                 <div class="mapa_monitoramento">
-                    <img id="mapa_trilho" src="../assets/img/mapa-trilho.png" alt="mapa_de_monitoramento">
+                    <img id="mapa_trilho" src="../assets/img/mapa_trilho.png" alt="mapa_de_monitoramento">
                 </div>
 
             </div>

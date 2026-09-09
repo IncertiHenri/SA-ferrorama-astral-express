@@ -40,7 +40,7 @@
 
             <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
                 <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
-                Monitoramento em tempo Real
+                Monitoramento em tempo real
             </button>
 
             <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">

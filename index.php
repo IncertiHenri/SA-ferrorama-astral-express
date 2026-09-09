@@ -7,21 +7,21 @@
     <title>Login</title>
 </head>
 
-<body id="body-login">
+<body id="body_login">
 
-    <div class="login-esquerdo">
-        <div class="titulo-site">
+    <div class="login_esquerdo">
+        <div class="titulo_site">
             <img src="assets/img/trem.PNG" alt="trem" class="trem">
-            <div class="inline-block">
-                <div class="inline-flex">
-                    <h1 class="titulo-login">ASTRAL</h1>
-                    <h4 class="titulo2-login">EXPRESS</h4>
+            <div class="inline_block">
+                <div class="inline_flex">
+                    <h1 class="titulo_login">ASTRAL</h1>
+                    <h4 class="titulo2_login">EXPRESS</h4>
                 </div>
-                <p class="subtitulo-login">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+                <p class="subtitulo_login">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
         </div>
 
-        <div class="campo-login">
+        <div class="campo_login">
 
             <h3 class="titulo3">Faça login para continuar sua jornada!</h3>
 
@@ -33,9 +33,9 @@
                 <input type="password" id="senha">
 
 
-                <button type="submit" id="botao-login">Entrar</button>
+                <button type="submit" id="botao_login">Entrar</button>
 
-                <p class="texto-cadastro">
+                <p class="texto_cadastro">
                     Ainda não fez o cadastro?
                     <a href="public/cadastro.html">Cadastre-se!</a>
                 </p>
@@ -43,8 +43,8 @@
         </div>
     </div>
 
-    <div id="imagem-inicial">
-        <img id="imagem-estacao" src="assets/img/estacao2.png" alt="estacao">
+    <div id="imagem_inicial">
+        <img id="imagem_estacao" src="assets/img/estacao_2.png" alt="estacao">
     </div>
 
     <script src="scripts/script.js"></script>
