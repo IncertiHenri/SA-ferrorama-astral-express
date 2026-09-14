@@ -66,6 +66,48 @@
         </div>
 
     </div>
+     <main id="main_cadastro_sensores">
+
+        <div class="campo_verde_medio_sensores">
+
+            <div class="novos_sensores">
+
+                <div class="borda_verde_flex_titulo">
+                    <h1 class="titulo_cadastro_sensores">Cadastro de Novos Trens</h1>
+                </div>
+
+                <div class="campo_borda_verde">
+
+                    <div class="flex_column">
+                        <h2 class="informacoes_cadastro_sensores">Linha</h2>
+                        <label for="linha_cadastro_sensor"></label>
+                        <input type="text" id="linha_cadastro_sensor" class="campo_dados">
+                    </div>
+
+                    <div class="flex_column">
+                        <h2 class="informacoes_cadastro_sensores">Tipo de Dado</h2>
+                        <label for="tipo_dado_cadastro_sensor"></label>
+                        <select name="tipo_dado" id="tipo_dado_cadastro_sensor" class="campo_dados">
+                            <option value="">Selecione o tipo dado</option>
+                            <option value="velocidade">Velocidade</option>
+                            <option value="falha">Falha</option>
+                            <option value="temperatura">Temperatura</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="borda_verde_flex">
+                    <button onclick="cadastrarSensor()" id="botao_cadastrar_sensor">Cadastrar sensor</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+        <script src="../scripts/script.js"></script>
+
 </body>
 
 </html>
