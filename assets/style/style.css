@@ -361,17 +361,41 @@ label {
     justify-content: center;
 }
 
-.flex_column{
-    display: flex;
-    flex-direction: column;
-}
-
-.input_visualizacao_relatorios{
-    background-color: var(--verde-escuro-musgo);
+.campo_visualizacao_relatorios{
+    background-color: var(--verde-medio-musgo);
     color: var(--branco);
+    border: 0px;
+    border-radius: 50px;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.texto_cadastro_relatorios{
+    color: var(--branco);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
+#formulario_visualizacao_relatorios{
+    gap: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#botao_formulario_visualizar_relatorios{
+    background-color: var(--verde-musgo);
+    color: var(--branco);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem_filtrar{
+    width: 30px;
+}
 
 /* SERENNA */
 

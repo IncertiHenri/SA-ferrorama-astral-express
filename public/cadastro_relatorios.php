@@ -75,41 +75,43 @@
 
     <main>
         <div class="fundo_cadastros">
-            <div class="">
+            <div>
                 <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
                 <div class="borda_verde_flex">
-                    <form action="" class="flex">
+                    <form action="" class="flex" id="formulario_visualizacao_relatorios">
                         <div class="flex_column">
-                        <label for="data_inicio" id="eta">Data início</label>
-                        <input type="date" name="data_inicio" class="input_visualizacao_relatorios">
+                            <label for="data_inicio" class="texto_cadastro_relatorios">Data início</label>
+                            <input type="date" name="data_inicio" class="campo_visualizacao_relatorios">
                         </div>
                         <div class="flex_column">
-                        <label for="data_fim" class="input_visualizacao_relatorios">Data fim</label>
-                        <input type="date" name="data_fim">
+                            <label for="data_fim" class="texto_cadastro_relatorios">Data fim</label>
+                            <input type="date" name="data_fim" class="campo_visualizacao_relatorios">
                         </div>
                         <div class="flex_column">
-                        <label for="tipo_relatorio">Tipo de relatório</label>
-                        <select name="tipo_relatorio" id="tipo_relatorio">
-                            <option value="1">X</option>
-                            <option value="2">X</option>
-                            <option value="3">X</option>
-                            <option value="4">X</option>
-                            <option value="5">X</option>
-                        </select>
+                            <label for="tipo_relatorio" class="texto_cadastro_relatorios">Tipo de relatório</label>
+                            <select name="tipo_relatorio" id="tipo_relatorio" class="campo_visualizacao_relatorios">
+                                <option value="1">Todos</option>
+                                <option value="2">X</option>
+                                <option value="3">X</option>
+                                <option value="4">X</option>
+                                <option value="5">X</option>
+                            </select>
                         </div>
                         <div class="flex_column">
-                        <label for="tipo_falha">Tipo de falha</label>
-                        <select name="tipo_falha" id="tipo_falha">
-                            <option value="1">X</option>
-                            <option value="2">X</option>
-                            <option value="3">X</option>
-                            <option value="4">X</option>
-                            <option value="5">X</option>
-                        </select>
+                            <label for="tipo_falha" class="texto_cadastro_relatorios">Tipo de falha</label>
+                            <select name="tipo_falha" id="tipo_falha" class="campo_visualizacao_relatorios">
+                                <option value="1">Todos</option>
+                                <option value="2">X</option>
+                                <option value="3">X</option>
+                                <option value="4">X</option>
+                                <option value="5">X</option>
+                            </select>
                         </div>
+
+                        <button type="submit" id="botao_formulario_visualizar_relatorios"><img class="imagem_filtrar"
+                                src="../assets/img/filtro.png" alt="filtro">Filtrar</button>
+                    </form>
                 </div>
-                <button type="submit">Filtrar</button>
-                </form>
 
                 <h1 class="titulo_relatorios">Últimos Relatórios</h1>
                 <div class="borda_verde_flex">
