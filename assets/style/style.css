@@ -624,6 +624,8 @@ td {
 
 #titulo_tabela {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--branco);
+    
 }
 
 #botao_sensor_novo {
@@ -666,4 +668,4 @@ td {
     background-color: var(--verde-musgo);
 }
 
-/* NATHAN */
+/* NATAN */
