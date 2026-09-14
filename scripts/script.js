@@ -26,6 +26,10 @@ function visualizacaoTrens() {
     window.location.href = "../public/visualizacao_trens.php";
 }
 
+function cadastroUsuarios() {
+    window.location.href = "../public/cadastro_usuarios.php";
+}
+
 document.getElementById("login").onsubmit = (e) => {
     e.preventDefault();
 

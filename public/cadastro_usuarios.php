@@ -20,25 +20,22 @@
     </header>
 
 
-  <main id="main_monitoramento">
+      <main id="main_visualizacao_sensores">
 
         <div class="menu">
 
             <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
             <div class="inline_block">
-
                 <div class="inline_flex">
                     <h1 class="titulo_menu">ASTRAL</h1>
                     <h4 class="titulo2_menu">EXPRESS</h4>
                 </div>
 
                 <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
-
             </div>
 
             <div id="botoes_menu">
-
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
                 <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
             </button>
@@ -62,94 +59,56 @@
             <button class="botao_menu_atual" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
                 <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados"> Usuários cadastrados
             </button>
-
             </div>
-
         </div>
 
-        <div id="tabelas_monitoramento">
+         <button class="botao_superior" id="botao_voltar" onclick="usuariosCadastrados()">
+    <img src="../assets/img/sair.png" alt="voltar">
+    Voltar
+</button>
 
-            <div class="fundo_tabela_monitoramento">
+        <div class="fundo_cadastros">
 
-                <div class="texto_cadastro">
-                    <h1>Usuários cadastrados</h1>
+            <div class="cadastros">
+
+                <div class="borda_verde_flex">
+                    <h1 class="texto_cadastro">Cadastro de Usuários</h1>
                 </div>
 
-                <div class="tabela_monitoramento">
+                <form action="#" method="post">
 
-                    <table>
+                <div class="tabela">
 
-                        <tr>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Usuário</th>
-                            <th>E-mail</th>
-                        </tr>
+                    <div class="borda_verde">
 
-                        <tr>
-                            <td>01</td>
-                            <td>Henrique</td>
-                            <td>Batata</td>
-                            <td>henri@gmail.com</td>
-                        </tr>
+                        <table>
 
-                        <tr>
-                            <td>02</td>
-                            <td>Serenna</td>
-                            <td>Cebola</td>
-                            <td>nenna@gmail.com</td>
-                        </tr>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Usuário</th>
+                                <th>E-mail</th>
+                                <th>Senha</th>
+                            </tr>
 
-                        <tr>
-                            <td>03</td>
-                            <td>Thaís</td>
-                            <td>Panda vermelho</td>
-                            <td>Panda vermelho</td>
-                        </tr>
+                            <tr>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="email"></td>
+                                <td><input type="password"></td>
+                            </tr>
 
-                        <tr>
-                            <td>04</td>
-                            <td>Annie</td>
-                            <td>Marie</td>
-                            <td>amari@gmail.com</td>
-                        </tr>
+                        </table>
 
-                        <tr>
-                            <td>05</td>
-                            <td>Lucas</td>
-                            <td>LUCAS</td>
-                            <td>lu@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>06</td>
-                            <td>Amanda</td>
-                            <td>Mandy</td>
-                            <td>mand@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>07</td>
-                            <td>Gustavo</td>
-                            <td>Gusgus</td>
-                            <td>gus@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>08</td>
-                            <td>Reki</td>
-                            <td>Reki</td>
-                            <td>rk@gmail.com</td>
-                        </tr>
-
-                    </table>
-
+                    </div>
                 </div>
 
-                <br> <br> <button id="botao_sensor_novo" onclick="cadastroUsuarios()"> Cadastrar Usuário</button>
+                <div class="borda_verde_flex">
+                    <button id="botao_sensor_novo">Salvar</button>
+                </div>
+
+            </form>
 
             </div>
-
         </div>
 
     </main>
