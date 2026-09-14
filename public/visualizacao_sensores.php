@@ -69,7 +69,7 @@
             <div class="cadastros">
 
                 <div class="borda_verde_flex">
-                    <h2 id="titulo_tabela">Visualização Sensores</h2>
+                    <h2 id="titulo_tabela">Visualização de Sensores</h2>
                 </div>
 
                 <div class="tabela">

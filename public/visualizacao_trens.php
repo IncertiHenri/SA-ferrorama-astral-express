@@ -8,6 +8,13 @@
 </head>
 
 <body id="visualizacao_trens">
+    <header>
+        <div id="navbar_tela_inicial">
+            <p>Olá, Admin</p>
+            <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+            <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+        </div>
+    </header>
 
     <div class="menu">
 
@@ -55,7 +62,118 @@
 
         </div>
     </div>
+  <div class="fundo_cadastros">
 
+            <div class="cadastros">
+
+                <div class="borda_verde_flex">
+                    <h2 id="titulo_tabela">Visualização de Trens</h2>
+                </div>
+
+                <div class="tabela">
+
+                    <div class="borda_verde">
+
+                        <table>
+
+                            <tr>
+                                <td>ID do Trem</td>
+                                <td>Localização</td>
+                                <td>Tipo de Dado</td>
+                                <td>Ação</td>
+                            </tr>
+
+                            <tr>
+                                <td>01</td>
+                                <td>Linha A</td>
+                                <td>Velocidade</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>02</td>
+                                <td>Linha B</td>
+                                <td>Temperatura</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>03</td>
+                                <td>Linha C</td>
+                                <td>Falha</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>04</td>
+                                <td>Linha D</td>
+                                <td>Velocidade</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>05</td>
+                                <td>Linha E</td>
+                                <td>Temperatura</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>06</td>
+                                <td>Linha F</td>
+                                <td>Falha</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>07</td>
+                                <td>Linha G</td>
+                                <td>Velocidade</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>08</td>
+                                <td>Linha H</td>
+                                <td>Velocidade</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>09</td>
+                                <td>Linha I</td>
+                                <td>Falha</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>10</td>
+                                <td>Linha J</td>
+                                <td>Temperatura</td>
+                                <td><button id="botao2">Visualizar</button></td>
+                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="borda_verde_flex">
+                    <button id="botao_sensor_novo">Cadastrar Novo Trem</button>
+                </div>
+
+            </div>
+        </div>
     <script src="../scripts/script.js"></script>
 
 </body>

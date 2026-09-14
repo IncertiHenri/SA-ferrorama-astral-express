@@ -361,10 +361,22 @@ label {
     justify-content: center;
 }
 
+.flex_column{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_visualizacao_relatorios{
+    background-color: var(--verde-escuro-musgo);
+    color: var(--branco);
+}
+
+
+
 /* SERENNA */
 
 #body_tela_inicial {
-    background-color: var(--verde-musgo);
+    background-color: var(--verde-musgo);    
     margin: 0;
 }
 
@@ -577,6 +589,7 @@ table {
     font-weight: bold;
 }
 
+
 /* THAIS */
 
 #visualizacao_sensores {
@@ -624,6 +637,8 @@ td {
 
 #titulo_tabela {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--branco);
+    
 }
 
 #botao_sensor_novo {
@@ -675,4 +690,4 @@ td {
     background-color: var(--verde-musgo);
 }
 
-/* NATHAN */
+/* NATAN */

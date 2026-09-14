@@ -23,71 +23,100 @@
 
     </header>
 
-    <main id="main_cadastro_relatorios">
+    <div class="menu">
 
-        <div id="relatorios_analiticos">
+        <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <h1 class="titulo_relatorios">Relatórios analíticos</h1>
+        <div class="inline_block">
 
-            <div class="conteiners_pequenos">
-
-                <div class="relatorio_informacao_pequena">
-
-                    <div class="bolinhas_imagem">
-                        <img class="imagens_grandes_relatorio" src="../assets/img/velocidade.png" alt="velocidade">
-                    </div>
-
-                    <h2>Velocidade média</h2>
-                    <p>120Km/h</p>
-
-                </div>
-
-                <div class="relatorio_informacao_pequena">
-
-                    <div class="bolinhas_imagem">
-                        <img class="imagens_grandes_relatorio" src="../assets/img/consumo_medio.png" alt="consumo">
-                    </div>
-
-                    <h2>Consumo média</h2>
-                    <p>75%</p>
-
-                </div>
-
-                <div class="relatorio_informacao_pequena">
-
-                    <div class="bolinhas_imagem">
-                        <img class="imagens_grandes_relatorio" src="../assets/img/falha.png" alt="falha">
-                    </div>
-
-                    <h2>Falhas detectadas</h2>
-                    <p>12</p>
-
-                </div>
-
+            <div class="inline_flex">
+                <h1 class="titulo_menu">ASTRAL</h1>
+                <h4 class="titulo2_menu">EXPRESS</h4>
             </div>
 
-            <div class="conteiners_medios">
-
-                <div class="relatorio_informacao_media">
-
-                </div>
-
-                <div class="relatorio_informacao_media">
-
-                </div>
-
-            </div>
-
-            <div class="conteiners_grandes">
-
-                <div class="relatorio_informacao_grande">
-
-                </div>
-
-            </div>
+            <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
 
         </div>
 
+        <div id="botoes_menu">
+
+            <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
+                <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
+            </button>
+
+            <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
+                <img class="imagem_botao_menu" src="../assets/img/cadastro_sensores.png" alt="cadastro_sensores">
+                Visualização de Sensores
+            </button>
+
+            <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
+                <img class="imagem_botao_menu" src="../assets/img/trem_botao.png" alt="trem_botao"> Visualização de
+                trens
+            </button>
+
+            <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
+                Monitoramento em tempo real
+            </button>
+
+            <button class="botao_menu_atual" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
+                <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
+                Cadastro de Relatórios
+            </button>
+
+            <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
+                <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados"> Usuários
+                cadastrados
+            </button>
+
+        </div>
+
+    </div>
+
+    <main>
+        <div class="fundo_cadastros">
+            <div class="">
+                <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
+                <div class="borda_verde_flex">
+                    <form action="" class="flex">
+                        <div class="flex_column">
+                        <label for="data_inicio" id="eta">Data início</label>
+                        <input type="date" name="data_inicio" class="input_visualizacao_relatorios">
+                        </div>
+                        <div class="flex_column">
+                        <label for="data_fim" class="input_visualizacao_relatorios">Data fim</label>
+                        <input type="date" name="data_fim">
+                        </div>
+                        <div class="flex_column">
+                        <label for="tipo_relatorio">Tipo de relatório</label>
+                        <select name="tipo_relatorio" id="tipo_relatorio">
+                            <option value="1">X</option>
+                            <option value="2">X</option>
+                            <option value="3">X</option>
+                            <option value="4">X</option>
+                            <option value="5">X</option>
+                        </select>
+                        </div>
+                        <div class="flex_column">
+                        <label for="tipo_falha">Tipo de falha</label>
+                        <select name="tipo_falha" id="tipo_falha">
+                            <option value="1">X</option>
+                            <option value="2">X</option>
+                            <option value="3">X</option>
+                            <option value="4">X</option>
+                            <option value="5">X</option>
+                        </select>
+                        </div>
+                </div>
+                <button type="submit">Filtrar</button>
+                </form>
+
+                <h1 class="titulo_relatorios">Últimos Relatórios</h1>
+                <div class="borda_verde_flex">
+
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="../scripts/script.js"></script>
