@@ -171,7 +171,7 @@
                 </div>
 
                 <div class="borda_verde_flex">
-                    <button id="botao_sensor_novo">Cadastrar Novo Sensor</button>
+                    <a href= "cadastro_sensores.php"><button id="botao_sensor_novo">Cadastrar Novo Sensor</button></a>
                 </div>
 
             </div>
