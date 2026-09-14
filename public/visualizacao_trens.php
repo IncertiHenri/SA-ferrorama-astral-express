@@ -169,9 +169,8 @@
                 </div>
 
                 <div class="borda_verde_flex">
-                   <a href= "cadastro_trens.php"><button  class="botao_menu" id="botao_menu_cadastro_trens" onclick="cadastro_trens()" id="botao_sensor_novo">Cadastrar Novo Trem</button></a>
+                    <a href= "cadastro_trens.php"><button  class="botao_menu" id="botao_menu_cadastro_trens" onclick="cadastro_trens()" id="botao_tren_novo">Cadastrar Novo Trens</button></a>
                 </div>
-
             </div>
         </div>
     <script src="../scripts/script.js"></script>
