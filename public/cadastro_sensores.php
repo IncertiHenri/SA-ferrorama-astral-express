@@ -17,10 +17,11 @@
             <p>Olá, Admin</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+
         </div>
 
-        <div class="botao_voltar">
-            <button onclick="voltar()">Voltar</button>
+        <div class="botao_voltar_sensor">
+            <a href="visualizacao_sensores.php"><button id= "voltar_sensores">Voltar</button></a>
         </div>
 
     </header>
@@ -81,12 +82,6 @@
                 </div>
 
                 <div class="campo_borda_verde">
-
-                    <div class="flex_column">
-                        <h2 class="informacoes_cadastro_sensores">ID do Sensor</h2>
-                        <label for="id_sensor"></label>
-                        <input type="number" id="id_sensor" class="campo_dados">
-                    </div>
 
                     <div class="flex_column">
                         <h2 class="informacoes_cadastro_sensores">Linha</h2>
