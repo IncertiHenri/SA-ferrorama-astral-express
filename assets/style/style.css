@@ -311,7 +311,7 @@ label {
 
 .novos_sensores {
     background-color: var(--verde-escuro-musgo);
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
 }
 
@@ -321,8 +321,8 @@ label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 20px;
