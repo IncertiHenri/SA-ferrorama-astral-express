@@ -62,6 +62,11 @@
             </div>
         </div>
 
+         <button class="botao_superior" id="botao_voltar" onclick="usuariosCadastrados()">
+    <img src="../assets/img/sair.png" alt="voltar">
+    Voltar
+</button>
+
         <div class="fundo_cadastros">
 
             <div class="cadastros">
@@ -69,6 +74,8 @@
                 <div class="borda_verde_flex">
                     <h1 class="texto_cadastro">Cadastro de Usuários</h1>
                 </div>
+
+                <form action="#" method="post">
 
                 <div class="tabela">
 
@@ -98,6 +105,8 @@
                 <div class="borda_verde_flex">
                     <button id="botao_sensor_novo">Salvar</button>
                 </div>
+
+            </form>
 
             </div>
         </div>
