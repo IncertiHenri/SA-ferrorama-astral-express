@@ -78,6 +78,10 @@
             <div>
                 <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
                 <div class="borda_verde_flex">
+                    <div id="filtros_relatorios">
+                        <h1 class="titulo_relatorios">Filtros <img class="imagem_filtrar" src="../assets/img/filtro.png" alt="filtro"></h1> 
+                        </div>
+                        <div>
                     <form action="" class="flex" id="formulario_visualizacao_relatorios">
                         <div class="flex_column">
                             <label for="data_inicio" class="texto_cadastro_relatorios">Data início</label>
@@ -107,16 +111,44 @@
                                 <option value="5">X</option>
                             </select>
                         </div>
-
+                    
                         <button type="submit" id="botao_formulario_visualizar_relatorios"><img class="imagem_filtrar"
                                 src="../assets/img/filtro.png" alt="filtro">Filtrar</button>
                     </form>
+                    </div>
                 </div>
 
                 <h1 class="titulo_relatorios">Últimos Relatórios</h1>
-                <div class="borda_verde_flex">
+                
 
+                <div>
+                    <div class="borda_verde_flex">
+                        <div class="flex" id="ultimos_relatorios">
+                            <h1 class="texto_cadastro_relatorios">Nome</h1>
+                            <h1 class="texto_cadastro_relatorios">Data de Criação</h1>
+                            <h1 class="texto_cadastro_relatorios">Tipo de relatório</h1>
+                            <h1 class="texto_cadastro_relatorios">Ações</h1>
+                        </div>
+                    </div>
+                    <div class="flex">
+                    <div class="borda_verde_flex">
+
+                    </div>
+                    <div class="borda_verde_flex">
+
+                    </div>
+                    <div class="borda_verde_flex">
+
+                    </div>
+                    <div class="borda_verde_flex">
+
+                    </div>
+                    </div>
                 </div>
+
+
+
+                
             </div>
         </div>
     </main>

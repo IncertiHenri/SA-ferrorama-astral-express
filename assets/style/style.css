@@ -397,6 +397,18 @@ label {
     width: 30px;
 }
 
+#filtros_relatorios{
+    padding-left: 10px;
+}
+
+.ultimos_relatorios{
+    display: flex;
+}
+
+#ultimos_relatorios{
+    gap: 75px;
+}
+
 /* SERENNA */
 
 #body_tela_inicial {
