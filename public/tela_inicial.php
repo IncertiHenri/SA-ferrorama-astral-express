@@ -88,22 +88,22 @@
 
             <div class="container_botoes">
 
-                <button class="botao_tela_inicial" onclick="botaoTelaInicial()">
+                <button class="botao_tela_inicial" onclick="visualizacaoSensores()">
                     <img src="../assets/img/cadastro_sensores.png" alt="cadastro_de_sensores_e_trens" class="imagem_cadastro_sensores">
                     <span>Cadastro de Sensores e Trens</span>
                 </button>
 
-                <button class="botao_tela_inicial" onclick="botaoTelaInicial()">
+                <button class="botao_tela_inicial" onclick="monitoramentoTempoReal()">
                     <img src="../assets/img/monitoramento_tempo.png" alt="monitoramento_em_tempo_real" class="imagem_cadastro_sensores">
                     <span>Monitoramento em Tempo Real</span>
                 </button>
 
-                <button class="botao_tela_inicial" onclick="botaoTelaInicial()">
+                <button class="botao_tela_inicial" onclick="cadastroRelatorios()">
                     <img src="../assets/img/cadastro_relatorios.png" alt="cadastro_de_relatorios" class="imagem_cadastro_sensores">
                     <span>Cadastro de Relatórios</span>
                 </button>
 
-                <button class="botao_tela_inicial" onclick="botaoTelaInicial()">
+                <button class="botao_tela_inicial" onclick="usuariosCadastrados()">
                     <img src="../assets/img/usuarios.png" alt="usuarios_cadastrados" class="imagem_cadastro_sensores">
                     <span>Usuários cadastrados</span>
                 </button>
