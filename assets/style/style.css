@@ -776,6 +776,42 @@ td {
     min-height: 100vh;
 
 }
+#botao_formulario_cadastro_trens{
+background-color: var(--verde-musgo);
+    color: var(--branco);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+.campo_verde_medio_trens {
+    background-color: var(--verde-medio-musgo);
+    padding: 10px;
+    border-radius: 20px;
+    width: 40%;
+    margin-left: 20%;
+}
+#main_cadastro_trens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.titulo_cadastro_trens {
+    color: var(--branco);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#formulario_cadastro_trens{
+    padding: 10px;
+}
+#campos_cadastro_trens{
+    gap: 50px;
+}
 
 /* ANNIE */
 

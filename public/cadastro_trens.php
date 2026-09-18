@@ -43,11 +43,11 @@
                 <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
             </button>
 
-            <button class="botao_menu_atual" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
+            <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
                 <img class="imagem_botao_menu" src="../assets/img/cadastro_sensores.png" alt="cadastro_sensores"> Visualização de Sensores
             </button>
 
-            <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
+            <button class="botao_menu_atual" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
                 <img class="imagem_botao_menu" src="../assets/img/trem_botao.png" alt="trem_botao"> Visualização de trens
             </button>
 
@@ -66,45 +66,46 @@
         </div>
 
     </div>
-     <main id="main_cadastro_sensores">
+    <main id="main_cadastro_trens">
 
-        <div class="campo_verde_medio_sensores">
+        <div class="campo_verde_medio_trens">
+            <div class="campo_borda_verde">
+                <h1 class="titulo_cadastro_trens">Cadastro de Novos Trens</h1>
+            </div>
+            <div class="campo_borda_verde" id="justify_align">
 
-            <div class="novos_sensores">
-
-                <div class="borda_verde_flex_titulo">
-                    <h1 class="titulo_cadastro_sensores">Cadastro de Novos Trens</h1>
-                </div>
-
-                <div class="campo_borda_verde">
+                <form action="#" id="formulario_cadastro_trens">
 
                     <div class="flex_column">
-                        <h2 class="informacoes_cadastro_sensores">Linha</h2>
-                        <label for="linha_cadastro_sensor"></label>
-                        <input type="text" id="linha_cadastro_sensor" class="campo_dados">
+                        <div class="flex" id="campos_cadastro_trens">
+                            <div class="flex_column">
+                                <label for="linha" class="texto_cadastros">Linha</label>
+                                <input type="text" name="linha" class="campo_cadastros">
+                            </div>
+
+                            <div class="flex_column">
+                                <label for="rota" class="texto_cadastros">Rota</label>
+                                <input type="text" name="rota" class="campo_cadastros">
+                            </div>
+
+                            <div class="flex_column">
+                                <label for="dado" class="texto_cadastros">Tipo de dado</label>
+                                <select name="dado" class="campo_cadastros">
+                                    <option value="">Selecione</option>
+                                    <option value="1">Velocidade</option>
+                                    <option value="2">Temperatura</option>
+                                    <option value="3">Falha</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" id="botao_formulario_cadastro_trens">Cadastrar</button>
+
                     </div>
-
-                    <div class="flex_column">
-                        <h2 class="informacoes_cadastro_sensores">Tipo de Dado</h2>
-                        <label for="tipo_dado_cadastro_sensor"></label>
-                        <select name="tipo_dado" id="tipo_dado_cadastro_sensor" class="campo_dados">
-                            <option value="">Selecione o tipo dado</option>
-                            <option value="velocidade">Velocidade</option>
-                            <option value="falha">Falha</option>
-                            <option value="temperatura">Temperatura</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="borda_verde_flex">
-                    <button onclick="cadastrarSensor()" id="botao_cadastrar_sensor">Cadastrar sensor</button>
-                </div>
+                </form>
 
             </div>
-
         </div>
-
+        </div>
     </main>
         <script src="../scripts/script.js"></script>
 
