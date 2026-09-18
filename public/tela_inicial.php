@@ -56,7 +56,8 @@
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png"
+                        alt="cadastro_relatorios">
                     Visualização de Relatórios
                 </button>
 
@@ -95,17 +96,20 @@
             <div class="container_botoes">
 
                 <button class="botao_tela_inicial" onclick="visualizacaoSensores()">
-                    <img src="../assets/img/cadastro_sensores.png" alt="cadastro_de_sensores_e_trens" class="imagem_cadastro_sensores">
+                    <img src="../assets/img/cadastro_sensores.png" alt="cadastro_de_sensores_e_trens"
+                        class="imagem_cadastro_sensores">
                     <span>Cadastro de Sensores e Trens</span>
                 </button>
 
                 <button class="botao_tela_inicial" onclick="monitoramentoTempoReal()">
-                    <img src="../assets/img/monitoramento_tempo.png" alt="monitoramento_em_tempo_real" class="imagem_cadastro_sensores">
+                    <img src="../assets/img/monitoramento_tempo.png" alt="monitoramento_em_tempo_real"
+                        class="imagem_cadastro_sensores">
                     <span>Monitoramento em Tempo Real</span>
                 </button>
 
                 <button class="botao_tela_inicial" onclick="cadastroRelatorios()">
-                    <img src="../assets/img/cadastro_relatorios.png" alt="cadastro_de_relatorios" class="imagem_cadastro_sensores">
+                    <img src="../assets/img/cadastro_relatorios.png" alt="cadastro_de_relatorios"
+                        class="imagem_cadastro_sensores">
                     <span>Cadastro de Relatórios</span>
                 </button>
 

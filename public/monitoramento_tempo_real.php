@@ -55,7 +55,8 @@
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png"
+                        alt="cadastro_relatorios">
                     Visualização de Relatórios
                 </button>
 

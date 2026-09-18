@@ -356,7 +356,7 @@ label {
     justify-content: center;
 }
 
-.campo_cadastros{
+.campo_cadastros {
     background-color: var(--verde-medio-musgo);
     color: var(--branco);
     border: 2px solid var(--verde-musgo);
@@ -366,19 +366,19 @@ label {
     width: 200px;
 }
 
-.texto_cadastros{
+.texto_cadastros {
     color: var(--branco);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#formulario_visualizacao_relatorios{
+#formulario_visualizacao_relatorios {
     gap: 40px;
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 20px;
 }
 
-#botao_formulario_visualizar_relatorios{
+#botao_formulario_visualizar_relatorios {
     background-color: var(--verde-musgo);
     color: var(--branco);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -389,42 +389,42 @@ label {
     justify-content: center;
 }
 
-.imagem_filtrar{
+.imagem_filtrar {
     width: 30px;
 }
 
-#filtros_relatorios{
+#filtros_relatorios {
     padding-left: 10px;
 }
 
-.ultimos_relatorios{
+.ultimos_relatorios {
     display: flex;
 }
 
-#ultimos_relatorios{
+#ultimos_relatorios {
     gap: 75px;
 }
 
-.titulo_cadastro_sensor{
+.titulo_cadastro_sensor {
     color: var(--branco);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
     padding: 10px;
     padding-left: 15px;
 }
 
-#campo_cadastro_sensores{
+#campo_cadastro_sensores {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#formulario_cadastro_sensores{
+#formulario_cadastro_sensores {
     padding: 10px;
 }
 
-#botao_formulario_cadastro_sensor{
-background-color: var(--verde-musgo);
+#botao_formulario_cadastro_sensor {
+    background-color: var(--verde-musgo);
     color: var(--branco);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 0px;
@@ -436,29 +436,29 @@ background-color: var(--verde-musgo);
     margin-top: 15px;
 }
 
-#justify_align{
+#justify_align {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#campo_formulario_rotas{
+#campo_formulario_rotas {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#campos_cadastro_usuarios{
+#campos_cadastro_usuarios {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#campos_cadastro_sensores{
+#campos_cadastro_sensores {
     gap: 50px;
 }
 
-#campos_cadastro_usuarios{
+#campos_cadastro_usuarios {
     gap: 50px;
     padding: 25px;
 }
@@ -466,7 +466,7 @@ background-color: var(--verde-musgo);
 /* SERENNA */
 
 #body_tela_inicial {
-    background-color: var(--verde-musgo);    
+    background-color: var(--verde-musgo);
     margin: 0;
 }
 
@@ -752,7 +752,7 @@ td {
 #titulo_tabela {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--branco);
-    
+
 }
 
 #botao_sensor_novo {
@@ -786,15 +786,16 @@ td {
 }
 
 
-#main_cadastro_sensores{
+#main_cadastro_sensores {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 
 }
-#botao_formulario_cadastro_trens{
-background-color: var(--verde-musgo);
+
+#botao_formulario_cadastro_trens {
+    background-color: var(--verde-musgo);
     color: var(--branco);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 0px;
@@ -805,6 +806,7 @@ background-color: var(--verde-musgo);
     padding: 10px;
     margin-top: 15px;
 }
+
 .campo_verde_medio_trens {
     background-color: var(--verde-medio-musgo);
     padding: 10px;
@@ -812,21 +814,25 @@ background-color: var(--verde-musgo);
     width: 40%;
     margin-left: 20%;
 }
-#main_cadastro_trens{
+
+#main_cadastro_trens {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 
 }
+
 .titulo_cadastro_trens {
     color: var(--branco);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#formulario_cadastro_trens{
+
+#formulario_cadastro_trens {
     padding: 10px;
 }
-#campos_cadastro_trens{
+
+#campos_cadastro_trens {
     gap: 50px;
 }
 

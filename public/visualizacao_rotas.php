@@ -53,7 +53,8 @@
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png"
+                        alt="cadastro_relatorios">
                     Visualização de Relatórios
                 </button>
 
@@ -89,14 +90,15 @@
                                 <td>Destino</td>
                             </tr>
 
-                            
+
                         </table>
 
                     </div>
                 </div>
 
                 <div class="borda_verde_flex">
-                    <a href= "cadastro_rotas.php"><button  class="botao_menu" id="botao_menu_cadastro_rotas" id="botao_sensor_novo">Cadastrar Nova Rota</button></a>
+                    <a href="cadastro_rotas.php"><button class="botao_menu" id="botao_menu_cadastro_rotas"
+                            id="botao_sensor_novo">Cadastrar Nova Rota</button></a>
                 </div>
 
             </div>
