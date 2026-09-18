@@ -83,86 +83,6 @@
                                 <td>Ação</td>
                             </tr>
 
-                            <tr>
-                                <td>01</td>
-                                <td>Linha A</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>02</td>
-                                <td>Linha B</td>
-                                <td>Temperatura</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>03</td>
-                                <td>Linha C</td>
-                                <td>Falha</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>04</td>
-                                <td>Linha D</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>05</td>
-                                <td>Linha E</td>
-                                <td>Temperatura</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>06</td>
-                                <td>Linha F</td>
-                                <td>Falha</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>07</td>
-                                <td>Linha G</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>08</td>
-                                <td>Linha H</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>09</td>
-                                <td>Linha I</td>
-                                <td>Falha</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>10</td>
-                                <td>Linha J</td>
-                                <td>Temperatura</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
                         </table>
 
                     </div>
@@ -174,46 +94,7 @@
             </div>
         </div>
 
- <main id="main_cadastro_sensores">
-
-        <div class="campo_verde_medio_sensores">
-
-            <div class="novos_sensores">
-
-                <div class="borda_verde_flex_titulo">
-                    <h1 class="titulo_cadastro_sensores">Cadastro de Novos Sensores</h1>
-                </div>
-
-                <div class="campo_borda_verde">
-
-                    <div class="flex_column">
-                        <h2 class="informacoes_cadastro_sensores">Linha</h2>
-                        <label for="linha_cadastro_sensor"></label>
-                        <input type="text" id="linha_cadastro_sensor" class="campo_dados">
-                    </div>
-
-                    <div class="flex_column">
-                        <h2 class="informacoes_cadastro_sensores">Tipo de Dado</h2>
-                        <label for="tipo_dado_cadastro_sensor"></label>
-                        <select name="tipo_dado" id="tipo_dado_cadastro_sensor" class="campo_dados">
-                            <option value="">Selecione o tipo dado</option>
-                            <option value="velocidade">Velocidade</option>
-                            <option value="falha">Falha</option>
-                            <option value="temperatura">Temperatura</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="borda_verde_flex">
-                    <button onclick="cadastrarSensor()" id="botao_cadastrar_sensor">Cadastrar sensor</button>
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>
+  
 
     <script src="../scripts/script.js"></script>
 
