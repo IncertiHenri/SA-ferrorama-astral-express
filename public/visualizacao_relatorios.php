@@ -3,72 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../assets/style/style.css">
-    <title>Visualização de relatórios</title>
+
+    <title>Cadastro de Relatórios</title>
 </head>
 
-<body id="pagina_relatorios">
+<body id="body_cadastro_relatorios">
 
     <header>
+
         <div id="navbar_tela_inicial">
             <p>Olá, Admin</p>
+
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
         </div>
+
     </header>
 
     <div class="menu">
 
-        <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-        <div class="inline_block">
-            <div class="inline_flex">
-                <h1 class="titulo_menu">ASTRAL</h1>
-                <h4 class="titulo2_menu">EXPRESS</h4>
+            <div class="inline_block">
+                <div class="inline_flex">
+                    <h1 class="titulo_menu">ASTRAL</h1>
+                    <h4 class="titulo2_menu">EXPRESS</h4>
+                </div>
+
+                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
 
-            <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
+            <div id="botoes_menu">
+                <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
+                    <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_sensores.png" alt="cadastro_sensores">
+                    Visualização de Sensores
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
+                    <img class="imagem_botao_menu" src="../assets/img/trem_botao.png" alt="trem_botao">
+                    Visualização de trens
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                    <img class="imagem_botao_menu" src="../assets/img/recarregar.png" alt="trem_botao">
+                    Visualização de rotas
+                </button>
+
+                <button class="botao_menu_atual" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
+                    Visualização de Relatórios
+                </button>
+
+                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                    <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
+                    Monitoramento em tempo real
+                </button>
+
+                <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
+                    <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados">
+                    Usuários cadastrados
+                </button>
+            </div>
         </div>
 
-        <div id="botoes_menu">
-            <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
-            </button>
+    <main>
+        <div class="fundo_cadastros">
+            <div>
+                <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
+                <div class="borda_verde_flex">
+                    <div id="filtros_relatorios">
+                        <h1 class="titulo_relatorios">Filtros<img class="imagem_filtrar" src="../assets/img/filtro.png" alt="filtro"></h1> 
+                        </div>
+                        <div>
+                    <form action="#" class="flex" id="formulario_visualizacao_relatorios">
+                        <div class="flex_column">
+                            <label for="data_inicio" class="texto_cadastros">Data início</label>
+                            <input type="date" name="data_inicio" class="campo_cadastros">
+                        </div>
+                        <div class="flex_column">
+                            <label for="data_fim" class="texto_cadastros">Data fim</label>
+                            <input type="date" name="data_fim" class="campo_cadastros">
+                        </div>
+                        <div class="flex_column">
+                            <label for="tipo_relatorio" class="texto_cadastro">Tipo de relatório</label>
+                            <select name="tipo_relatorio" id="texto_cadastros" class="campo_cadastros">
+                                <option value="1">Todos</option>
+                                <option value="2">X</option>
+                                <option value="3">X</option>
+                                <option value="4">X</option>
+                                <option value="5">X</option>
+                            </select>
+                        </div>
+                        <div class="flex_column">
+                            <label for="tipo_falha" class="texto_cadastros">Tipo de falha</label>
+                            <select name="tipo_falha" id="tipo_falha" class="campo_cadastros">
+                                <option value="1">Todos</option>
+                                <option value="2">X</option>
+                                <option value="3">X</option>
+                                <option value="4">X</option>
+                                <option value="5">X</option>
+                            </select>
+                        </div>
+                    
+                        <button type="submit" id="botao_formulario_visualizar_relatorios">Filtrar</button>
+                    </form>
+                    </div>
+                </div>
 
-            <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                <img class="imagem_botao_menu" src="../assets/img/cadastro_sensores.png" alt="cadastro_sensores">
-                Visualização de Sensores
-            </button>
+                <h1 class="titulo_relatorios">Últimos Relatórios</h1>
+                
 
-            <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                <img class="imagem_botao_menu" src="../assets/img/trem_botao.png" alt="trem_botao">
-                Visualização de trens
-            </button>
+                <div>
+                    <div class="borda_verde_flex">
+                        <div class="flex" id="ultimos_relatorios">
+                            <h1 class="texto_cadastros">Nome</h1>
+                            <h1 class="texto_cadastros">Data de Criação</h1>
+                            <h1 class="texto_cadastros">Tipo de relatório</h1>
+                            <h1 class="texto_cadastros">Ações</h1>
+                        </div>
+                    </div>
+                    <div class="flex">
+                    <div class="borda_verde_flex">
 
-            <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
-                Monitoramento em tempo Real
-            </button>
+                    </div>
+                    <div class="borda_verde_flex">
 
-            <button class="botao_menu_atual" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
-                Cadastro de Relatórios
-            </button>
+                    </div>
+                    <div class="borda_verde_flex">
 
-            <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
-                <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados">
-                Usuários cadastrados
-            </button>
+                    </div>
+                    <div class="borda_verde_flex">
+
+                    </div>
+                    </div>
+                </div>
+
+
+
+                
+            </div>
         </div>
-    </div>
-
-    <div class="nova_caixa">
-
-        <h1 id="texto_da_pagina">Visualização de Relatórios</h1>
-
-        <div class="nova_caixa"></div>
-
-    </div>
+    </main>
 
     <script src="../scripts/script.js"></script>
 

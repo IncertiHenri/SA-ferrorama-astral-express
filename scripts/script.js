@@ -15,7 +15,7 @@ function monitoramentoTempoReal() {
 }
 
 function cadastroRelatorios() {
-    window.location.href = "../public/cadastro_relatorios.php";
+    window.location.href = "../public/visualizacao_relatorios.php";
 }
 
 function usuariosCadastrados() {
@@ -28,6 +28,10 @@ function visualizacaoTrens() {
 
 function cadastroUsuarios() {
     window.location.href = "../public/cadastro_usuarios.php";
+}
+
+function visualizacaoRotas() {
+    window.location.href = "../public/visualizacao_rotas.php";
 }
 
 document.getElementById("login").onsubmit = (e) => {

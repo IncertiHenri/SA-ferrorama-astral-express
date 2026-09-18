@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../assets/style/style.css">
-
-    <title>Usuários cadastrados</title>
+    <title>Visualização Rotas</title>
 </head>
 
-<body id="usuarios_cadastrados">
+<body id="visualizacao_sensores">
 
     <header>
         <div id="navbar_tela_inicial">
@@ -19,8 +17,7 @@
         </div>
     </header>
 
-
-  <main id="main_monitoramento">
+    <main id="main_visualizacao_sensores">
 
         <div class="menu">
 
@@ -50,7 +47,7 @@
                     Visualização de trens
                 </button>
 
-                <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                <button class="botao_menu_atual" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
                     <img class="imagem_botao_menu" src="../assets/img/recarregar.png" alt="trem_botao">
                     Visualização de rotas
                 </button>
@@ -65,100 +62,48 @@
                     Monitoramento em tempo real
                 </button>
 
-                <button class="botao_menu_atual" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
+                <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
                     <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados">
                     Usuários cadastrados
                 </button>
             </div>
         </div>
 
-        <div id="tabelas_monitoramento">
+        <div class="fundo_cadastros">
 
-            <div class="fundo_tabela_monitoramento">
+            <div class="cadastros">
 
-                <div class="texto_cadastro">
-                    <h1>Usuários cadastrados</h1>
+                <div class="borda_verde_flex">
+                    <h2 id="titulo_tabela">Visualização de Sensores</h2>
                 </div>
 
-                <div class="tabela_monitoramento">
+                <div class="tabela">
 
-                    <table>
+                    <div class="borda_verde">
 
-                        <tr>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Usuário</th>
-                            <th>E-mail</th>
-                        </tr>
+                        <table>
 
-                        <tr>
-                            <td>01</td>
-                            <td>Henrique</td>
-                            <td>Batata</td>
-                            <td>henri@gmail.com</td>
-                        </tr>
+                            <tr>
+                                <td>ID do Sensor</td>
+                                <td>Localização</td>
+                                <td>Tipo de Dado</td>
+                                <td>Ação</td>
+                            </tr>
 
-                        <tr>
-                            <td>02</td>
-                            <td>Serenna</td>
-                            <td>Cebola</td>
-                            <td>nenna@gmail.com</td>
-                        </tr>
+                            
+                        </table>
 
-                        <tr>
-                            <td>03</td>
-                            <td>Thaís</td>
-                            <td>Panda vermelho</td>
-                            <td>Panda vermelho</td>
-                        </tr>
-
-                        <tr>
-                            <td>04</td>
-                            <td>Annie</td>
-                            <td>Marie</td>
-                            <td>amari@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>05</td>
-                            <td>Lucas</td>
-                            <td>LUCAS</td>
-                            <td>lu@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>06</td>
-                            <td>Amanda</td>
-                            <td>Mandy</td>
-                            <td>mand@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>07</td>
-                            <td>Gustavo</td>
-                            <td>Gusgus</td>
-                            <td>gus@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>08</td>
-                            <td>Reki</td>
-                            <td>Reki</td>
-                            <td>rk@gmail.com</td>
-                        </tr>
-
-                    </table>
-
+                    </div>
                 </div>
 
-                <br> <br> <button id="botao_sensor_novo" onclick="cadastroUsuarios()"> Cadastrar Usuário</button>
+                <div class="borda_verde_flex">
+                    <a href= "cadastro_sensores.php"><button  class="botao_menu" id="botao_menu_cadastro_trens" onclick="cadastro_sensores()" id="botao_sensor_novo">Cadastrar Novo Sensor</button></a>
+                </div>
 
             </div>
-
         </div>
 
     </main>
-
 
     <script src="../scripts/script.js"></script>
 

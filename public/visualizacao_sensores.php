@@ -47,14 +47,19 @@
                     Visualização de trens
                 </button>
 
-                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
-                    Monitoramento em tempo real
+                <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                    <img class="imagem_botao_menu" src="../assets/img/recarregar.png" alt="trem_botao">
+                    Visualização de rotas
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
                     <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
-                    Cadastro de Relatórios
+                    Visualização de Relatórios
+                </button>
+
+                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                    <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
+                    Monitoramento em tempo real
                 </button>
 
                 <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
@@ -85,86 +90,7 @@
                                 <td>Ação</td>
                             </tr>
 
-                            <tr>
-                                <td>01</td>
-                                <td>Linha A</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>02</td>
-                                <td>Linha B</td>
-                                <td>Temperatura</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>03</td>
-                                <td>Linha C</td>
-                                <td>Falha</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>04</td>
-                                <td>Linha D</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>05</td>
-                                <td>Linha E</td>
-                                <td>Temperatura</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>06</td>
-                                <td>Linha F</td>
-                                <td>Falha</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>07</td>
-                                <td>Linha G</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>08</td>
-                                <td>Linha H</td>
-                                <td>Velocidade</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>09</td>
-                                <td>Linha I</td>
-                                <td>Falha</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>10</td>
-                                <td>Linha J</td>
-                                <td>Temperatura</td>
-                                <td><button id="botao2">Visualizar</button></td>
-                                <td><button id="botao2" onclick="alerta()">Excluir</button></td>
-                            </tr>
-
+                            
                         </table>
 
                     </div>
