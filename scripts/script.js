@@ -34,6 +34,10 @@ function visualizacaoRotas() {
     window.location.href = "../public/visualizacao_rotas.php";
 }
 
+function cadastrarRotas(){
+    window.location.href = "../public/cadastro_rotas.php";
+}
+
 document.getElementById("login").onsubmit = (e) => {
     e.preventDefault();
 

@@ -6,23 +6,23 @@
 
     <link rel="stylesheet" href="../assets/style/style.css">
 
-    <title>Usuários cadastrados</title>
+    <title>Cadastro de sensores</title>
 </head>
 
-<body id="usuarios_cadastrados">
+<body id="cadastro_sensores">
 
     <header>
+
         <div id="navbar_tela_inicial">
             <p>Olá, Admin</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+
         </div>
+
     </header>
 
-
-      <main id="main_visualizacao_sensores">
-
-        <div class="menu">
+    <div class="menu">
 
             <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
@@ -50,7 +50,7 @@
                     Visualização de trens
                 </button>
 
-                <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                <button class="botao_menu_atual" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
                     <img class="imagem_botao_menu" src="../assets/img/recarregar.png" alt="trem_botao">
                     Visualização de rotas
                 </button>
@@ -65,64 +65,46 @@
                     Monitoramento em tempo real
                 </button>
 
-                <button class="botao_menu_atual" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
+                <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
                     <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados">
                     Usuários cadastrados
                 </button>
             </div>
         </div>
 
-         <button class="botao_superior" id="botao_voltar" onclick="usuariosCadastrados()">
-    <img src="../assets/img/sair.png" alt="voltar">
-    Voltar
-</button>
+    <main id="main_cadastro_sensores">
 
-        <div class="fundo_cadastros">
+        <div class="campo_verde_medio_sensores">
+            <div class="campo_borda_verde">
+                <h1 class="titulo_cadastro_sensor">Cadastro de Novas Rotas</h1>
+            </div>
+            <div class="campo_borda_verde" id="campo_formulario_rotas">
 
-            <div class="cadastros">
+            <div>
+                <form action="#" id="formulario_cadastro_sensores">
 
-                <div class="borda_verde_flex">
-                    <h1 class="texto_cadastro">Cadastro de Usuários</h1>
-                </div>
+                    <div class="flex_column">
+                        <div class="flex" id="campos_cadastro_sensores">
+                            <div class="flex_column">
+                                <label for="origem" class="texto_cadastros">Origem</label>
+                                <input type="text" name="nome" class="campo_cadastros">
+                            </div>
 
-                <form action="#" method="post">
+                            <div class="flex_column">
+                                <label for="destino" class="texto_cadastros">Destino</label>
+                                <input type="text" name="loc" class="campo_cadastros">
+                            </div>
 
-                <div class="tabela">
-
-                    <div class="borda_verde">
-
-                        <table>
-
-                            <tr>
-                                <th>Nome</th>
-                                <th>Usuário</th>
-                                <th>E-mail</th>
-                                <th>Senha</th>
-                            </tr>
-
-                            <tr>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><input type="email"></td>
-                                <td><input type="password"></td>
-                            </tr>
-
-                        </table>
+                        </div>
+                        <button type="submit" id="botao_formulario_cadastro_sensor">Cadastrar</button>
 
                     </div>
-                </div>
-
-                <div class="borda_verde_flex">
-                    <button id="botao_sensor_novo">Salvar</button>
-                </div>
-
-            </form>
+                </form>
 
             </div>
         </div>
-
+        </div>
     </main>
-
 
     <script src="../scripts/script.js"></script>
 

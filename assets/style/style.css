@@ -442,6 +442,12 @@ background-color: var(--verde-musgo);
     justify-content: center;
 }
 
+#campo_formulario_rotas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #campos_cadastro_sensores{
     gap: 50px;
 }

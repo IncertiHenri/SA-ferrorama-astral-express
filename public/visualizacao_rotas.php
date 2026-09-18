@@ -74,7 +74,7 @@
             <div class="cadastros">
 
                 <div class="borda_verde_flex">
-                    <h2 id="titulo_tabela">Visualização de Sensores</h2>
+                    <h2 id="titulo_tabela">Visualização de Rotas</h2>
                 </div>
 
                 <div class="tabela">
@@ -84,10 +84,9 @@
                         <table>
 
                             <tr>
-                                <td>ID do Sensor</td>
-                                <td>Localização</td>
-                                <td>Tipo de Dado</td>
-                                <td>Ação</td>
+                                <td>ID da rota</td>
+                                <td>Origem</td>
+                                <td>Destino</td>
                             </tr>
 
                             
@@ -97,7 +96,7 @@
                 </div>
 
                 <div class="borda_verde_flex">
-                    <a href= "cadastro_sensores.php"><button  class="botao_menu" id="botao_menu_cadastro_trens" onclick="cadastro_sensores()" id="botao_sensor_novo">Cadastrar Novo Sensor</button></a>
+                    <a href= "cadastro_rotas.php"><button  class="botao_menu" id="botao_menu_cadastro_rotas" id="botao_sensor_novo">Cadastrar Nova Rota</button></a>
                 </div>
 
             </div>
