@@ -79,21 +79,21 @@
                 <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
                 <div class="borda_verde_flex">
                     <div id="filtros_relatorios">
-                        <h1 class="titulo_relatorios">Filtros <img class="imagem_filtrar" src="../assets/img/filtro.png" alt="filtro"></h1> 
+                        <h1 class="titulo_relatorios">Filtros<img class="imagem_filtrar" src="../assets/img/filtro.png" alt="filtro"></h1> 
                         </div>
                         <div>
-                    <form action="" class="flex" id="formulario_visualizacao_relatorios">
+                    <form action="#" class="flex" id="formulario_visualizacao_relatorios">
                         <div class="flex_column">
-                            <label for="data_inicio" class="texto_cadastro_relatorios">Data início</label>
-                            <input type="date" name="data_inicio" class="campo_visualizacao_relatorios">
+                            <label for="data_inicio" class="texto_cadastros">Data início</label>
+                            <input type="date" name="data_inicio" class="campo_cadastros">
                         </div>
                         <div class="flex_column">
-                            <label for="data_fim" class="texto_cadastro_relatorios">Data fim</label>
-                            <input type="date" name="data_fim" class="campo_visualizacao_relatorios">
+                            <label for="data_fim" class="texto_cadastros">Data fim</label>
+                            <input type="date" name="data_fim" class="campo_cadastros">
                         </div>
                         <div class="flex_column">
-                            <label for="tipo_relatorio" class="texto_cadastro_relatorios">Tipo de relatório</label>
-                            <select name="tipo_relatorio" id="tipo_relatorio" class="campo_visualizacao_relatorios">
+                            <label for="tipo_relatorio" class="texto_cadastro">Tipo de relatório</label>
+                            <select name="tipo_relatorio" id="texto_cadastros" class="campo_cadastros">
                                 <option value="1">Todos</option>
                                 <option value="2">X</option>
                                 <option value="3">X</option>
@@ -102,8 +102,8 @@
                             </select>
                         </div>
                         <div class="flex_column">
-                            <label for="tipo_falha" class="texto_cadastro_relatorios">Tipo de falha</label>
-                            <select name="tipo_falha" id="tipo_falha" class="campo_visualizacao_relatorios">
+                            <label for="tipo_falha" class="texto_cadastros">Tipo de falha</label>
+                            <select name="tipo_falha" id="tipo_falha" class="campo_cadastros">
                                 <option value="1">Todos</option>
                                 <option value="2">X</option>
                                 <option value="3">X</option>
@@ -112,8 +112,7 @@
                             </select>
                         </div>
                     
-                        <button type="submit" id="botao_formulario_visualizar_relatorios"><img class="imagem_filtrar"
-                                src="../assets/img/filtro.png" alt="filtro">Filtrar</button>
+                        <button type="submit" id="botao_formulario_visualizar_relatorios">Filtrar</button>
                     </form>
                     </div>
                 </div>
@@ -124,10 +123,10 @@
                 <div>
                     <div class="borda_verde_flex">
                         <div class="flex" id="ultimos_relatorios">
-                            <h1 class="texto_cadastro_relatorios">Nome</h1>
-                            <h1 class="texto_cadastro_relatorios">Data de Criação</h1>
-                            <h1 class="texto_cadastro_relatorios">Tipo de relatório</h1>
-                            <h1 class="texto_cadastro_relatorios">Ações</h1>
+                            <h1 class="texto_cadastros">Nome</h1>
+                            <h1 class="texto_cadastros">Data de Criação</h1>
+                            <h1 class="texto_cadastros">Tipo de relatório</h1>
+                            <h1 class="texto_cadastros">Ações</h1>
                         </div>
                     </div>
                     <div class="flex">
