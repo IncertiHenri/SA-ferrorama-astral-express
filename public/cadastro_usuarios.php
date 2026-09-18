@@ -20,7 +20,7 @@
     </header>
 
 
-      <main id="main_visualizacao_sensores">
+    <main id="main_visualizacao_sensores">
 
         <div class="menu">
 
@@ -56,7 +56,8 @@
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png"
+                        alt="cadastro_relatorios">
                     Visualização de Relatórios
                 </button>
 
@@ -72,10 +73,10 @@
             </div>
         </div>
 
-         <button class="botao_superior" id="botao_voltar" onclick="usuariosCadastrados()">
-    <img src="../assets/img/sair.png" alt="voltar">
-    Voltar
-</button>
+        <button class="botao_superior" id="botao_voltar" onclick="usuariosCadastrados()">
+            <img src="../assets/img/sair.png" alt="voltar">
+            Voltar
+        </button>
 
         <div class="fundo_cadastros">
 
@@ -85,38 +86,43 @@
                     <h1 class="texto_cadastro">Cadastro de Usuários</h1>
                 </div>
 
-                <form action="#" method="post">
-
                 <div class="tabela">
 
                     <div class="borda_verde">
 
-                        <table>
+                        <form action="#" id="formulario_cadastro_usuarios">
 
-                            <tr>
-                                <th>Nome</th>
-                                <th>Usuário</th>
-                                <th>E-mail</th>
-                                <th>Senha</th>
-                            </tr>
+                            <div class="flex_column">
+                                <div class="flex" id="campos_cadastro_usuarios">
+                                    <div class="flex_column">
+                                        <label for="nome" class="texto_cadastros">Nome</label>
+                                        <input type="text" name="nome" class="campo_cadastros">
+                                    </div>
 
-                            <tr>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><input type="email"></td>
-                                <td><input type="password"></td>
-                            </tr>
+                                    <div class="flex_column">
+                                        <label for="usuario" class="texto_cadastros">Usuário</label>
+                                        <input type="text" name="usuario" class="campo_cadastros">
+                                    </div>
 
-                        </table>
+                                    <div class="flex_column">
+                                        <label for="email" class="texto_cadastros">E-mail</label>
+                                        <input type="email" name="email" class="campo_cadastros">
+                                    </div>
+
+                                    <div class="flex_column">
+                                        <label for="senha" class="texto_cadastros">Senha</label>
+                                        <input type="password" name="senha" class="campo_cadastros">
+                                    </div>
+
+                                </div>
+                                <button type="submit" id="botao_formulario_cadastro_sensor">Cadastrar</button>
+
+                            </div>
+                        </form>
 
                     </div>
                 </div>
 
-                <div class="borda_verde_flex">
-                    <button id="botao_sensor_novo">Salvar</button>
-                </div>
-
-            </form>
 
             </div>
         </div>

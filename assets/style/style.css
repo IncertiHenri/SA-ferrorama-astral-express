@@ -448,8 +448,19 @@ background-color: var(--verde-musgo);
     justify-content: center;
 }
 
+#campos_cadastro_usuarios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #campos_cadastro_sensores{
     gap: 50px;
+}
+
+#campos_cadastro_usuarios{
+    gap: 50px;
+    padding: 25px;
 }
 
 /* SERENNA */
