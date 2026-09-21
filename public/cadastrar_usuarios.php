@@ -12,3 +12,5 @@ $sql = "INSERT INTO usuario (nome, usuario, email, senha) VALUES ('$nome', '$usu
 mysqli_query($conn, $sql);
 
 header ("Location: ../public/usuarios_cadastrados.php");
+
+?>
