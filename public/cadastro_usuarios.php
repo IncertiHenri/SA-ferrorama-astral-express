@@ -90,7 +90,7 @@
 
                     <div class="borda_verde">
 
-                        <form action="#" id="formulario_cadastro_usuarios">
+                        <form action="cadastrar_usuarios.php" method="POST" id="formulario_cadastro_usuarios">
 
                             <div class="flex_column">
                                 <div class="flex" id="campos_cadastro_usuarios">
