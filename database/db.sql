@@ -7,6 +7,7 @@ CREATE TABLE usuario (
     nome VARCHAR(100),
     usuario VARCHAR(45) UNIQUE,
     senha VARCHAR(255),
+    email VARCHAR(100),
     perfil VARCHAR(20) DEFAULT 'funcionario'
 );
 
