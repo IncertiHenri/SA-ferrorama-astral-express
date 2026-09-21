@@ -1,3 +1,12 @@
+<?php
+
+include ("../infra/conexao.php");
+
+$sql = "SELECT id_usuario, nome, usuario, email FROM usuario";
+$resultado = mysqli_query($conn, $sql);
+
+?>
+
 <html lang="en">
 
 <head>
@@ -91,62 +100,18 @@
                             <th>E-mail</th>
                         </tr>
 
-                        <tr>
-                            <td>01</td>
-                            <td>Henrique</td>
-                            <td>Batata</td>
-                            <td>henri@gmail.com</td>
-                        </tr>
+                        <?php
+                        
+                        while ($usuario = mysqli_fetch_assoc($resultado)) {
+                            echo "<tr>";
+                            echo "<td>" . $usuario["id_usuario"] . "</td>";
+                            echo "<td>" . $usuario["nome"] . "</td>";
+                            echo "<td>" . $usuario["usuario"] . "</td>";
+                            echo "<td>" . $usuario["email"] . "</td>";
+                            echo "</tr>";
+                        }
 
-                        <tr>
-                            <td>02</td>
-                            <td>Serenna</td>
-                            <td>Cebola</td>
-                            <td>nenna@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>03</td>
-                            <td>Thaís</td>
-                            <td>Panda vermelho</td>
-                            <td>Panda vermelho</td>
-                        </tr>
-
-                        <tr>
-                            <td>04</td>
-                            <td>Annie</td>
-                            <td>Marie</td>
-                            <td>amari@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>05</td>
-                            <td>Lucas</td>
-                            <td>LUCAS</td>
-                            <td>lu@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>06</td>
-                            <td>Amanda</td>
-                            <td>Mandy</td>
-                            <td>mand@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>07</td>
-                            <td>Gustavo</td>
-                            <td>Gusgus</td>
-                            <td>gus@gmail.com</td>
-                        </tr>
-
-                        <tr>
-                            <td>08</td>
-                            <td>Reki</td>
-                            <td>Reki</td>
-                            <td>rk@gmail.com</td>
-                        </tr>
-
+                        ?>
                     </table>
 
                 </div>
