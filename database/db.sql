@@ -2,11 +2,12 @@ CREATE DATABASE IF NOT EXISTS sistema_ferroviario_astral_express;
 
 USE sistema_ferroviario_astral_express;
 
-CREATE TABLE admin (
-    id_admin INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45),
-    usuario VARCHAR(45),
-    senha VARCHAR(45)
+CREATE TABLE usuario (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    usuario VARCHAR(45) UNIQUE,
+    senha VARCHAR(255),
+    perfil VARCHAR(20) DEFAULT 'funcionario'
 );
 
 CREATE TABLE trem (
@@ -34,9 +35,9 @@ CREATE TABLE trem_rota (
 CREATE TABLE log_acesso (
     id_log INT PRIMARY KEY AUTO_INCREMENT,
     data_hora DATETIME,
-    acao VARCHAR(45),
-    id_admin INT,
-    FOREIGN KEY (id_admin) REFERENCES admin(id_admin)
+    acao VARCHAR(100),
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE sensor (
@@ -46,10 +47,10 @@ CREATE TABLE sensor (
     localizacao VARCHAR(45),
     id_trem INT,
     id_rota INT,
-    id_admin INT,
+    id_usuario INT,
     FOREIGN KEY (id_trem) REFERENCES trem(id_trem),
     FOREIGN KEY (id_rota) REFERENCES rota(id_rota),
-    FOREIGN KEY (id_admin) REFERENCES admin(id_admin)
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE registro_sensor (

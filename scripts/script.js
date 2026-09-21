@@ -34,7 +34,7 @@ function visualizacaoRotas() {
     window.location.href = "../public/visualizacao_rotas.php";
 }
 
-function cadastrarRotas(){
+function cadastrarRotas() {
     window.location.href = "../public/cadastro_rotas.php";
 }
 
