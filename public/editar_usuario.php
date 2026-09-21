@@ -9,7 +9,7 @@ $email = $_POST["email"];
 $perfil = $_POST["perfil"];
 $id = $_GET["id"];
 
-$sql = "UPDATE usuarios SET nome = '$nome', usuario = 'usuario', senha = '$senha', email = 'email', perfil = 'perfil' WHERE id = '$id";
+$sql = "UPDATE usuario SET nome = '$nome', usuario = 'usuario', senha = '$senha', email = 'email', perfil = 'perfil' WHERE id_usuario = '$id";
 
 mysqli_query($conn, $sql);
 
