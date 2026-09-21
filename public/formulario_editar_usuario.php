@@ -1,12 +1,3 @@
-<?php
-
-include ("../infra/conexao.php");
-
-$sql = "SELECT id_usuario, nome, usuario, email FROM usuario";
-$resultado = mysqli_query($conn, $sql);
-
-?>
-
 <html lang="en">
 
 <head>
@@ -20,6 +11,14 @@ $resultado = mysqli_query($conn, $sql);
 
 <body id="usuarios_cadastrados">
 
+<?php
+
+include ("../infra/conexao.php");
+
+$id = $_GET["id"];
+
+?>
+
     <header>
         <div id="navbar_tela_inicial">
             <p>Olá, Admin</p>
@@ -29,7 +28,7 @@ $resultado = mysqli_query($conn, $sql);
     </header>
 
 
-  <main id="main_monitoramento">
+    <main id="main_visualizacao_sensores">
 
         <div class="menu">
 
@@ -65,7 +64,8 @@ $resultado = mysqli_query($conn, $sql);
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
+                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png"
+                        alt="cadastro_relatorios">
                     Visualização de Relatórios
                 </button>
 
@@ -81,47 +81,58 @@ $resultado = mysqli_query($conn, $sql);
             </div>
         </div>
 
-        <div id="tabelas_monitoramento">
+        <button class="botao_superior" id="botao_voltar" onclick="usuariosCadastrados()">
+            <img src="../assets/img/sair.png" alt="voltar">
+            Voltar
+        </button>
 
-            <div class="fundo_tabela_monitoramento">
+        <div class="fundo_cadastros">
 
-                <div class="texto_cadastro">
-                    <h1>Usuários cadastrados</h1>
+            <div class="cadastros">
+
+                <div class="borda_verde_flex">
+                    <h1 class="texto_cadastro">Atualizar usuários</h1>
                 </div>
 
-                <div class="tabela_monitoramento">
+                <div class="tabela">
 
-                    <table>
+                    <div class="borda_verde">
 
-                        <tr>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Usuário</th>
-                            <th>E-mail</th>
-                        </tr>
+                        <form action="editar_usuario.php?id=<?php echo $id ?>" method="POST" id="formulario_cadastro_usuarios">
 
-                        <?php
-                        
-                        while ($usuario = mysqli_fetch_assoc($resultado)) {
-                            echo "<tr>";
-                            echo "<td>" . $usuario["id_usuario"] . "</td>";
-                            echo "<td>" . $usuario["nome"] . "</td>";
-                            echo "<td>" . $usuario["usuario"] . "</td>";
-                            echo "<td>" . $usuario["email"] . "</td>";
-                            echo "<td> <a href='excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
-                            echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
-                            echo "</tr>";
-                        }
+                            <div class="flex_column">
+                                <div class="flex" id="campos_cadastro_usuarios">
+                                    <div class="flex_column">
+                                        <label for="nome" class="texto_cadastros">Nome</label>
+                                        <input type="text" name="nome" class="campo_cadastros">
+                                    </div>
 
-                        ?>
-                    </table>
+                                    <div class="flex_column">
+                                        <label for="usuario" class="texto_cadastros">Usuário</label>
+                                        <input type="text" name="usuario" class="campo_cadastros">
+                                    </div>
 
+                                    <div class="flex_column">
+                                        <label for="email" class="texto_cadastros">E-mail</label>
+                                        <input type="email" name="email" class="campo_cadastros">
+                                    </div>
+
+                                    <div class="flex_column">
+                                        <label for="senha" class="texto_cadastros">Senha</label>
+                                        <input type="password" name="senha" class="campo_cadastros">
+                                    </div>
+
+                                </div>
+                                <button type="submit" id="botao_formulario_cadastro_sensor">Cadastrar</button>
+
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
 
-                <br> <br> <button id="botao_sensor_novo" onclick="cadastroUsuarios()"> Cadastrar Usuário</button>
 
             </div>
-
         </div>
 
     </main>

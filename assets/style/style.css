@@ -852,7 +852,7 @@ td {
     width: 100%;
     max-width: 100%;
     height: 100%;
-    marging: 50px auto;
+    margin: 50px auto;
     background-color: var(--verde-musgo);
 }
 
