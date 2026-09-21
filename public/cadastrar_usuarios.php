@@ -7,9 +7,22 @@ $usuario = $_POST["usuario"];
 $senha = $_POST["senha"];
 $email = $_POST["email"];
 
-$sql = "INSERT INTO usuario (nome, usuario, email, senha) VALUES ('$nome', '$usuario', '$email', '$senha')";
+if(empty($nome) || empty($usuario) || empty($senha) || empty($email)) {
+    echo"<script>
+        alert('Preencha todos os campos!');
+        history.back();
+    </script>";
 
-mysqli_query($conn, $sql);
+    exit();
+}
+
+$sql = "INSERT INTO usuario (nome, usuario, email, senha) VALUES (?, ?, ?, ?)";
+
+$stmt = mysqli_prepare($conn, $sql);
+
+mysqli_stmt_bind_param($stmt, "ssss", $nome, $usuario, $email, $senha);
+
+mysqli_stmt_execute($stmt);
 
 header ("Location: ../public/usuarios_cadastrados.php");
 
