@@ -4,14 +4,18 @@ include ("../infra/conexao.php");
 
 $nome = $_POST["nome"];
 $usuario = $_POST["usuario"];
-$senha = $_POST["senha"];
+$senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
 $email = $_POST["email"];
 $perfil = $_POST["perfil"];
 $id = $_GET["id"];
 
-$sql = "UPDATE usuario SET nome = '$nome', usuario = 'usuario', senha = '$senha', email = 'email', perfil = 'perfil' WHERE id_usuario = '$id";
+$sql = "UPDATE usuario SET nome = ?, usuario = ?, senha = ?, email = ?, perfil = ? WHERE id_usuario = ?";
 
-mysqli_query($conn, $sql);
+$stmt = mysqli_prepare($conn, $sql);
+
+mysqli_stmt_bind_param($stmt, "sssssi", $nome, $usuario, $senha, $email, $perfil, $id);
+
+mysqli_stmt_execute($stmt);
 
 header ("Location: usuarios_cadastrados.php");
 
