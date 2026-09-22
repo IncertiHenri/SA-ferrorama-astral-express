@@ -16,6 +16,8 @@ if(empty($nome) || empty($usuario) || empty($senha) || empty($email)) {
     exit();
 }
 
+$senha = password_hash($senha, PASSWORD_DEFAULT);
+
 $sql = "INSERT INTO usuario (nome, usuario, email, senha) VALUES (?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($conn, $sql);
