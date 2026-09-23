@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if ($_SESSION['admin'] === false) {
+    echo 'Você não tem permissão para cadastrar usuários.';
+    href('Location: usuarios_cadastrados.php');
+}
+
+?>
 <html lang="en">
 
 <head>
