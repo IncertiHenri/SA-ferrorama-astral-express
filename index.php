@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //validações
+    //se tudo estiver ok
+
+    $_SESSION['admin'] = usuario['EH_ADMIN'];
+}
+
+?>
 <html lang="en">
 
 <head>

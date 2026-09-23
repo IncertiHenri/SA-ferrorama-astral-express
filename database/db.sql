@@ -59,3 +59,9 @@ CREATE TABLE registro_sensor (
     id_sensor INT,
     FOREIGN KEY (id_sensor) REFERENCES sensor(id_sensor)
 );
+
+CREATE TABLE admim (
+    id_admim INT PRIMARY KEY AUTO_INCREMENT,
+    perfil VARCHAR(20), 
+    FOREIGN KEY (perfil) REFERENCES usuario(perfil)
+);
