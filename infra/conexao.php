@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "root";
+$pass = "";
 $database = "sistema_ferroviario_astral_express";
 
 $conn = new mysqli($host, $user, $pass, $database);
