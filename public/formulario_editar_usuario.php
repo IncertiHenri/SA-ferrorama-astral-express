@@ -11,6 +11,14 @@
 
 <body id="usuarios_cadastrados">
 
+<?php
+
+include ("../infra/conexao.php");
+
+$id = $_GET["id"];
+
+?>
+
     <header>
         <div id="navbar_tela_inicial">
             <p>Olá, Admin</p>
@@ -83,14 +91,14 @@
             <div class="cadastros">
 
                 <div class="borda_verde_flex">
-                    <h1 class="texto_cadastro">Cadastro de Usuários</h1>
+                    <h1 class="texto_cadastro">Atualizar usuários</h1>
                 </div>
 
                 <div class="tabela">
 
                     <div class="borda_verde">
 
-                        <form action="cadastrar_usuarios.php" method="POST" id="formulario_cadastro_usuarios">
+                        <form action="editar_usuario.php?id=<?php echo $id ?>" method="POST" id="formulario_cadastro_usuarios">
 
                             <div class="flex_column">
                                 <div class="flex" id="campos_cadastro_usuarios">
@@ -112,15 +120,6 @@
                                     <div class="flex_column">
                                         <label for="senha" class="texto_cadastros">Senha</label>
                                         <input type="password" name="senha" class="campo_cadastros">
-                                    </div>
-
-                                    <div class="flex_column">
-                                       <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
-                                       <select name="tipo_perfil" id="tipo_perfil" class="campo_cadastros">
-                                        <option value="1">Funcionário</option>
-                                        <option value="2">Administrador</option>
-                                    </select>
-
                                     </div>
 
                                 </div>
