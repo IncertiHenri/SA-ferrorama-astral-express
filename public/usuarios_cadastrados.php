@@ -119,6 +119,7 @@ $resultado = mysqli_query($conn, $sql);
                 </div>
 
                 <br> <br> <button id="botao_sensor_novo" onclick="cadastroUsuarios()"> Cadastrar Usuário</button>
+                
 
             </div>
 
