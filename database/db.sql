@@ -8,7 +8,7 @@ CREATE TABLE usuario (
     usuario VARCHAR(45) UNIQUE,
     senha VARCHAR(255),
     email VARCHAR(100),
-    perfil VARCHAR(20) DEFAULT 'funcionario'
+    eh_admin BOOLEAN DEFAULT false
 );
 
 CREATE TABLE trem (
@@ -60,8 +60,16 @@ CREATE TABLE registro_sensor (
     FOREIGN KEY (id_sensor) REFERENCES sensor(id_sensor)
 );
 
+CREATE TABLE perfil(
+    id_perfil INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT, 
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
+
 CREATE TABLE admim (
     id_admim INT PRIMARY KEY AUTO_INCREMENT,
-    perfil VARCHAR(20), 
-    FOREIGN KEY (perfil) REFERENCES usuario(perfil)
+    id_perfil INT, 
+    FOREIGN KEY (id_perfil) REFERENCES perfil(id_perfil)
 );
+
+CREATE TABLE 
