@@ -2,11 +2,10 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "root";
 $database = "sistema_ferroviario_astral_express";
-$port = 3308;
 
-$conn = new mysqli($host, $user, $pass, $database, $port);
+$conn = new mysqli($host, $user, $pass, $database);
 
 if ($conn->connect_error) {
     die("Erro na conexão com o banco: " . $conn->connect_error);
