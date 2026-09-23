@@ -114,6 +114,15 @@
                                         <input type="password" name="senha" class="campo_cadastros">
                                     </div>
 
+                                    <div class="flex_column">
+                                       <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
+                                       <select name="tipo_perfil" id="tipo_perfil" class="campo_cadastros">
+                                        <option value="1">Funcionário</option>
+                                        <option value="2">Administrador</option>
+                                    </select>
+
+                                    </div>
+
                                 </div>
                                 <button type="submit" id="botao_formulario_cadastro_sensor">Cadastrar</button>
 
