@@ -8,6 +8,28 @@ $senha = $_POST["senha"];
 $email = $_POST["email"];
 $id = $_GET["id"];
 
+if(mb_strlen($nome) < 3 ||  !preg_match('/^[\p{L}]+$/u', $nome)){
+    echo "<script>alert('Nome inválido! O nome deve conter apenas letras e no mínimo 3');
+    window.location.href = 'formulario_editar_usuario.php?id=$id';
+    </script>";
+    exit;
+} else if(strlen($usuario) < 5){
+    echo "<script>alert('Usuário inválido! O nome deve conter pelo menos 5 caracteres');
+    window.location.href = 'formulario_editar_usuario.php?id=$id';
+    </script>";
+    exit;
+} else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo "<script>alert('E-mail inválido! Insira um E-mail válido');
+    window.location.href = 'formulario_editar_usuario.php?id=$id';
+    </script>";
+    exit;
+}else if(strlen($senha) < 8){
+    echo "<script>alert('Senha inválida! A senha deve conter no mínimo 8 caracteres');
+    window.location.href = 'formulario_editar_usuario.php?id=$id';
+    </script>";
+    exit;
+} 
+
 $sql = "UPDATE usuario SET nome = ?, usuario = ?, senha = ?, email = ? WHERE id_usuario = ?";
 
 $stmt = $conn->prepare($sql);
