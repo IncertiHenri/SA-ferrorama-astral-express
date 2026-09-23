@@ -42,7 +42,7 @@ document.getElementById("login").onsubmit = (e) => {
     e.preventDefault();
 
     let email = document.getElementById("email").value;
-    let senha = Number(document.getElementById("senha").value);
+    let senha = document.getElementById("senha").value;
     let verificacao = false;
 
     if (!email || !email.includes("@")) return alert("Informe um E-mail válido!");
@@ -50,19 +50,28 @@ document.getElementById("login").onsubmit = (e) => {
     if (!senha) return alert("Informe uma senha válida!");
 
     // Teste de email
-    let emailCorreto = "xxx@gmail.com";
+    let emailAdmin = "xxx@gmail.com";
+    let emailFuncionario = "zzz@gmail.com";
 
     // Teste de senha
-    let senhaCorreta = 1;
+    let senhaAdmin = "1";
+    let senhaFuncionario = "2";
 
-    if (email === emailCorreto && senha === senhaCorreta) {
+    if (email === emailAdmin && senha === senhaAdmin) {
         verificacao = true;
 
+        alert("Login realizado com sucesso!");
         window.location.href = "public/tela_inicial.php";
 
+    } else if (email === emailFuncionario && senha === senhaFuncionario) {
+        verificacao = true;
+
         alert("Login realizado com sucesso!");
+        window.location.href = "public/tela_inicial.php";
+
     } else {
-        return alert("E-mail ou senha incorretos!");
+        verificacao = false;
+        alert("E-mail ou senha incorretos!");
     }
 }
 
