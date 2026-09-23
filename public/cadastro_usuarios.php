@@ -2,9 +2,9 @@
 
 session_start();
 
-if ($_SESSION['admin'] === false) {
-    echo 'Você não tem permissão para cadastrar usuários.';
-    href('Location: usuarios_cadastrados.php');
+if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] !== "admin") {
+    echo "Você não tem permissão para cadastrar usuários.";
+    header('Location: usuarios_cadastrados.php');
 }
 
 ?>
