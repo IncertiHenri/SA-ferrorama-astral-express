@@ -10,7 +10,6 @@
 <body id="body_login">
 
     <div class="login_esquerdo">
-        <div class="titulo_site">
             <img src="assets/img/trem.PNG" alt="trem" class="trem">
             <div class="inline_block">
                 <div class="inline_flex">
@@ -19,11 +18,10 @@
                 </div>
                 <p class="subtitulo_login">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
 
         <div class="campo_login">
 
-            <h3 class="titulo3">Faça login para continuar sua jornada!</h3>
+            <h3>Faça login para continuar sua jornada!</h3>
 
             <form id="login">
                 <label for="email">E-mail:</label>
@@ -43,9 +41,7 @@
         </div>
     </div>
 
-    <div id="imagem_inicial">
         <img id="imagem_estacao" src="assets/img/estacao_2.png" alt="estacao">
-    </div>
 
     <script src="scripts/script.js"></script>
 </body>
