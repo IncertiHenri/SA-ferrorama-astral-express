@@ -123,4 +123,20 @@ O sistema irá cadastrar todos os funcionários que utilizarão o sistema, permi
 
 - | RNF20 | O sistema deve exibir uma tela de confirmação quando o usuário escolhe excluir um sensor.
 
+- | RNF21 | O sistema deve armazenar as senhas dos usuários utilizando um mecanismo seguro de hash.
+
+- | RNF22 | O sistema deve conter proteção contra SQL injection.
+
+- | RNF23 | O sistema deve realizar consultas parametrizadas nas operações com o banco de dados.
+
+- | RNF24 | O sistema deve pelos formulários validar os dados recebidos no backend antes de realizar as operações no banco de dados.
+
+- | RNF25 | O sistema deve impedir que usuários vejam dados que não estejam no nível de acesso.
+
+- | RNF26 | O sistema deve impedir que usuários que não possuem permissão atribuam a si o perfil de administrador por dados enviados pelo frontend. 
+
+- | RNF27 | O sistema deve evitar exposição desnecessária de dados sensíveis no frontend.
+
+- | RNF28 | O sistema deve tratar erros durante as operações do backend sem mostrar informações internas da aplicação.
+
  

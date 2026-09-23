@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "root";
 $database = "sistema_ferroviario_astral_express";
 
 $conn = new mysqli($host, $user, $pass, $database);
@@ -13,5 +13,4 @@ if ($conn->connect_error) {
 ;
 
 $conn->set_charset("utf8mb4");
-
 ?>
