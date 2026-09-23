@@ -2,7 +2,7 @@
 
 include ("../infra/conexao.php");
 
-$sql = "SELECT id_usuario, nome, usuario, email FROM usuario";
+$sql = "SELECT id_usuario, nome, usuario, email, perfil FROM usuario";
 $resultado = mysqli_query($conn, $sql);
 
 ?>
@@ -98,6 +98,8 @@ $resultado = mysqli_query($conn, $sql);
                             <th>Nome</th>
                             <th>Usuário</th>
                             <th>E-mail</th>
+                            <th>Cargo</th>
+
                         </tr>
 
                         <?php
@@ -108,6 +110,7 @@ $resultado = mysqli_query($conn, $sql);
                             echo "<td>" . $usuario["nome"] . "</td>";
                             echo "<td>" . $usuario["usuario"] . "</td>";
                             echo "<td>" . $usuario["email"] . "</td>";
+                            echo "<td>" . $usuario["perfil"] . "</td>";
                             echo "<td> <a href='excluir_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
                             echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
                             echo "</tr>";
