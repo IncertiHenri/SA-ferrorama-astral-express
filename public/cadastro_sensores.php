@@ -104,7 +104,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" id="botao_formulario_cadastro_sensor">Cadastrar</button>
+                        <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
 
                     </div>
                 </form>

@@ -423,7 +423,7 @@ label {
     padding: 10px;
 }
 
-#botao_formulario_cadastro_sensor {
+.botao_formulario_cadastro_sensor {
     background-color: var(--verde-musgo);
     color: var(--branco);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
