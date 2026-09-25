@@ -6,6 +6,7 @@ $nome = $_POST["nome"];
 $usuario = $_POST["usuario"];
 $senha = $_POST["senha"];
 $email = $_POST["email"];
+$perfil = $_POST["perfil"];
 
 if(mb_strlen($nome) < 3 ||  !preg_match('/^[\p{L}]+$/u', $nome)){
     echo "<script>alert('Nome inválido! O nome deve conter apenas letras e no mínimo 3');
@@ -31,11 +32,11 @@ if(mb_strlen($nome) < 3 ||  !preg_match('/^[\p{L}]+$/u', $nome)){
 
 $senha = password_hash($senha, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO usuario (nome, usuario, email, senha) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO usuario (nome, usuario, email, senha, perfil) VALUES (?, ?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($conn, $sql);
 
-mysqli_stmt_bind_param($stmt, "ssss", $nome, $usuario, $email, $senha);
+mysqli_stmt_bind_param($stmt, "sssss", $nome, $usuario, $email, $senha, $perfil);
 
 mysqli_stmt_execute($stmt);
 

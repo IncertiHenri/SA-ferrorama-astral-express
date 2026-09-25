@@ -120,15 +120,15 @@
 
                                     <div class="flex_column">
                                        <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
-                                       <select name="tipo_perfil" id="tipo_perfil" class="campo_cadastros">
-                                        <option value="1">Funcionário</option>
-                                        <option value="2">Administrador</option>
+                                       <select name="perfil" id="perfil" class="campo_cadastros">
+                                        <option value="funcionario">Funcionário</option>
+                                        <option value="admin">Administrador</option>
                                     </select>
 
                                     </div>
 
                                 </div>
-                                <button type="submit" id="botao_formulario_cadastro_sensor">Cadastrar</button>
+                                <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
 
                             </div>
                         </form>
