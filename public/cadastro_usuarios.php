@@ -1,11 +1,5 @@
 <?php
 
-session_start();
-
-if (!isset($_SESSION["perfil"]) || $_SESSION["perfil"] !== "admin") {
-    echo "Você não tem permissão para cadastrar usuários.";
-    header('Location: usuarios_cadastrados.php');
-}
 
 ?>
 <html lang="en">
