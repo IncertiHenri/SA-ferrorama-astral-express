@@ -61,8 +61,8 @@ CREATE TABLE registro_sensor (
 );
 
 
-insert into usuario(nome, usuario, email, perfil) values
-('Teunome', 'teunome12', 'teunome@gmail.com', 'admin'),
-('Fulano', 'De tal', 'Seilá@gmail.com', 'funcionario'),
-('Vader', 'Anakin', 'Padme@gmail.com', 'funcionario'),
-('Kenobi', 'Obi-Ben', 'Hellothere@gmail.com', 'admin');
+insert into usuario(nome, usuario, senha, email, perfil) values
+('Teunome', 'teunome12', 'teunome123', 'teunome@gmail.com', 'admin'),
+('Fulano', 'De tal', 'naoseioque', 'Seilá@gmail.com', 'funcionario'),
+('Vader', 'Anakin', 'darth123', 'Padme@gmail.com', 'funcionario'),
+('Kenobi', 'Obi-Ben', 'ihavethegraund', 'Hellothere@gmail.com', 'admin');
