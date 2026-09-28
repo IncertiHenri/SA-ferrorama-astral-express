@@ -97,8 +97,9 @@
                 </div>
 
                 <div class="borda_verde_flex">
-                    <a href="cadastro_rotas.php"><button class="botao_menu" id="botao_menu_cadastro_rotas"
-                            id="botao_sensor_novo">Cadastrar Nova Rota</button></a>
+                    <a href="cadastro_rotas.php"><button id="botao_sensor_novo" onclick="cadastroUsuarios()">
+                        Cadastrar Nova Rota
+                    </button></a>
                 </div>
 
             </div>
