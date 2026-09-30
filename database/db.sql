@@ -65,4 +65,6 @@ insert into usuario(nome, usuario, senha, email, perfil) values
 ('Teunome', 'teunome12', 'teunome123', 'teunome@gmail.com', 'admin'),
 ('Fulano', 'De tal', 'naoseioque', 'Seilá@gmail.com', 'funcionario'),
 ('Vader', 'Anakin', 'darth123', 'Padme@gmail.com', 'funcionario'),
-('Kenobi', 'Obi-Ben', 'ihavethegraund', 'Hellothere@gmail.com', 'admin');
+('Kenobi', 'Obi-Ben', 'ihavethegraund', 'Hellothere@gmail.com', 'admin'),
+('ZZZZZZZ', 'zzzzzzz', '123456', 'zzz@gmail.com', 'funcionario'),
+('XXXXXXX', 'xxxxxxx', '123456', 'xxx@gmail.com', 'admin');
