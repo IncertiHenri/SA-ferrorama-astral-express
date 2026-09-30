@@ -94,7 +94,7 @@
 
             <div class="borda_verde_flex">
                 <a href="cadastro_trens.php"><button id="botao_sensor_novo" onclick="cadastroUsuarios()">
-                    Cadastrar Novo Trens
+                    Cadastrar Novo Trem
                 </button></a>
             </div>
         </div>

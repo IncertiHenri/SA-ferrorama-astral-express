@@ -68,6 +68,11 @@
         </div>
     </div>
 
+    <button class="botao_superior" id="botao_voltar" onclick="visualizacaoTrens()">
+            <img src="../assets/img/sair.png" alt="voltar">
+            Voltar
+        </button>
+
     <main id="main_cadastro_trens">
 
         <div class="campo_verde_medio_trens">
