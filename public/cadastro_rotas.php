@@ -72,6 +72,11 @@
         </div>
     </div>
 
+    <button class="botao_superior" id="botao_voltar" onclick="visualizacaoRotas()">
+            <img src="../assets/img/sair.png" alt="voltar">
+            Voltar
+        </button>
+
     <main id="main_cadastro_sensores">
 
         <div class="campo_verde_medio_sensores">
@@ -96,7 +101,7 @@
                                 </div>
 
                             </div>
-                            <button type="submit" id="botao_formulario_cadastro_sensor">Cadastrar</button>
+                            <button type="submit" id="botao_formulario_cadastro_sensor" class="botao_formulario_cadastro_sensor">Cadastrar</button>
 
                         </div>
                     </form>

@@ -59,3 +59,10 @@ CREATE TABLE registro_sensor (
     id_sensor INT,
     FOREIGN KEY (id_sensor) REFERENCES sensor(id_sensor)
 );
+
+
+insert into usuario(nome, usuario, senha, email, perfil) values
+('Teunome', 'teunome12', 'teunome123', 'teunome@gmail.com', 'admin'),
+('Fulano', 'De tal', 'naoseioque', 'Seilá@gmail.com', 'funcionario'),
+('Vader', 'Anakin', 'darth123', 'Padme@gmail.com', 'funcionario'),
+('Kenobi', 'Obi-Ben', 'ihavethegraund', 'Hellothere@gmail.com', 'admin');

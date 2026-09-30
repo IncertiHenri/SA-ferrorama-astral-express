@@ -98,8 +98,9 @@
                 </div>
 
                 <div class="borda_verde_flex">
-                    <a href="cadastro_sensores.php"><button class="botao_menu" id="botao_menu_cadastro_trens"
-                            onclick="cadastro_sensores()" id="botao_sensor_novo">Cadastrar Novo Sensor</button></a>
+                    <a href="cadastro_sensores.php"><button id="botao_sensor_novo" onclick="cadastroUsuarios()">
+                        Cadastrar Novo Sensor
+                    </button></a>
                 </div>
 
             </div>

@@ -72,6 +72,11 @@
         </div>
     </div>
 
+    <button class="botao_superior" id="botao_voltar" onclick="visualizacaoSensores()">
+            <img src="../assets/img/sair.png" alt="voltar">
+            Voltar
+        </button>
+
     <main id="main_cadastro_sensores">
 
         <div class="campo_verde_medio_sensores">
