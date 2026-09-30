@@ -2,11 +2,23 @@
 
 session_start();
 
+if (isset($_SESSION['usuario'])){
+    if ($_SESSION['perfil'] == 'admin'){
+        header('Location: admin.php');
+    } else {
+        header('Location: home.php');
+    }
+    exit();
+
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //validações
     //se tudo estiver ok
 
     $_SESSION['admin'] = usuario['EH_ADMIN'];
+
+
 }
 
 ?>
