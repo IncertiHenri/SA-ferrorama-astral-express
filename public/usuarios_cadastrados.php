@@ -1,7 +1,13 @@
 <?php
 
+session_start();
+
 include ("../infra/conexao.php");
 
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
+    header("Location: tela_inicial.php");
+    exit();
+}
 
 
 $sql = "SELECT id_usuario, nome, usuario, email, perfil FROM usuario";
@@ -108,11 +114,11 @@ $resultado = mysqli_query($conn, $sql);
                         
                         while ($usuario = mysqli_fetch_assoc($resultado)) {
                             echo "<tr>";
-                            echo "<td>" . $usuario["id_usuario"] . "</td>";
-                            echo "<td>" . $usuario["nome"] . "</td>";
-                            echo "<td>" . $usuario["usuario"] . "</td>";
-                            echo "<td>" . $usuario["email"] . "</td>";
-                            echo "<td>" . $usuario["perfil"] . "</td>";
+                            echo "<td>" . $usuario['id_usuario'] . "</td>";
+                            echo "<td>" . $usuario['nome'] . "</td>";
+                            echo "<td>" . $usuario['usuario'] . "</td>";
+                            echo "<td>" . $usuario['email'] . "</td>";
+                            echo "<td>" . $usuario['perfil'] . "</td>";
                            echo "<td> <a href='excluir_usuario.php?id=" . $usuario["id_usuario"] . "'onclick='return confirm(\"Tem certeza que deseja excluir este usuário?\");'>
                            <button class='botao_crud'>Excluir</button> </a> </td>";
                             echo "<td> <a href='formulario_editar_usuario.php?id=" . $usuario["id_usuario"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
