@@ -729,6 +729,31 @@ table {
     height: 30px;
 }
 
+.fundo_confirmacao_exclusao {
+    background-color: var(--verde-medio-musgo);
+    place-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    margin-top: 300px;
+    margin-left: 1000px;
+}
+
+.confirmacao_exclusao {
+    background-color: var(--verde-escuro-musgo);
+    color: var(--branco);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: grid;
+    place-items: center;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 /* THAIS */
 
 #visualizacao_sensores {
