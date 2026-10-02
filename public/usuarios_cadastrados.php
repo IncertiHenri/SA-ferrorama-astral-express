@@ -2,6 +2,8 @@
 
 include ("../infra/conexao.php");
 
+
+
 $sql = "SELECT id_usuario, nome, usuario, email, perfil FROM usuario";
 $resultado = mysqli_query($conn, $sql);
 
