@@ -2,15 +2,6 @@
 
 session_start();
 
-if (isset($_SESSION['usuario'])){
-    if ($_SESSION['perfil'] == 'admin'){
-        header('Location: admin.php');
-    } else {
-        header('Location: home.php');
-    }
-    exit();
-
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //validações
@@ -49,20 +40,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <h3 class="titulo3">Faça login para continuar sua jornada!</h3>
 
-            <form id="login">
+            <form id="login" action="public/login.php" method="POST">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name='email'>
 
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha">
+                <input type="password" id="senha" name='senha'>
 
 
                 <button type="submit" id="botao_login">Entrar</button>
 
-                <p class="texto_cadastro">
-                    Ainda não fez o cadastro?
-                    <a href="public/cadastro.html">Cadastre-se!</a>
-                </p>
             </form>
         </div>
     </div>
