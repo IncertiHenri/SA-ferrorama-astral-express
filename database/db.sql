@@ -62,9 +62,7 @@ CREATE TABLE registro_sensor (
 
 
 insert into usuario(nome, usuario, senha, email, perfil) values
-('Teunome', 'teunome12', 'teunome123', 'teunome@gmail.com', 'admin'),
-('Fulano', 'De tal', 'naoseioque', 'Seilá@gmail.com', 'funcionario'),
-('Vader', 'Anakin', 'darth123', 'Padme@gmail.com', 'funcionario'),
-('Kenobi', 'Obi-Ben', 'ihavethegraund', 'Hellothere@gmail.com', 'admin'),
-('ZZZZZZZ', 'zzzzzzz', '123456', 'zzz@gmail.com', 'funcionario'),
-('XXXXXXX', 'xxxxxxx', '123456', 'xxx@gmail.com', 'admin');
+('Natan', 'Natanzinho', '$2y$10$wmtRpjrvQfXSJ4y9UcyfdueWcN.92UdF2i2TmF3gOXloX/qiH0HN.', 'natan@gmail.com', 'admin'),
+('Serenna', 'cebola', '$2y$10$92Y2OpAFRMUsnXQZTcEgx.QB2uNflA7EHnpqix2Zil9yzxSr45mf.', 'serenna@gmail.com', 'admin'),
+('Henrique', 'batata', '$2y$10$kAtK23ian.cXW2Ei9ucjf.e.xj2ucxlCqc.IbTyOpLjT6.RYy9UUm', 'henrique@gmail.com', 'admin'),
+('Thais', 'café', '$2y$10$Ht39mfCNSlOrKZHDv5IpO.DTBo8PvmKk1IX3Mws6pRIf2yYbd5ZAe', 'thais@gmail.com', 'admin');

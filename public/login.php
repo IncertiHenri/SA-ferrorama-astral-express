@@ -8,28 +8,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $query = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
-    $result = $conn->query($query);
+    $query = "SELECT * FROM usuario WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $query);
+
+    mysqli_stmt_bind_param($stmt, "s", $email);
+
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
 
     if ($result->num_rows > 0) {
         $usuario = $result->fetch_assoc();
-        $_SESSION['usuario'] = $usuario['email'];
-        $_SESSION['tipo'] = $usuario['perfil'];
 
-        if ($usuario['perfil'] === 'admin') {
+        if (password_verify($senha, $usuario['senha'])) {
+            $_SESSION['usuario'] = $usuario['email'];
+            $_SESSION['tipo'] = $usuario['perfil'];
+
             header('Location: tela_inicial.php');
+            exit();
+
         } else {
-            header('Location: tela_inicial.php');
+            echo "Email ou senha incorretos.";
         }
-        exit();
     } else {
         echo "Email ou senha incorretos.";
     }
 }
-
-
-
-
-
 
 ?>
