@@ -38,6 +38,10 @@ function cadastrarRotas() {
     window.location.href = "../public/cadastro_rotas.php";
 }
 
+function sair() {
+    window.location.href = "logout.php";
+}
+
 
 
 

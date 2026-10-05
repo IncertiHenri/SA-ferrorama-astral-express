@@ -1,5 +1,14 @@
 <?php
 
+include("../infra/conexao.php");
+
+session_start();
+
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
+    header("Location: ../index.php");
+    exit();
+
+}
 
 ?>
 <html lang="en">
@@ -70,10 +79,20 @@
                     Monitoramento em tempo real
                 </button>
 
-                <button class="botao_menu_atual" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
-                    <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados">
-                    Usuários cadastrados
-                </button>
+                <?php
+
+                if ($_SESSION['tipo'] === 'admin') {
+
+                    $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                <img class='imagem_botao_menu' src='../assets/img/usuarios.png' alt='usuarios_cadastrados'>
+                Usuários cadastrados
+                </button>";
+
+                    echo $cod;
+                }
+
+                ?>
+
             </div>
         </div>
 
@@ -119,11 +138,11 @@
                                     </div>
 
                                     <div class="flex_column">
-                                       <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
-                                       <select name="perfil" id="perfil" class="campo_cadastros">
-                                        <option value="funcionario">Funcionário</option>
-                                        <option value="admin">Administrador</option>
-                                    </select>
+                                        <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
+                                        <select name="perfil" id="perfil" class="campo_cadastros">
+                                            <option value="funcionario">Funcionário</option>
+                                            <option value="admin">Administrador</option>
+                                        </select>
 
                                     </div>
 

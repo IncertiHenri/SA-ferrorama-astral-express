@@ -2,6 +2,14 @@
 
 include ("../infra/conexao.php");
 
+session_start();
+
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
+    header("Location: ../index.php");
+    exit();
+
+}
+
 $nome = $_POST["nome"];
 $usuario = $_POST["usuario"];
 $senha = $_POST["senha"];

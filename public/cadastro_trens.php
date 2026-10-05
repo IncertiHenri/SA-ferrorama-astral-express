@@ -1,3 +1,15 @@
+<?php
+
+include ("../infra/conexao.php");
+
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../index.php");
+    exit();
+}
+
+?>
 <html lang="en">
 
 <head>
@@ -61,10 +73,20 @@
                 Monitoramento em tempo real
             </button>
 
-            <button class="botao_menu" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
-                <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados">
+            <?php
+
+                if ($_SESSION['tipo'] === 'admin') {
+
+                    $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                <img class='imagem_botao_menu' src='../assets/img/usuarios.png' alt='usuarios_cadastrados'>
                 Usuários cadastrados
-            </button>
+                </button>";
+
+                    echo $cod;
+                }
+
+                ?>
+
         </div>
     </div>
 
