@@ -1,3 +1,13 @@
+<?php
+
+include ("../infra/conexao.php");
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../index.php");
+    exit();
+}
+
+?>
 <html lang="en">
 
 <head>

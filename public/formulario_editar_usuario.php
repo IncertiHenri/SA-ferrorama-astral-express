@@ -1,3 +1,17 @@
+<?php
+
+include ("../infra/conexao.php");
+
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../index.php");
+    exit();
+}
+
+$id = $_GET["id"];
+
+?>
 <html lang="en">
 
 <head>
@@ -10,14 +24,6 @@
 </head>
 
 <body id="usuarios_cadastrados">
-
-<?php
-
-include ("../infra/conexao.php");
-
-$id = $_GET["id"];
-
-?>
 
     <header>
         <div id="navbar_tela_inicial">
@@ -74,10 +80,19 @@ $id = $_GET["id"];
                     Monitoramento em tempo real
                 </button>
 
-                <button class="botao_menu_atual" id="botao_menu_usuarios_cadastrados" onclick="usuariosCadastrados()">
-                    <img class="imagem_botao_menu" src="../assets/img/usuarios.png" alt="usuarios_cadastrados">
-                    Usuários cadastrados
-                </button>
+                <?php
+
+                if ($_SESSION['tipo'] === 'admin') {
+
+                    $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                <img class='imagem_botao_menu' src='../assets/img/usuarios.png' alt='usuarios_cadastrados'>
+                Usuários cadastrados
+                </button>";
+
+                    echo $cod;
+                }
+
+                ?>
             </div>
         </div>
 
