@@ -9,6 +9,12 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
+    header("Location: ../index.php");
+    exit();
+
+}
+
 ?>
 
 <html lang="en">
