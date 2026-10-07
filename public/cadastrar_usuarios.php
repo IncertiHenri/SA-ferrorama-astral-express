@@ -48,5 +48,6 @@ mysqli_stmt_bind_param($stmt, "sssss", $nome, $usuario, $email, $senha, $perfil)
 mysqli_stmt_execute($stmt);
 
 header ("Location: ../public/usuarios_cadastrados.php");
+exit;
 
 ?>

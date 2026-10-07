@@ -86,7 +86,7 @@ $resultado = mysqli_query($conn, $sql);
 
                 if ($_SESSION['tipo'] === 'admin') {
 
-                    $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                    $cod = "<button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                 <img class='imagem_botao_menu' src='../assets/img/usuarios.png' alt='usuarios_cadastrados'>
                 Usuários cadastrados
                 </button>";
