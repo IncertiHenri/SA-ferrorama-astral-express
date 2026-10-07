@@ -29,7 +29,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 <body id="cadastro_sensores">
     <header>
-        <div id="navbar_tela_inicial">
+        <div id="navbar">
             <p>Olá, Admin</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
@@ -38,15 +38,17 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
     <div class="menu">
 
-        <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+        <div class="conteiner_menu_logo">
+            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-        <div class="inline_block">
-            <div class="inline_flex">
-                <h1 class="titulo_menu">ASTRAL</h1>
-                <h4 class="titulo2_menu">EXPRESS</h4>
+            <div class="inline_block">
+                <div class="inline_flex">
+                    <h1 class="titulo_menu">ASTRAL</h1>
+                    <h4 class="titulo2_menu">EXPRESS</h4>
+                </div>
+
+                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-
-            <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
         </div>
 
         <div id="botoes_menu">

@@ -22,7 +22,7 @@ if (!isset($_SESSION['usuario'])) {
 <body id="body_tela_inicial">
 
     <header>
-        <div id="navbar_tela_inicial">
+        <div id="navbar">
             <p>Olá, Admin</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
@@ -34,6 +34,7 @@ if (!isset($_SESSION['usuario'])) {
 
         <div class="menu">
 
+            <div class="conteiner_menu_logo">
             <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
             <div class="inline_block">
@@ -44,6 +45,7 @@ if (!isset($_SESSION['usuario'])) {
 
                 <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
+        </div>
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
