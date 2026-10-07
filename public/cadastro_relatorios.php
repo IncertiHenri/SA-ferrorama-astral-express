@@ -1,6 +1,6 @@
 <?php
 
-include ("../infra/conexao.php");
+include("../infra/conexao.php");
 
 session_start();
 
@@ -46,58 +46,53 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
         <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
         <div class="inline_block">
-
             <div class="inline_flex">
                 <h1 class="titulo_menu">ASTRAL</h1>
                 <h4 class="titulo2_menu">EXPRESS</h4>
             </div>
 
             <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
-
         </div>
 
         <div id="botoes_menu">
-
             <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
+                Tela inicial
+            </button>
+
+            <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                Monitoramento em tempo real
             </button>
 
             <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                <img class="imagem_botao_menu" src="../assets/img/cadastro_sensores.png" alt="cadastro_sensores">
                 Visualização de Sensores
             </button>
 
             <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                <img class="imagem_botao_menu" src="../assets/img/trem_botao.png" alt="trem_botao"> Visualização de
-                trens
+                Visualização de trens
             </button>
 
-            <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
-                Monitoramento em tempo real
+            <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                Visualização de rotas
             </button>
 
             <button class="botao_menu_atual" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
-                Cadastro de Relatórios
+                Visualização de Relatórios
             </button>
 
             <?php
 
-                if ($_SESSION['tipo'] === 'admin') {
+            if ($_SESSION['tipo'] === 'admin') {
 
-                    $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                <img class='imagem_botao_menu' src='../assets/img/usuarios.png' alt='usuarios_cadastrados'>
+                $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                 Usuários cadastrados
                 </button>";
 
-                    echo $cod;
-                }
+                echo $cod;
+            }
 
-                ?>
+            ?>
 
         </div>
-
     </div>
 
     <main>
@@ -106,46 +101,47 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                 <h1 class="titulo_relatorios">Visualização de Relatórios</h1>
                 <div class="borda_verde_flex">
                     <div id="filtros_relatorios">
-                        <h1 class="titulo_relatorios">Filtros<img class="imagem_filtrar" src="../assets/img/filtro.png" alt="filtro"></h1> 
-                        </div>
-                        <div>
-                    <form action="#" class="flex" id="formulario_visualizacao_relatorios">
-                        <div class="flex_column">
-                            <label for="data_inicio" class="texto_cadastros">Data início</label>
-                            <input type="date" name="data_inicio" class="campo_cadastros">
-                        </div>
-                        <div class="flex_column">
-                            <label for="data_fim" class="texto_cadastros">Data fim</label>
-                            <input type="date" name="data_fim" class="campo_cadastros">
-                        </div>
-                        <div class="flex_column">
-                            <label for="tipo_relatorio" class="texto_cadastro">Tipo de relatório</label>
-                            <select name="tipo_relatorio" id="texto_cadastros" class="campo_cadastros">
-                                <option value="1">Todos</option>
-                                <option value="2">X</option>
-                                <option value="3">X</option>
-                                <option value="4">X</option>
-                                <option value="5">X</option>
-                            </select>
-                        </div>
-                        <div class="flex_column">
-                            <label for="tipo_falha" class="texto_cadastros">Tipo de falha</label>
-                            <select name="tipo_falha" id="tipo_falha" class="campo_cadastros">
-                                <option value="1">Todos</option>
-                                <option value="2">X</option>
-                                <option value="3">X</option>
-                                <option value="4">X</option>
-                                <option value="5">X</option>
-                            </select>
-                        </div>
-                    
-                        <button type="submit" id="botao_formulario_visualizar_relatorios">Filtrar</button>
-                    </form>
+                        <h1 class="titulo_relatorios">Filtros<img class="imagem_filtrar" src="../assets/img/filtro.png"
+                                alt="filtro"></h1>
+                    </div>
+                    <div>
+                        <form action="#" class="flex" id="formulario_visualizacao_relatorios">
+                            <div class="flex_column">
+                                <label for="data_inicio" class="texto_cadastros">Data início</label>
+                                <input type="date" name="data_inicio" class="campo_cadastros">
+                            </div>
+                            <div class="flex_column">
+                                <label for="data_fim" class="texto_cadastros">Data fim</label>
+                                <input type="date" name="data_fim" class="campo_cadastros">
+                            </div>
+                            <div class="flex_column">
+                                <label for="tipo_relatorio" class="texto_cadastro">Tipo de relatório</label>
+                                <select name="tipo_relatorio" id="texto_cadastros" class="campo_cadastros">
+                                    <option value="1">Todos</option>
+                                    <option value="2">X</option>
+                                    <option value="3">X</option>
+                                    <option value="4">X</option>
+                                    <option value="5">X</option>
+                                </select>
+                            </div>
+                            <div class="flex_column">
+                                <label for="tipo_falha" class="texto_cadastros">Tipo de falha</label>
+                                <select name="tipo_falha" id="tipo_falha" class="campo_cadastros">
+                                    <option value="1">Todos</option>
+                                    <option value="2">X</option>
+                                    <option value="3">X</option>
+                                    <option value="4">X</option>
+                                    <option value="5">X</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" id="botao_formulario_visualizar_relatorios">Filtrar</button>
+                        </form>
                     </div>
                 </div>
 
                 <h1 class="titulo_relatorios">Últimos Relatórios</h1>
-                
+
 
                 <div>
                     <div class="borda_verde_flex">
@@ -157,24 +153,24 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                         </div>
                     </div>
                     <div class="flex">
-                    <div class="borda_verde_flex">
+                        <div class="borda_verde_flex">
 
-                    </div>
-                    <div class="borda_verde_flex">
+                        </div>
+                        <div class="borda_verde_flex">
 
-                    </div>
-                    <div class="borda_verde_flex">
+                        </div>
+                        <div class="borda_verde_flex">
 
-                    </div>
-                    <div class="borda_verde_flex">
+                        </div>
+                        <div class="borda_verde_flex">
 
-                    </div>
+                        </div>
                     </div>
                 </div>
 
 
 
-                
+
             </div>
         </div>
     </main>

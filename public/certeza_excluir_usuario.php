@@ -1,6 +1,6 @@
 <?php
 
-include ("../infra/conexao.php");
+include("../infra/conexao.php");
 
 session_start();
 
@@ -47,32 +47,27 @@ if (!isset($_SESSION['usuario'])) {
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                    <img class="imagem_botao_menu" src="../assets/img/tela_inicial.png" alt="tela_inicial"> Tela inicial
+                    Tela inicial
+                </button>
+
+                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                    Monitoramento em tempo real
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro_sensores.png" alt="cadastro_sensores">
                     Visualização de Sensores
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                    <img class="imagem_botao_menu" src="../assets/img/trem_botao.png" alt="trem_botao">
                     Visualização de trens
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
-                    <img class="imagem_botao_menu" src="../assets/img/recarregar.png" alt="trem_botao">
                     Visualização de rotas
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                    <img class="imagem_botao_menu" src="../assets/img/cadastro_relatorios.png" alt="cadastro_relatorios">
                     Visualização de Relatórios
-                </button>
-
-                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    <img class="imagem_botao_menu" src="../assets/img/monitoramento_tempo.png" alt="monitoramento">
-                    Monitoramento em tempo real
                 </button>
 
                 <?php
@@ -80,7 +75,6 @@ if (!isset($_SESSION['usuario'])) {
                 if ($_SESSION['tipo'] === 'admin') {
 
                     $cod = "<button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                <img class='imagem_botao_menu' src='../assets/img/usuarios.png' alt='usuarios_cadastrados'>
                 Usuários cadastrados
                 </button>";
 
@@ -94,26 +88,26 @@ if (!isset($_SESSION['usuario'])) {
 
         <?php
 
-            $id = $_GET["id"];
+        $id = $_GET["id"];
 
-            echo "<div class='fundo_confirmacao_exclusao'>";
-            echo "<div class='confirmacao_exclusao'>";
+        echo "<div class='fundo_confirmacao_exclusao'>";
+        echo "<div class='confirmacao_exclusao'>";
 
-            echo "<h2>Tem certeza que quer excluir?</h2>";
-            echo "<div class='container_botoes'>";
+        echo "<h2>Tem certeza que quer excluir?</h2>";
+        echo "<div class='container_botoes'>";
 
-            echo "<a class='botao_crud' href='excluir_usuario.php?id=$id'>Sim</a>";
-            echo "<a class='botao_crud' href='usuarios_cadastrados.php'>Não</a>";
+        echo "<a class='botao_crud' href='excluir_usuario.php?id=$id'>Sim</a>";
+        echo "<a class='botao_crud' href='usuarios_cadastrados.php'>Não</a>";
 
-            echo "</div>";
+        echo "</div>";
 
-            echo "</div>";
-            echo "</div>";
+        echo "</div>";
+        echo "</div>";
 
-            ?>
+        ?>
 
 
-    <script src="../scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
 
 </body>
 
