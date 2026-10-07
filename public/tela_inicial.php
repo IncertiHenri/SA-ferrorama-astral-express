@@ -142,10 +142,19 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                     <span>Cadastro de Relatórios</span>
                 </button>
 
-                <button class="botao_tela_inicial" onclick="usuariosCadastrados()">
-                    <img src="../assets/img/usuarios.png" alt="usuarios_cadastrados" class="imagem_cadastro_sensores">
+                <?php
+
+                if ($_SESSION['tipo'] === 'admin') {
+
+                    $cod = "<button class='botao_tela_inicial' onclick='usuariosCadastrados()'>
+                    <img src='../assets/img/usuarios.png' alt='usuarios_cadastrados' class='imagem_cadastro_sensores'>
                     <span>Usuários cadastrados</span>
-                </button>
+                </button>";
+
+                    echo $cod;
+                }
+
+                ?>
 
             </div>
 
