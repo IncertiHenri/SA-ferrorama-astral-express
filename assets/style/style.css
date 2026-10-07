@@ -16,6 +16,7 @@
     --verde-claro: #7ed957;
     --rosa: #ff66c4;
     --roxo: #5e17eb;
+    --branco-dente:#ded7c4;
 }
 
 #body_login {
@@ -549,8 +550,8 @@ label {
     width: fit-content;
     padding: 30px;
     border-radius: 20px;
-    max-height: 800px;
-    max-width: 1700px;
+    max-height: 700px;
+    max-width: 1600px;
 }
 
 #tabelas_monitoramento {
@@ -570,7 +571,7 @@ label {
     overflow-y: auto;
     padding: 10px;
     border-radius: 20px;
-    max-width: 1700px;
+    max-width: 1200px;
 }
 
 .tabela_monitoramento::-webkit-scrollbar {
