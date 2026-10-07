@@ -168,25 +168,21 @@ label {
     display: inline-block;
     height: 100%;
     position: absolute;
-}
-
-.imagem_botao_menu {
-    width: 50px;
-    height: 50px;
+    width: 18%;
 }
 
 .botao_menu {
     background-color: var(--verde-medio-musgo);
     border: 0;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     color: var(--branco);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: left;
     font-size: 20px;
-    font-weight: 600;
+    
     gap: 10px;
     margin-bottom: 15px;
     width: 100%;
@@ -196,17 +192,24 @@ label {
     background-color: var(--verde-musgo);
     border: 0;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     color: var(--branco);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: left;
     font-size: 20px;
-    font-weight: 600;
     gap: 10px;
     margin-bottom: 15px;
     width: 100%;
+}
+
+.conteiner_menu_logo{
+    margin-right: 10px;
+}
+
+main{
+    width: 90%;
 }
 
 #botoes_menu {
@@ -516,7 +519,7 @@ label {
     margin-top: 30px;
 }
 
-#navbar_tela_inicial {
+#navbar {
     position: fixed;
     right: 0;
     top: 0;
@@ -525,6 +528,7 @@ label {
     padding: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
+    gap: 10px;
 }
 
 .imagem_usuario {
@@ -538,9 +542,11 @@ label {
     color: var(--branco);
     border-radius: 5px;
     border: none;
-    font-size: 20px;
-    padding: 20px;
+    font-size: 15px;
+    padding: 10px;
     cursor: pointer;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .fundo_tabela_monitoramento {
