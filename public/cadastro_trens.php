@@ -4,16 +4,11 @@ include("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.php");
-    exit();
-}
-
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
+if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
     header("Location: ../index.php");
     exit();
     
-}
+} 
 
 ?>
 <html lang="en">
@@ -105,27 +100,31 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
             </div>
             <div class="campo_borda_verde" id="justify_align">
 
-                <form action="#" id="formulario_cadastro_trens">
+                <form action="cadastrar_trem.php" id="formulario_cadastro_trens" method="POST">
 
                     <div class="flex_column">
                         <div class="flex" id="campos_cadastro_trens">
                             <div class="flex_column">
-                                <label for="linha" class="texto_cadastros">Linha</label>
-                                <input type="text" name="linha" class="campo_cadastros">
+                                <label for="nome" class="texto_cadastros">Nome</label>
+                                <input type="text" name="nome" class="campo_cadastros">
                             </div>
 
                             <div class="flex_column">
-                                <label for="rota" class="texto_cadastros">Rota</label>
-                                <input type="text" name="rota" class="campo_cadastros">
+                                <label for="modelo" class="texto_cadastros">Modelo</label>
+                                <input type="text" name="modelo" class="campo_cadastros">
                             </div>
 
                             <div class="flex_column">
-                                <label for="dado" class="texto_cadastros">Tipo de dado</label>
-                                <select name="dado" class="campo_cadastros">
+                                <label for="capacidade" class="texto_cadastros">Capacidade</label>
+                                <input type="number" name="capacidade" class="campo_cadastros">
+                            </div>
+
+                            <div class="flex_column">
+                                <label for="status" class="texto_cadastros">Status do trem</label>
+                                <select name="status" class="campo_cadastros">
                                     <option value="">Selecione</option>
-                                    <option value="1">Velocidade</option>
-                                    <option value="2">Temperatura</option>
-                                    <option value="3">Falha</option>
+                                    <option value="ativo">Ativo</option>
+                                    <option value="inativo">Inativo</option>
                                 </select>
                             </div>
                         </div>

@@ -115,12 +115,23 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
 
                 </div>
             </div>
+                <?php
 
-            <div class="borda_verde_flex">
-                <a href="cadastro_trens.php"><button id="botao_sensor_novo" onclick="cadastroUsuarios()">
+                if ($_SESSION['tipo'] === 'admin') {
+
+                    $cod = "
+                    <div class='borda_verde_flex'>
+
+                    <a href='cadastro_trens.php'><button id='botao_sensor_novo' onclick='cadastroUsuarios()'>
                         Cadastrar Novo Trem
                     </button></a>
-            </div>
+                    
+                    </div>";
+
+                    echo $cod;
+                }
+
+                ?>
         </div>
     </div>
 
