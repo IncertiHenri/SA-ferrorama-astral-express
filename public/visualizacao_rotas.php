@@ -111,6 +111,9 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                                 <td>ID da rota</td>
                                 <td>Origem</td>
                                 <td>Destino</td>
+                                <td>Trem Associado</td>
+                                <td>Usuário Associado</td>
+                                <td>Ação</td>
                             </tr>
 
 
@@ -120,9 +123,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                 </div>
 
                 <div class="borda_verde_flex">
-                    <a href="cadastro_rotas.php"><button id="botao_sensor_novo" onclick="cadastroUsuarios()">
-                            Cadastrar Nova Rota
-                        </button></a>
+                    <button type="submit" onclick="cadastroRotas()" class="botao_formulario_cadastro_sensor">Cadastrar Nova Rota</button>
                 </div>
 
             </div>
