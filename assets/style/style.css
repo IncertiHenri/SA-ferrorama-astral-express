@@ -555,9 +555,11 @@ main{
     place-items: center;
     width: fit-content;
     padding: 30px;
-    border-radius: 10px;
-    max-height: 700px;
-    max-width: 1600px;
+    border-radius: 20px;
+    min-height: 650px;
+    max-height: 650px;
+    min-width: 1250px;
+    max-width: 1250px;
 }
 
 #tabelas_monitoramento {
