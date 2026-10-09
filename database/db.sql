@@ -4,25 +4,29 @@ USE sistema_ferroviario_astral_express;
 
 CREATE TABLE usuario (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100),
-    usuario VARCHAR(45) UNIQUE,
-    senha VARCHAR(255),
-    email VARCHAR(100),
+    nome VARCHAR(100) NOT NULL,
+    usuario VARCHAR(45) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
     perfil ENUM('admin', 'funcionario') DEFAULT 'funcionario'
 );
 
 CREATE TABLE trem (
     id_trem INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45),
-    modelo VARCHAR(45),
-    capacidade INT,
-    status VARCHAR(45)
+    nome VARCHAR(45) NOT NULL,
+    modelo VARCHAR(45) NOT NULL,
+    capacidade INT NOT NULL,
+    status VARCHAR(45) NOT NULL,
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE rota (
     id_rota INT PRIMARY KEY AUTO_INCREMENT,
-    origem VARCHAR(45),
-    destino VARCHAR(45)
+    origem VARCHAR(45) NOT NULL,
+    destino VARCHAR(45) NOT NULL,
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE trem_rota (
@@ -35,17 +39,17 @@ CREATE TABLE trem_rota (
 
 CREATE TABLE log_acesso (
     id_log INT PRIMARY KEY AUTO_INCREMENT,
-    data_hora DATETIME,
-    acao VARCHAR(100),
+    data_hora DATETIME NOT NULL,
+    acao VARCHAR(100) NOT NULL,
     id_usuario INT,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE sensor (
     id_sensor INT PRIMARY KEY AUTO_INCREMENT,
-    tipo_dado VARCHAR(45),
-    nome VARCHAR(45),
-    localizacao VARCHAR(45),
+    tipo_dado VARCHAR(45) NOT NULL,
+    nome VARCHAR(45) NOT NULL,
+    localizacao VARCHAR(45) NOT NULL,
     id_trem INT,
     id_rota INT,
     id_usuario INT,
