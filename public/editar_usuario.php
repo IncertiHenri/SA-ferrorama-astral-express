@@ -38,11 +38,13 @@ if(mb_strlen($nome) < 3 ||  !preg_match('/^[\p{L}]+$/u', $nome)){
     exit;
 } 
 
+$senha = password_hash($senha, PASSWORD_DEFAULT);
+
 $sql = "UPDATE usuario SET nome = ?, usuario = ?, senha = ?, email = ? WHERE id_usuario = ?";
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("sssii",$nome,$usuario,$senha,$email,$id);
+$stmt->bind_param("ssssi",$nome,$usuario,$senha,$email,$id);
 
 $stmt->execute();
 
