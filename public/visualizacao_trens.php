@@ -14,7 +14,6 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
     exit();
     
 }
-
 ?>
 <html lang="en">
 
@@ -106,10 +105,31 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
 
                         <tr>
                             <td>ID do Trem</td>
-                            <td>Localização</td>
-                            <td>Tipo de Dado</td>
-                            <td>Ação</td>
+                            <td>Nome</td>
+                            <td>Modelo</td>
+                            <td>Capacidade</td>
+                            <td>Status</td>
                         </tr>
+
+                        <?php
+
+                         $sql = "SELECT * FROM trem";
+
+                        $trens = $conn->query($sql);
+
+                        while ($resultado = mysqli_fetch_assoc($trens)) {
+                            echo "<tr>";
+                            echo "<td>" . $resultado["id_trem"] . "</td>";
+                            echo "<td>" . $resultado["nome"] . "</td>";
+                            echo "<td>" . $resultado["modelo"] . "</td>";
+                            echo "<td>" . $resultado["capacidade"] . "</td>";
+                            echo "<td>" . $resultado["status"] . "</td>";
+                            echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                            echo "<td> <a href='formulario_editar_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                            echo "</tr>";
+                        }
+
+                        ?>
 
                     </table>
 
