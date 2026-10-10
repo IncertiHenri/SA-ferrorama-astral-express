@@ -115,7 +115,21 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                                 <td>Usuário Associado</td>
                                 <td>Ação</td>
                             </tr>
+                            <?php
 
+                            while ($rota = mysqli_fetch_assoc($resultado)) {
+                                echo "<tr>";
+                                echo "<td>" . $rota["id_rota"] . "</td>";
+                                echo "<td>" . $rota["origem"] . "</td>";
+                                echo "<td>" . $rota["destino"] . "</td>";
+                                echo "<td>" . $rota["Trem Associado"] . "</td>";
+                                echo "<td>" . $rota["Usuário Associado"] . "</td>";
+                                echo "<td> <a href='excluir_rota.php?id=" . $rota["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                echo "<td> <a href='formulario_editar_rota.php?id=" . $rota["id_rota"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                echo "</tr>";
+                            }
+
+                            ?>
 
                         </table>
 

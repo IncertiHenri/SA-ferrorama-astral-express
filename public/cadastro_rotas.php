@@ -9,7 +9,7 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
+if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
     header("Location: ../index.php");
     exit();
     
@@ -110,24 +110,30 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
             <div class="campo_borda_verde" id="campo_formulario_rotas">
 
                 <div>
-                    <form action="#" id="formulario_cadastro_sensores">
+                    <form action="cadastro_rota.php" id="formulario_cadastro_sensores">
 
                         <div class="flex_column">
                             <div class="flex" id="campos_cadastro_sensores">
                                 <div class="flex_column">
                                     <label for="origem" class="texto_cadastros">Origem</label>
-                                    <input type="text" name="nome" class="campo_cadastros">
+                                    <input type="text" name="origem" class="campo_cadastros">
                                 </div>
 
                                 <div class="flex_column">
                                     <label for="destino" class="texto_cadastros">Destino</label>
-                                    <input type="text" name="loc" class="campo_cadastros">
+                                    <input type="text" name="destino" class="campo_cadastros">
+                                </div>
+                                <div class="flex_column">
+                                    <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
+                                    <input type="text" name="trem_associado" class="campo_cadastros">
+                                </div>
+                                <div class="flex_column">
+                                    <label for="usuario_associado" class="texto_cadastros">Usuário Associado</label>
+                                    <input type="text" name="usuario_associado" class="campo_cadastros">
                                 </div>
 
                             </div>
-                            <button type="submit" id="botao_formulario_cadastro_sensor"
-                                class="botao_formulario_cadastro_sensor">Cadastrar</button>
-
+                            <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
                         </div>
                     </form>
 
