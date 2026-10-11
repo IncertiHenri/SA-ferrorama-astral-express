@@ -4,18 +4,17 @@ include("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
+    
     header("Location: ../index.php");
     exit();
 }
 
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
-    header("Location: ../index.php");
-    exit();
-    
-}
+$sql = "SELECT * FROM rota";
+$resultado = $conn->query($sql);
 
 ?>
+
 <html lang="en">
 
 <head>
@@ -137,7 +136,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                 </div>
 
                 <div class="borda_verde_flex">
-                    <button type="submit" onclick="cadastroRotas()" class="botao_formulario_cadastro_sensor">Cadastrar Nova Rota</button>
+                    <button type="button" onclick="cadastroRotas()" class="botao_formulario_cadastro_sensor">Cadastrar Nova Rota</button>
                 </div>
 
             </div>

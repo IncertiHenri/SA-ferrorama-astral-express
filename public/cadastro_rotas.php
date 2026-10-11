@@ -110,7 +110,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
             <div class="campo_borda_verde" id="campo_formulario_rotas">
 
                 <div>
-                    <form action="cadastro_rota.php" id="formulario_cadastro_sensores">
+                    <form action="cadastro_nova_rota.php" method="POST" id="formulario_cadastro_sensores">
 
                         <div class="flex_column">
                             <div class="flex" id="campos_cadastro_sensores">

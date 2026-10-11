@@ -123,8 +123,8 @@ $id = $_GET["id"];
                             <div class="flex_column">
                                 <div class="flex" id="campos_editar_rota">
                                     <div class="flex_column">
-                                        <label for="Origem" class="texto_cadastros">Origem</label>
-                                        <input type="text" name="Origem" class="campo_cadastros">
+                                        <label for="origem" class="texto_cadastros">Origem</label>
+                                        <input type="text" name="origem" class="campo_cadastros">
                                     </div>
 
                                     <div class="flex_column">

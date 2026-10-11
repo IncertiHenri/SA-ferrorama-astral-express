@@ -22,4 +22,6 @@ mysqli_stmt_execute($stmt);
 
 header ("Location: visualizacao_rotas.php");
 
+exit();
+
 ?>
