@@ -136,10 +136,8 @@ $resultado = $conn->query($sql);
                 </div>
 
                 <div class="borda_verde_flex">
-                    <button type="button" onclick="cadastroRotas()" class="botao_formulario_cadastro_sensor">Cadastrar Nova Rota</button>
+                    <button type="button" onclick="window.location.href='cadastro_rotas.php'" class="botao_formulario_cadastro_sensor">Cadastrar Nova Rota</button>
                 </div>
-
-            </div>
         </div>
 
     </main>
