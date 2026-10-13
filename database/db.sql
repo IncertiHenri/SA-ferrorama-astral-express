@@ -24,6 +24,7 @@ CREATE TABLE trem (
 CREATE TABLE rota (
     id_rota INT PRIMARY KEY AUTO_INCREMENT,
     origem VARCHAR(45) NOT NULL,
+    tempo TIME NOT NULL,
     destino VARCHAR(45) NOT NULL,
     id_usuario INT,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)

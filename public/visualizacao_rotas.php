@@ -110,6 +110,7 @@ $resultado = $conn->query($sql);
                                 <td>ID da rota</td>
                                 <td>Origem</td>
                                 <td>Destino</td>
+                                <td>Tempo</td>
                                 <td>Trem Associado</td>
                                 <td>Usuário Associado</td>
                                 <td>Ação</td>
@@ -121,6 +122,7 @@ $resultado = $conn->query($sql);
                                 echo "<td>" . $rota["id_rota"] . "</td>";
                                 echo "<td>" . $rota["origem"] . "</td>";
                                 echo "<td>" . $rota["destino"] . "</td>";
+                                echo "<td>" . $rota["tempo"] . "</td>";
                                 echo "<td>" . $rota["Trem Associado"] . "</td>";
                                 echo "<td>" . $rota["Usuário Associado"] . "</td>";
                                 echo "<td> <a href='excluir_rota.php?id=" . $rota["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";

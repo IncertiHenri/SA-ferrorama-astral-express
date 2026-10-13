@@ -124,6 +124,10 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
                                     <input type="text" name="destino" class="campo_cadastros">
                                 </div>
                                 <div class="flex_column">
+                                    <label for="tempo" class="texto_cadastros">Tempo</label>
+                                    <input type="time" name="tempo" class="campo_cadastro">
+                                </div>
+                                <div class="flex_column">
                                     <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
                                     <input type="text" name="trem_associado" class="campo_cadastros">
                                 </div>
