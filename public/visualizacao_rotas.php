@@ -11,7 +11,8 @@ if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo']) || ($_SESSION['tip
 }
 
 $sql = "SELECT * FROM rota";
-$resultado = $conn->query($sql);
+$rota = $conn->query($sql);
+
 
 ?>
 
@@ -117,16 +118,16 @@ $resultado = $conn->query($sql);
                             </tr>
                             <?php
 
-                            while ($rota = mysqli_fetch_assoc($resultado)) {
+                            while ($resultado = mysqli_fetch_assoc($rota)) {
                                 echo "<tr>";
-                                echo "<td>" . $rota["id_rota"] . "</td>";
-                                echo "<td>" . $rota["origem"] . "</td>";
-                                echo "<td>" . $rota["destino"] . "</td>";
-                                echo "<td>" . $rota["tempo"] . "</td>";
-                                echo "<td>" . $rota["Trem Associado"] . "</td>";
-                                echo "<td>" . $rota["Usuário Associado"] . "</td>";
-                                echo "<td> <a href='excluir_rota.php?id=" . $rota["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
-                                echo "<td> <a href='formulario_editar_rota.php?id=" . $rota["id_rota"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                echo "<td>" . $resultado["id_rota"] . "</td>";
+                                echo "<td>" . $resultado["origem"] . "</td>";
+                                echo "<td>" . $resultado["destino"] . "</td>";
+                                echo "<td>" . $resultado["tempo"] . "</td>";
+                                echo "<td>" . $resultado["trem_associado"] . "</td>";
+                                echo "<td>" . $resultado["usuario_associado"] . "</td>";
+                                echo "<td> <a href='excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                echo "<td> <a href='formulario_editar_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
                                 echo "</tr>";
                             }
 

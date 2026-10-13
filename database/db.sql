@@ -72,3 +72,7 @@ insert into usuario(nome, usuario, senha, email, perfil) values
 ('Henrique', 'batata', '$2y$10$kAtK23ian.cXW2Ei9ucjf.e.xj2ucxlCqc.IbTyOpLjT6.RYy9UUm', 'henrique@gmail.com', 'admin'),
 ('Thais', 'café', '$2y$10$Ht39mfCNSlOrKZHDv5IpO.DTBo8PvmKk1IX3Mws6pRIf2yYbd5ZAe', 'thais@gmail.com', 'admin'),
 ('icaro', 'icaro botelho', '$2y$10$XklNHlwJHAldi.eWQgasU.cE4t7hMIaBcs0F8h7QPLpgTM/GJ4Rj6', 'icaro@gmail.com', 'funcionario');
+
+insert into trem(nome, modelo, capacidade, status) values
+('Renato', 'Escala HO', '55', 'ativo'),
+('icaro', 'Escala N', '34', 'inativo');
