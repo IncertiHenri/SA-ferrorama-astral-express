@@ -133,6 +133,11 @@ $id = $_GET["id"];
                                     </div>
 
                                     <div class="flex_column">
+                                        <label for="tempo" class="texto_cadastros">Tempo</label>
+                                        <input type="time" name="tempo" class="campo_cadastros">
+                                    </div>
+
+                                    <div class="flex_column">
                                         <label for="usuario_associado" class="texto_cadastros">Usuário Associado</label>
                                         <input type="text" name="usuario_associado" class="campo_cadastros">
                                     </div>
