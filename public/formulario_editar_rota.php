@@ -9,7 +9,25 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
-$id = $_GET["id"];
+if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
+    header("Location: ../index.php");
+    exit();
+    
+}
+
+$sql_trem = "SELECT * FROM trem";
+$resultado_trem = mysqli_query($conn, $sql_trem);
+
+if ($resultado_trem === false) {
+    die('Erro na procura de trens: ' . mysqli_error($conn));
+}
+
+$sql_usuario = "SELECT * FROM usuario";
+$resultado_usuario = mysqli_query($conn, $sql_usuario);
+
+if ($resultado_usuario === false) {
+    die('Erro na procura de usuários: ' . mysqli_error($conn));
+}
 
 ?>
 <html lang="en">
@@ -138,18 +156,31 @@ $id = $_GET["id"];
                                     </div>
 
                                     <div class="flex_column">
-                                        <label for="usuario_associado" class="texto_cadastros">Usuário Associado</label>
-                                        <input type="text" name="usuario_associado" class="campo_cadastros">
+                                        <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
+                                        <select name="trem_associado" id="">
+                                        <option value="">Selecione um Trem</option>
+                                        <?php
+                                        while ($trem = mysqli_fetch_assoc($resultado_trem)) {
+                                            echo "<option value='{$trem['id_trem']}'>{$trem['nome']}</option>";
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
 
                                     <div class="flex_column">
-                                        <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
-                                        <input type="text" name="trem_associado" class="campo_cadastros">
+                                        <label for="usuario_associado" class="texto_cadastros">Usuário Associado</label>
+                                        <select name="usuario_associado" id="">
+                                            <option value="">Selecione um Usuário</option>
+                                            <?php
+                                            while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
+                                            echo "<option value='{$usuario['id_usuario']}'>{$usuario['nome']}</option>";
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
 
                                 </div>
                                 <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
-
                             </div>
                         </form>
 

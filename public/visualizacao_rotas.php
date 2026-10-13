@@ -10,7 +10,13 @@ if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo']) || ($_SESSION['tip
     exit();
 }
 
-$sql = "SELECT * FROM rota";
+$sql = "SELECT rota.*, usuario.nome AS usuario_associado,
+        trem.nome AS trem_associado
+        FROM rota
+        LEFT JOIN usuario ON rota.id_usuario = usuario.id_usuario
+        LEFT JOIN trem_rota ON rota.id_rota = trem_rota.id_rota
+        LEFT JOIN trem ON trem_rota.id_trem = trem.id_trem";
+
 $rota = $conn->query($sql);
 
 

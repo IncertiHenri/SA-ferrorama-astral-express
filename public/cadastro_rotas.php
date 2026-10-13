@@ -38,7 +38,7 @@ if ($resultado_usuario === false) {
 
     <link rel="stylesheet" href="../assets/style/style.css">
 
-    <title>Cadastro de sensores</title>
+    <title>Cadastro de rotas</title>
 </head>
 
 <body id="cadastro_sensores">
@@ -143,7 +143,7 @@ if ($resultado_usuario === false) {
                                 </div>
                                 <div class="flex_column">
                                     <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
-                                    <select name="trem" id="">
+                                    <select name="trem_associado" id="">
                                   <option value="">Selecione um Trem</option>
                                   <?php
                                   while ($trem = mysqli_fetch_assoc($resultado_trem)) {
@@ -154,7 +154,7 @@ if ($resultado_usuario === false) {
                                 </div>
                                 <div class="flex_column">
                                     <label for="usuario_associado" class="texto_cadastros">Usuário Associado</label>
-                                    <select name="trem" id="">
+                                    <select name="usuario_associado" id="">
                                   <option value="">Selecione um Usuário</option>
                                   <?php
                                   while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
