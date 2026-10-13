@@ -15,6 +15,8 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
     
 }
 
+$id = $_GET["id"];
+
 $sql_trem = "SELECT * FROM trem";
 $resultado_trem = mysqli_query($conn, $sql_trem);
 
