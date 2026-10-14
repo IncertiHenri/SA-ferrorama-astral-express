@@ -9,10 +9,24 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
+if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
     header("Location: ../index.php");
     exit();
     
+}
+
+$sql_trem = "SELECT * FROM trem";
+$resultado_trem = mysqli_query($conn, $sql_trem);
+
+if ($resultado_trem === false) {
+    die('Erro na procura de trens: ' . mysqli_error($conn));
+}
+
+$sql_usuario = "SELECT * FROM usuario";
+$resultado_usuario = mysqli_query($conn, $sql_usuario);
+
+if ($resultado_usuario === false) {
+    die('Erro na procura de usuários: ' . mysqli_error($conn));
 }
 
 ?>
@@ -24,7 +38,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
 
     <link rel="stylesheet" href="../assets/style/style.css">
 
-    <title>Cadastro de sensores</title>
+    <title>Cadastro de rotas</title>
 </head>
 
 <body id="cadastro_sensores">
@@ -110,24 +124,48 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
             <div class="campo_borda_verde" id="campo_formulario_rotas">
 
                 <div>
-                    <form action="#" id="formulario_cadastro_sensores">
+                    <form action="cadastro_nova_rota.php" method="POST" id="formulario_cadastro_sensores">
 
                         <div class="flex_column">
                             <div class="flex" id="campos_cadastro_sensores">
                                 <div class="flex_column">
                                     <label for="origem" class="texto_cadastros">Origem</label>
-                                    <input type="text" name="nome" class="campo_cadastros">
+                                    <input type="text" name="origem" class="campo_cadastros">
                                 </div>
 
                                 <div class="flex_column">
                                     <label for="destino" class="texto_cadastros">Destino</label>
-                                    <input type="text" name="loc" class="campo_cadastros">
+                                    <input type="text" name="destino" class="campo_cadastros">
+                                </div>
+                                <div class="flex_column">
+                                    <label for="tempo" class="texto_cadastros">Tempo</label>
+                                    <input type="time" name="tempo" class="campo_cadastro">
+                                </div>
+                                <div class="flex_column">
+                                    <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
+                                    <select name="trem_associado" id="">
+                                  <option value="">Selecione um Trem</option>
+                                  <?php
+                                  while ($trem = mysqli_fetch_assoc($resultado_trem)) {
+                                    echo "<option value='{$trem['id_trem']}'>{$trem['nome']}</option>";
+                                    }
+                                    ?>
+                                    </select>
+                                </div>
+                                <div class="flex_column">
+                                    <label for="usuario_associado" class="texto_cadastros">Usuário Associado</label>
+                                    <select name="usuario_associado" id="">
+                                  <option value="">Selecione um Usuário</option>
+                                  <?php
+                                  while ($usuario = mysqli_fetch_assoc($resultado_usuario)) {
+                                    echo "<option value='{$usuario['id_usuario']}'>{$usuario['nome']}</option>";
+                                    }
+                                    ?>
+                                    </select>
                                 </div>
 
                             </div>
-                            <button type="submit" id="botao_formulario_cadastro_sensor"
-                                class="botao_formulario_cadastro_sensor">Cadastrar</button>
-
+                            <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
                         </div>
                     </form>
 

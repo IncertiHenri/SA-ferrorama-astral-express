@@ -4,18 +4,24 @@ include("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
+    
     header("Location: ../index.php");
     exit();
 }
 
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
-    header("Location: ../index.php");
-    exit();
-    
-}
+$sql = "SELECT rota.*, usuario.nome AS usuario_associado,
+        trem.nome AS trem_associado
+        FROM rota
+        LEFT JOIN usuario ON rota.id_usuario = usuario.id_usuario
+        LEFT JOIN trem_rota ON rota.id_rota = trem_rota.id_rota
+        LEFT JOIN trem ON trem_rota.id_trem = trem.id_trem";
+
+$rota = $conn->query($sql);
+
 
 ?>
+
 <html lang="en">
 
 <head>
@@ -111,8 +117,27 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                                 <td>ID da rota</td>
                                 <td>Origem</td>
                                 <td>Destino</td>
+                                <td>Tempo</td>
+                                <td>Trem Associado</td>
+                                <td>Usuário Associado</td>
+                                <td>Ação</td>
                             </tr>
+                            <?php
 
+                            while ($resultado = mysqli_fetch_assoc($rota)) {
+                                echo "<tr>";
+                                echo "<td>" . $resultado["id_rota"] . "</td>";
+                                echo "<td>" . $resultado["origem"] . "</td>";
+                                echo "<td>" . $resultado["destino"] . "</td>";
+                                echo "<td>" . $resultado["tempo"] . "</td>";
+                                echo "<td>" . $resultado["trem_associado"] . "</td>";
+                                echo "<td>" . $resultado["usuario_associado"] . "</td>";
+                                echo "<td> <a href='excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                echo "<td> <a href='formulario_editar_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                echo "</tr>";
+                            }
+
+                            ?>
 
                         </table>
 
@@ -120,12 +145,8 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                 </div>
 
                 <div class="borda_verde_flex">
-                    <a href="cadastro_rotas.php"><button id="botao_sensor_novo" onclick="cadastroUsuarios()">
-                            Cadastrar Nova Rota
-                        </button></a>
+                    <button type="button" onclick="window.location.href='cadastro_rotas.php'" class="botao_formulario_cadastro_sensor">Cadastrar Nova Rota</button>
                 </div>
-
-            </div>
         </div>
 
     </main>
