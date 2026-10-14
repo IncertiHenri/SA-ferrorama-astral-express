@@ -135,7 +135,7 @@ $id = $_GET["id"];
                                     </div>
 
                                 </div>
-                                <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
+                                <button type="submit" class="botao_formulario_cadastro_sensor">Atualizar</button>
 
                             </div>
                         </form>

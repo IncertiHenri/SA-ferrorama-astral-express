@@ -94,7 +94,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
         <div class="cadastros">
 
             <div class="borda_verde_flex">
-                <h2 id="titulo_tabela">Visualização de Trens</h2>
+                <h2 id="titulo_tabela">Trens Cadastrados</h2>
             </div>
 
             <div class="tabela">
