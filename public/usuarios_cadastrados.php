@@ -28,7 +28,7 @@ $resultado = mysqli_query($conn, $sql);
 
 <body id="usuarios_cadastrados">
 
-    <header>
+    <header>0
         <div id="navbar">
             <p>Olá, Admin</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">

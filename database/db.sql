@@ -79,96 +79,89 @@ insert into usuario(nome, usuario, senha, email, perfil) values
 USE sistema_ferroviario_astral_express;
 
 INSERT INTO usuario (nome, usuario, senha, email, perfil) VALUES
-('Henrique Incerti', 'henrique', 'senha123', 'henrique@astral.com', 'admin'),
-('Serenna Costa', 'serenna', 'senha234', 'serenna@astral.com', 'admin'),
-('Thais Oliveira', 'thais', 'senha345', 'thais@astral.com', 'admin'),
-('Lucas Almeida', 'lucas', 'senha456', 'lucas@astral.com', 'admin'),
-('Marina Souza', 'marina', 'senha567', 'marina@astral.com', 'funcionario'),
-('Gabriel Santos', 'gabriel', 'senha678', 'gabriel@astral.com', 'admin'),
-('Ana Martins', 'ana', 'senha789', 'ana@astral.com', 'funcionario'),
-('Pedro Lima', 'pedro', 'senha890', 'pedro@astral.com', 'funcionario'),
-('Julia Ferreira', 'julia', 'senha901', 'julia@astral.com', 'funcionario'),
-('Rafael Mendes', 'rafael', 'senha012', 'rafael@astral.com', 'funcionario'),
-('Beatriz Rodrigues', 'beatriz', 'senha1234', 'beatriz@astral.com', 'funcionario'),
-('Matheus Carvalho', 'matheus', 'senha2345', 'matheus@astral.com', 'funcionario'),
-('Isabela Rocha', 'isabela', 'senha3456', 'isabela@astral.com', 'admin'),
-('Felipe Gomes', 'felipe', 'senha4567', 'felipe@astral.com', 'funcionario'),
-('Camila Ribeiro', 'camila', 'senha5678', 'camila@astral.com', 'funcionario'),
-('Vinicius Barbosa', 'vinicius', 'senha6789', 'vinicius@astral.com', 'funcionario'),
-('Laura Nascimento', 'laura', 'senha7890', 'laura@astral.com', 'funcionario'),
-('Eduardo Cardoso', 'eduardo', 'senha8901', 'eduardo@astral.com', 'admin'),
-('Manuela Teixeira', 'manuela', 'senha9012', 'manuela@astral.com', 'funcionario'),
-('Bruno Moreira', 'bruno', 'senha0123', 'bruno@astral.com', 'funcionario');
+('Atsumu', 'atsumu', 'atsumu123', 'atsumu@gmail.com', 'admin'),
+('Hinata', 'hinata', 'hinata123', 'hinata@gmail.com', 'funcionario'),
+('Kageyama', 'kageyama', 'kageyama123', 'kageyama@gmail.com', 'funcionario'),
+('Oikawa', 'oikawa', 'oikawa123', 'oikawa@gmail.com', 'funcionario'),
+('Bokuto', 'bokuto', 'bokuto123', 'bokuto@gmail.com', 'funcionario'),
+('Kuroo', 'kuroo', 'kuroo123', 'kuroo@gmail.com', 'funcionario'),
+('Kenma', 'kenma', 'kenma123', 'kenma@gmail.com', 'funcionario'),
+('Osamu', 'osamu', 'osamu123', 'osamu@gmail.com', 'funcionario'),
+('Hoshu', 'hoshu', 'hoshu123', 'hoshu@gmail.com', 'funcionario'),
+('Sakusa', 'sakusa', 'sakusa123', 'sakusa@gmail.com', 'funcionario'),
+('Akaashi', 'akaashi', 'akaashi123', 'akaashi@gmail.com', 'funcionario'),
+('Kita', 'kita', 'kita123', 'kita@gmail.com', 'funcionario'),
+('Suna', 'suna', 'suna123', 'suna@gmail.com', 'funcionario'),
+('Aran', 'aran', 'aran123', 'aran@gmail.com', 'funcionario'),
+('Iwaizumi', 'iwaizumi', 'iwaizumi123', 'iwaizumi@gmail.com', 'funcionario'),
+('Ushijima', 'ushijima', 'ushijima123', 'ushijima@gmail.com', 'funcionario'),
+('Tendou', 'tendou', 'tendou123', 'tendou@gmail.com', 'funcionario'),
+('Yamaguchi', 'yamaguchi', 'yamaguchi123', 'yamaguchi@gmail.com', 'funcionario'),
+('Tsukishima', 'tsukishima', 'tsukishima123', 'tsukishima@gmail.com', 'funcionario'),
+('Nishinoya', 'nishinoya', 'nishinoya123', 'nishinoya@gmail.com', 'funcionario'),
+('Tanaka', 'tanaka', 'tanaka123', 'tanaka@gmail.com', 'funcionario'),
+('Sugawara', 'sugawara', 'sugawara123', 'sugawara@gmail.com', 'funcionario'),
+('Daichi', 'daichi', 'daichi123', 'daichi@gmail.com', 'funcionario'),
+('Asahi', 'asahi', 'asahi123', 'asahi@gmail.com', 'funcionario'),
+('Yachi', 'yachi', 'yachi123', 'yachi@gmail.com', 'funcionario'),
+('Kiyoko', 'kiyoko', 'kiyoko123', 'kiyoko@gmail.com', 'funcionario'),
+('Lev', 'lev', 'lev123', 'lev@gmail.com', 'funcionario'),
+('Yaku', 'yaku', 'yaku123', 'yaku@gmail.com', 'funcionario'),
+('Fukunaga', 'fukunaga', 'fukunaga123', 'fukunaga@gmail.com', 'funcionario'),
+('Yamamoto', 'yamamoto', 'yamamoto123', 'yamamoto@gmail.com', 'funcionario'),
+('Terushima', 'terushima', 'terushima123', 'terushima@gmail.com', 'funcionario'),
+('Aone', 'aone', 'aone123', 'aone@gmail.com', 'funcionario'),
+('Futakuchi', 'futakuchi', 'futakuchi123', 'futakuchi@gmail.com', 'funcionario'),
+('Koganegawa', 'koganegawa', 'koganegawa123', 'koganegawa@gmail.com', 'funcionario'),
+('Hoshiumi', 'hoshiumi', 'hoshiumi123', 'hoshiumi@gmail.com', 'funcionario'),
+('Hirugami', 'hirugami', 'hirugami123', 'hirugami@gmail.com', 'funcionario'),
+('Goshiki', 'goshiki', 'goshiki123', 'goshiki@gmail.com', 'funcionario'),
+('Semi', 'semi', 'semi123', 'semi@gmail.com', 'funcionario'),
+('Kuroishi', 'kuroishi', 'kuroishi123', 'kuroishi@gmail.com', 'funcionario'),
+('Komori', 'komori', 'komori123', 'komori@gmail.com', 'funcionario');
+
 
 INSERT INTO trem (nome, modelo, capacidade, status, id_usuario) VALUES
-('Expresso Aurora', 'AX-100', 300, 'ativo', 1),
-('Estrela Cadente', 'AX-200', 250, 'ativo', 2),
-('Cometa Dourado', 'AX-300', 400, 'ativo', 3),
-('Nebulosa', 'AX-400', 350, 'Inativo', 4),
-('Via Lactea', 'AX-500', 280, 'Inativo', 5),
-('Solaris', 'AX-600', 320, 'Inativo', 6),
-('Luz Celeste', 'AX-700', 200, 'Inativo', 7),
-('Horizonte', 'AX-800', 450, 'ativo', 8),
-('Orion', 'AX-900', 380, 'ativo', 9),
-('Cosmos', 'AX-1000', 310, 'ativo', 10);
+('Nebula Express', 'NE-150', 220, 'ativo', 2),
+('Aurora Boreal', 'AB-280', 500, 'Inativo', 4),
+('Galaxia Azul', 'GA-320', 150, 'ativo', 6),
+('Eclipse Lunar', 'EL-450', 380, 'ativo', 9),
+('Meteoro Veloz', 'MV-520', 290, 'Inativo', 12);
 
 INSERT INTO rota (origem, destino, id_usuario) VALUES
-('Joinville', 'Curitiba', 1),
-('Curitiba', 'Sao Paulo', 2),
-('Sao Paulo', 'Rio de Janeiro', 3),
-('Joinville', 'Florianopolis', 4),
-('Florianopolis', 'Porto Alegre', 5),
-('Brasilia', 'Goiania', 6),
-('Belo Horizonte', 'Sao Paulo', 7),
-('Curitiba', 'Porto Alegre', 8),
-('Rio de Janeiro', 'Belo Horizonte', 9),
-('Santos', 'Sao Paulo', 10);
+('Manaus', 'Belem', 2),
+('Recife', 'Salvador', 4),
+('Londrina', 'Maringa', 6),
+('Campinas', 'Santos', 9),
+('Goiania', 'Brasilia', 12);
 
 INSERT INTO trem_rota (id_trem, id_rota) VALUES
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10);
+(1, 3),
+(2, 5),
+(3, 1),
+(4, 2),
+(5, 4);
 
 INSERT INTO log_acesso (data_hora, acao, id_usuario) VALUES
-('2026-10-14 07:00:00', 'Login no sistema', 1),
-('2026-10-14 07:05:00', 'Cadastro de trem', 2),
-('2026-10-14 07:10:00', 'Consulta de rotas', 3),
-('2026-10-14 07:15:00', 'Atualizacao de trem', 4),
-('2026-10-14 07:20:00', 'Cadastro de rota', 5),
-('2026-10-14 07:25:00', 'Login no sistema', 6),
-('2026-10-14 07:30:00', 'Consulta de sensores', 7),
-('2026-10-14 07:35:00', 'Edicao de rota', 8),
-('2026-10-14 07:40:00', 'Consulta de registros', 9),
-('2026-10-14 07:45:00', 'Logout do sistema', 10);
+('2026-10-14 09:10:00', 'Cadastro de sensor', 2),
+('2026-10-14 09:25:00', 'Exclusao de trem', 4),
+('2026-10-14 09:40:00', 'Consulta de usuarios', 6),
+('2026-10-14 09:55:00', 'Atualizacao de rota', 9),
+('2026-10-14 10:10:00', 'Login no sistema', 12);
+
 
 INSERT INTO sensor
 (tipo_dado, nome, localizacao, id_trem, id_rota, id_usuario) VALUES
-('Temperatura', 'Sensor 01', 'trem', 1, 1, 1),
-('Velocidade', 'Sensor 02', 'ferrovia', 2, 2, 2),
-('falha', 'Sensor 03', 'trem', 3, 3, 3),
-('falha', 'Sensor 04', 'ferrovia', 4, 4, 4),
-('Temperatura', 'Sensor 05', 'ferrovia', 5, 5, 5),
-('Velocidade', 'Sensor 06', 'trem', 6, 6, 6),
-('falha', 'Sensor 07', 'trem', 7, 7, 7),
-('falha', 'Sensor 08', 'trem', 8, 8, 8),
-('falha', 'Sensor 09', 'ferrovia', 9, 9, 9),
-('Temperatura', 'Sensor 10', 'trem', 10, 10, 10);
+('Pressao', 'Sensor Pressao P01', 'trem', 1, 3, 2),
+('Vibracao', 'Sensor Vibracao V02', 'ferrovia', 2, 5, 4),
+('Umidade', 'Sensor Umidade U03', 'trem', 3, 1, 6),
+('Velocidade', 'Sensor Velocidade VE04', 'ferrovia', 4, 2, 9),
+('Temperatura', 'Sensor Termico T05', 'trem', 5, 4, 12);
+
 
 INSERT INTO registro_sensor (id_sensor) VALUES
 (1),
 (2),
 (3),
 (4),
-(5),
-(6),
-(7),
-(8),
-(9),
-(10);
+(5);

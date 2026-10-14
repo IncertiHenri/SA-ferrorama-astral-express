@@ -60,19 +60,7 @@ if (!isset($_SESSION['usuario'])) {
                 Visualização de Sensores
             </button>
 
-            <button class="botao_menu_atual" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                Visualização de trens
-            </button>
-
-            <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
-                Visualização de rotas
-            </button>
-
-            <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                Visualização de Relatórios
-            </button>
-
-                <?php
+            <?php
 
                 if ($_SESSION['tipo'] === 'admin') {
 
@@ -84,6 +72,15 @@ if (!isset($_SESSION['usuario'])) {
                 }
 
                 ?>
+
+            <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                Visualização de rotas
+            </button>
+
+            <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
+                Visualização de Relatórios
+            </button>
+
 
             </div>
         </div>

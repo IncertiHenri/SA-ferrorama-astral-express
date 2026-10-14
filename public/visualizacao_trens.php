@@ -73,19 +73,6 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                 Visualização de Relatórios
             </button>
 
-            <?php
-
-            if ($_SESSION['tipo'] === 'admin') {
-
-                $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                Usuários cadastrados
-                </button>";
-
-                echo $cod;
-            }
-
-            ?>
-
         </div>
     </div>
 
@@ -142,7 +129,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                     $cod = "
                     <div class='borda_verde_flex'>
 
-                    <a href='cadastro_trens.php'><button id='botao_sensor_novo' onclick='cadastroUsuarios()'>
+                    <a href='cadastro_trens.php'><button id='botao_sensor_novo' onclick='cadastroTrens()'>
                         Cadastrar Novo Trem
                     </button></a>
                     

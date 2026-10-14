@@ -58,10 +58,10 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
             <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
                 Visualização de Sensores
             </button>
-
-            <button class="botao_menu_atual" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                Visualização de trens
-            </button>
+s
+            <button class='botao_menu_atual' id='botao_menu_cadastro_trens' onclick='visualizacaoTrens()'>
+                Visualização de Trens
+                </button>
 
             <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
                 Visualização de rotas
@@ -71,18 +71,9 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
                 Visualização de Relatórios
             </button>
 
-            <?php
-
-            if ($_SESSION['tipo'] === 'admin') {
-
-                $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+            <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                 Usuários cadastrados
-                </button>";
-
-                echo $cod;
-            }
-
-            ?>
+                </button>
 
         </div>
     </div>
@@ -109,7 +100,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
                                 <input type="text" name="nome" class="campo_cadastros">
                             </div>
 
-                            <div class="flex_column">
+                            <div class="flsex_column">
                                 <label for="modelo" class="texto_cadastros">Modelo</label>
                                 <input type="text" name="modelo" class="campo_cadastros">
                             </div>
@@ -128,7 +119,16 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" id="botao_formulario_cadastro_trens">Cadastrar</button>
+                        <?php
+
+            if ($_SESSION['tipo'] === 'admin') {
+
+                $cod = "<button type='submit' id='botao_formulario_cadastro_trens'>Cadastrar</button>";
+
+                echo $cod;
+            }
+
+            ?>
 
                     </div>
                 </form>
