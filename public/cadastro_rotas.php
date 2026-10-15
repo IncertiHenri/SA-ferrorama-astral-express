@@ -115,15 +115,19 @@ if ($resultado_usuario === false) {
         Voltar
     </button>
 
-    <main id="main_cadastro_sensores">
+<main id="main_cadastro_sensores">
 
-        <div class="campo_verde_medio_sensores">
-            <div class="campo_borda_verde">
-                <h1 class="titulo_cadastro_sensor">Cadastro de Novas Rotas</h1>
-            </div>
-            <div class="campo_borda_verde" id="campo_formulario_rotas">
+    <div class="fundo_cadastros">
 
-                <div>
+        <div class="cadastros">
+
+                <div class="borda_verde_flex">
+                    <h1 class="texto_cadastro">Cadastrar Rota</h1>
+                </div>
+
+            <div class="tabela">
+
+                <div class="borda_verde">
                     <form action="cadastro_nova_rota.php" method="POST" id="formulario_cadastro_sensores">
 
                         <div class="flex_column">
@@ -168,11 +172,11 @@ if ($resultado_usuario === false) {
                             <button type="submit" class="botao_formulario_cadastro_sensor">Cadastrar</button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
     <script src="../scripts/script.js"></script>
 
