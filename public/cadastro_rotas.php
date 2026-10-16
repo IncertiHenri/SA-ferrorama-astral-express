@@ -124,6 +124,11 @@ if ($resultado_usuario === false) {
                         <div class="flex_column">
                             <div class="flex" id="campos_cadastro_sensores">
                                 <div class="flex_column">
+                                    <label for="hora" class="texto_cadastros">Data de Criação</label>
+                                    <input type="date" name="hora" class="campo_cadastros">
+                                </div>
+
+                                <div class="flex_column">
                                     <label for="origem" class="texto_cadastros">Origem</label>
                                     <input type="text" name="origem" class="campo_cadastros">
                                 </div>

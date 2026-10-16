@@ -100,7 +100,7 @@ s
                                 <input type="text" name="nome" class="campo_cadastros">
                             </div>
 
-                            <div class="flsex_column">
+                            <div class="flex_column">
                                 <label for="modelo" class="texto_cadastros">Modelo</label>
                                 <input type="text" name="modelo" class="campo_cadastros">
                             </div>
@@ -118,6 +118,24 @@ s
                                     <option value="inativo">Inativo</option>
                                 </select>
                             </div>
+
+                            <div class="flex_column">
+                                <label for="funcionario" class="texto_cadastros">Funcionário</label>
+                                <select name="funcionario" class="campo_cadastros">
+                                    <option value="">Selecione</option>
+                                    <?php 
+                                    
+                                    $sql = "SELECT id_usuario, usuario FROM usuario";
+
+                                    $busca = $conn->query($sql);
+
+                                    while($usuario = mysqli_fetch_assoc($busca)){
+                                        echo "<option value='" . $usuario["id_usuario"] . "'>" . $usuario["usuario"] . "</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+
                         </div>
                         <?php
 

@@ -95,16 +95,17 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                     <table>
 
                         <tr>
-                            <td>ID do Trem</td>
+                            <td>Trem</td>
                             <td>Nome</td>
                             <td>Modelo</td>
                             <td>Capacidade</td>
                             <td>Status</td>
+                            <td>Funcionário</td>
                         </tr>
 
                         <?php
 
-                         $sql = "SELECT * FROM trem";
+                         $sql = "SELECT * FROM trem JOIN usuario ON trem.id_usuario = usuario.id_usuario";
 
                         $trens = $conn->query($sql);
 
