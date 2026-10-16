@@ -13,6 +13,7 @@ $nome = $_POST["nome"];
 $modelo = $_POST["modelo"];
 $capacidade = $_POST["capacidade"];
 $status = $_POST["status"];
+$usuario = $_POST["id_usuario"];
 
 
 if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
@@ -44,11 +45,11 @@ if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
     exit;
 }
 
-$sql = "INSERT INTO trem (nome, modelo, capacidade, status) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO trem (nome, modelo, capacidade, status, id_usuario) VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("ssss", $nome, $modelo, $capacidade, $status);
+$stmt->bind_param("ssssi", $nome, $modelo, $capacidade, $status, $usuario);
 
 $stmt->execute();
 

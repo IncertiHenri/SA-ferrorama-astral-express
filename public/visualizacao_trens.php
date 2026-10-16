@@ -96,11 +96,12 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                             <td>Modelo</td>
                             <td>Capacidade</td>
                             <td>Status</td>
+                            <td>Funcionário</td>
                         </tr>
 
                         <?php
 
-                         $sql = "SELECT * FROM trem";
+                         $sql = "SELECT * FROM trem JOIN usuario ON trem.id_usuario = usuario.id_usuario";
 
                         $trens = $conn->query($sql);
 
@@ -111,6 +112,8 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                             echo "<td>" . $resultado["modelo"] . "</td>";
                             echo "<td>" . $resultado["capacidade"] . "</td>";
                             echo "<td>" . $resultado["status"] . "</td>";
+                            echo "<td>" . $resultado["id_usuario"] . "</td>";
+                            echo "<td>" . $resultado["usuario"] . "</td>";
                             echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
                             echo "<td> <a href='formulario_editar_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
                             echo "</tr>";
