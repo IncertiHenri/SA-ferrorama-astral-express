@@ -115,6 +115,7 @@ $rota = $conn->query($sql);
 
                             <tr>
                                 <td>ID da rota</td>
+                                <td>Hora da criação</td>
                                 <td>Origem</td>
                                 <td>Destino</td>
                                 <td>Tempo</td>
@@ -127,6 +128,7 @@ $rota = $conn->query($sql);
                             while ($resultado = mysqli_fetch_assoc($rota)) {
                                 echo "<tr>";
                                 echo "<td>" . $resultado["id_rota"] . "</td>";
+                                echo "<td>" . $resultado["hora"] . "</td>";
                                 echo "<td>" . $resultado["origem"] . "</td>";
                                 echo "<td>" . $resultado["destino"] . "</td>";
                                 echo "<td>" . $resultado["tempo"] . "</td>";

@@ -9,17 +9,18 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     exit();
 }
 
+$hora = $_POST['hora'];
 $origem = $_POST['origem'];
 $destino = $_POST['destino'];
 $tempo = $_POST['tempo'];
 $id_usuario = $_POST['usuario_associado'];
 $id_trem = $_POST['trem_associado'];
 
-$sql = "INSERT INTO rota (origem, destino, tempo, id_usuario)
-        VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO rota (hora, origem, destino, tempo, id_usuario)
+        VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sssi", $origem, $destino, $tempo, $id_usuario);
+$stmt->bind_param("dsssi", $hora, $origem, $destino, $tempo, $id_usuario);
 
 if ($stmt->execute()) {
 
