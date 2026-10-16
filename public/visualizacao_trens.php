@@ -73,6 +73,10 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                 Visualização de Relatórios
             </button>
 
+            <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                Usuários cadastrados
+                </button>
+
         </div>
     </div>
 
@@ -111,34 +115,29 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                             echo "<td>" . $resultado["modelo"] . "</td>";
                             echo "<td>" . $resultado["capacidade"] . "</td>";
                             echo "<td>" . $resultado["status"] . "</td>";
-                            echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
-                            echo "<td> <a href='formulario_editar_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
-                            echo "</tr>";
-                        }
+                            
+                                if ($_SESSION['tipo'] === 'admin') {
+                                    echo "<td> <a href='certeza_excluir_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                    echo "<td> <a href='formulario_editar_trem.php?id=" . $resultado["id_trem"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                }
 
-                        ?>
+                                echo "</tr>";
+                            }
+                            ?>
 
                     </table>
 
                 </div>
             </div>
-                <?php
-
-                if ($_SESSION['tipo'] === 'admin') {
-
-                    $cod = "
-                    <div class='borda_verde_flex'>
-
-                    <a href='cadastro_trens.php'><button id='botao_sensor_novo' onclick='cadastroTrens()'>
-                        Cadastrar Novo Trem
-                    </button></a>
-                    
-                    </div>";
-
-                    echo $cod;
-                }
-
-                ?>
+                
+            <?php if ($_SESSION['tipo'] === 'admin') { ?>
+                <div class="borda_verde_flex">
+                    <a href="cadastro_trens.php">
+                        <button id="botao_sensor_novo" onclick="cadastroTrens()">Cadastrar Novo Trem</button>
+                    </a>
+                </div>
+            <?php } ?>
+            
         </div>
     </div>
 

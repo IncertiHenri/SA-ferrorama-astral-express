@@ -4,12 +4,6 @@ include("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
-    header("Location: ../index.php");
-    exit();
-
-}
-
 $sql = "SELECT id_usuario, nome, usuario, email, perfil FROM usuario";
 $resultado = mysqli_query($conn, $sql);
 
@@ -28,7 +22,7 @@ $resultado = mysqli_query($conn, $sql);
 
 <body id="usuarios_cadastrados">
 
-    <header>0
+    <header>
         <div id="navbar">
             <p>Olá, Admin</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
@@ -79,18 +73,9 @@ $resultado = mysqli_query($conn, $sql);
                     Visualização de Relatórios
                 </button>
 
-                <?php
-
-                if ($_SESSION['tipo'] === 'admin') {
-
-                    $cod = "<button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                <button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                 Usuários cadastrados
-                </button>";
-
-                    echo $cod;
-                }
-
-                ?>
+                </button>
 
             </div>
         </div>
@@ -135,7 +120,13 @@ $resultado = mysqli_query($conn, $sql);
 
                 </div>
 
-                <br> <br> <button id="botao_sensor_novo" onclick="cadastroUsuarios()"> Cadastrar Usuário</button>
+                <br> <br> 
+                
+                <?php if ($_SESSION['tipo'] === 'admin') { ?>
+                    <button id="botao_sensor_novo" onclick="cadastroUsuarios()">
+                        Cadastrar Usuário
+                    </button>
+                <?php } ?>
 
 
             </div>

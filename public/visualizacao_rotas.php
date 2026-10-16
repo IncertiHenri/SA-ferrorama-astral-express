@@ -82,19 +82,10 @@ $rota = $conn->query($sql);
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
                     Visualização de Relatórios
                 </button>
-
-                <?php
-
-                if ($_SESSION['tipo'] === 'admin') {
-
-                    $cod = "<button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                 Usuários cadastrados
-                </button>";
-
-                    echo $cod;
-                }
-
-                ?>
+                </button>
 
             </div>
         </div>

@@ -81,6 +81,10 @@ if (!isset($_SESSION['usuario'])) {
                 Visualização de Relatórios
             </button>
 
+            <button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                Usuários cadastrados
+                </button>
+
 
             </div>
         </div>
