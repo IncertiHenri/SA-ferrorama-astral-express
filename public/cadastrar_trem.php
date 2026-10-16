@@ -13,7 +13,7 @@ $nome = $_POST["nome"];
 $modelo = $_POST["modelo"];
 $capacidade = $_POST["capacidade"];
 $status = $_POST["status"];
-$usuario = $_POST["id_usuario"];
+$usuario = $_POST["funcionario"];
 
 
 if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
