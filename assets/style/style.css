@@ -31,7 +31,7 @@
     background-color: var(--verde-musgo);
     color: var(--branco);
     padding: 30px;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-top: 30px;
     align-items: center;
     justify-content: center;
@@ -89,8 +89,8 @@
 #botao_login {
     background-color: var(--amarelo-bebe);
     border: 0;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 5px;
+    border-radius: 5px;
     font-size: 20px;
 }
 
@@ -98,7 +98,7 @@
     background-color: var(--fundo);
     border: 0;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 20px;
     color: var(--branco);
     font-size: 20px;
@@ -108,7 +108,7 @@
     background-color: var(--fundo);
     border: 0;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 20px;
     color: var(--branco);
     font-size: 20px;
@@ -116,13 +116,19 @@
 
 label {
     font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.acesso_admin{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--marrom-escuro);
 }
 
 #imagem_estacao {
     margin-left: 30px;
     width: 1100px;
     height: 800px;
-    border-radius: 35px;
+    border-radius: 20px;
 }
 
 .titulo_menu {
@@ -244,12 +250,14 @@ main{
 }
 
 #usuarios_cadastrados {
-    background-color: var(--verde-musgo);
+    background-image: url("../../assets/img/fundo.png");
+    background-size: cover;
     margin: 0;
 }
 
 #body_monitoramento {
-    background-color: var(--verde-musgo);
+    background-image: url("../../assets/img/fundo.png");
+    background-size: cover;
     margin: 0;
 }
 
@@ -258,7 +266,8 @@ main{
 }
 
 #body_cadastro_relatorios {
-    background-color: var(--verde-musgo);
+    background-image: url("../../assets/img/fundo.png");
+    background-size: cover;
     margin: 0;
 }
 
@@ -483,7 +492,8 @@ main{
 /* SERENNA */
 
 #body_tela_inicial {
-    background-color: var(--verde-musgo);
+    background-image: url("../../assets/img/fundo.png");
+    background-size: cover;
     margin: 0;
 }
 
@@ -668,7 +678,8 @@ table {
 
 #visualizacao_trens {
     margin: 0;
-    background-color: var(--verde-musgo);
+    background-image: url("../../assets/img/fundo.png");
+    background-size: cover;
 }
 
 #linha_1 {
@@ -774,7 +785,8 @@ table {
 /* THAIS */
 
 #visualizacao_sensores {
-    background-color: var(--verde-musgo);
+    background-image: url("../../assets/img/fundo.png");
+    background-size: cover;
     color: var(--branco);
     border: 0;
     margin: 0;

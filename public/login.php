@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($senha, $usuario['senha'])) {
             $_SESSION['usuario'] = $usuario['email'];
             $_SESSION['tipo'] = $usuario['perfil'];
+            $_SESSION['user'] = ucfirst($usuario['usuario']);
 
             header('Location: tela_inicial.php');
             exit();
