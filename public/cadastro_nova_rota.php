@@ -20,7 +20,7 @@ $sql = "INSERT INTO rota (hora, origem, destino, tempo, id_usuario)
         VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("dsssi", $hora, $origem, $destino, $tempo, $id_usuario);
+$stmt->bind_param("ssssi", $hora, $origem, $destino, $tempo, $id_usuario);
 
 if ($stmt->execute()) {
 

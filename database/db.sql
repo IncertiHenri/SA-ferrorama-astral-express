@@ -26,7 +26,7 @@ CREATE TABLE rota (
     origem VARCHAR(45) NOT NULL,
     tempo TIME NOT NULL,
     destino VARCHAR(45) NOT NULL,
-    hora DATETIME NOT NULL,
+    hora DATE NOT NULL,
     id_usuario INT,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
