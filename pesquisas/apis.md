@@ -50,4 +50,12 @@ Temos abaixo desta linha os headers da resposta, a exemplo de Cache-Control e Co
 ## Como funciona a troca de dados no formato JSON?
  Um dos usos mais comuns do JSON é na utilização de APIs, tanto em requisições quanto em respostas. Ele é muito mais compacto do que outros padrões e permite fácil consumo em navegadores web, já que o JavaScript consegue analisar strings JSON com facilidade, bastando apenas JSON.parse()começar a utilizá-lo.
 
-## Diferenças entre uma API e um sistema web tradicional?
+## Quais são as diferenças entre uma API e um sistema web tradicional?
+Tanto APIs quanto web services podem operar em máquinas ou redes, mas possuem algumas diferenças estruturais entre elas. Com as APIs, o cliente/consumidor de dados não precisa saber qual procedimento chamar no servidor é necessária apenas a utilização de comandos, e o próprio sistema de recebimento já sabe o que fazer com eles.
+
+## Qual a importância da autenticação, autorização e segurança no consumo de APIs?
+Tanto a autenticação quanto a autorização são partes fundamentais da estratégia de IAM de uma organização, mas têm funções distintas.
+
+## Exemplos de utilização de APIs em sistemas empresariais.
+- Viagens: as APIs são usadas para conectar agências e plataformas de reservas online a bancos de dados de companhias aéreas, sistemas de reservas de hotéis e serviços de transporte. 
+- Integração com mídias sociais: as APIs possibilitam que os desenvolvedores integrem funcionalidades sociais em seus aplicativos não só o login, mas também o compartilhamento de conteúdo e a obtenção de dados do usuário.
