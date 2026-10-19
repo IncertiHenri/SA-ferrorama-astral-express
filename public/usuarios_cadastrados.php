@@ -80,19 +80,20 @@ $resultado = mysqli_query($conn, $sql);
             </div>
         </div>
 
-        <div id="tabelas_monitoramento">
+    <div class="fundo_cadastros">
 
-            <div class="fundo_tabela_monitoramento">
+        <div class="cadastros">
 
-                <div class="texto_cadastro">
-                    <h1>Usuários cadastrados</h1>
-                </div>
+            <div class="borda_verde_flex">
+                <h2 id="titulo_tabela">Usuários Cadastrados</h2>
+            </div>
 
-                <div class="tabela_monitoramento">
+            <div class="tabela">
+
+                <div class="borda_verde">
 
                     <table>
 
-                        <tr>
                             <th>Matrícula</th>
                             <th>Nome</th>
                             <th>Usuário</th>
@@ -116,18 +117,16 @@ $resultado = mysqli_query($conn, $sql);
                         }
 
                         ?>
-                    </table>
+                   </table>
 
                 </div>
-
-                <br> <br> 
+            </div>
                 
                 <?php if ($_SESSION['tipo'] === 'admin') { ?>
                     <button id="botao_sensor_novo" onclick="cadastroUsuarios()">
                         Cadastrar Usuário
                     </button>
                 <?php } ?>
-
 
             </div>
 

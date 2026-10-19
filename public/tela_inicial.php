@@ -12,7 +12,6 @@ if (!isset($_SESSION['usuario'])) {
 if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
     header("Location: ../index.php");
     exit();
-    
 }
 
 ?>
@@ -24,6 +23,8 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../assets/style/style.css">
+
+
 
     <title>Tela Inicial</title>
 </head>
@@ -42,23 +43,22 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
     <main id="main_tela_inicial">
 
         <div class="menu">
-
             <div class="conteiner_menu_logo">
-            <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
+                <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
-            <div class="inline_block">
-                <div class="inline_flex">
-                    <h1 class="titulo_menu">ASTRAL</h1>
-                    <h4 class="titulo2_menu">EXPRESS</h4>
+                <div class="inline_block">
+                    <div class="inline_flex">
+                        <h1 class="titulo_menu">ASTRAL</h1>
+                        <h4 class="titulo2_menu">EXPRESS</h4>
+                    </div>
+
+                    <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
                 </div>
-
-                <p class="subtitulo_menu">SISTEMA DE MONITORAMENTO FERROVIÁRIO</p>
             </div>
-        </div>
 
             <div id="botoes_menu">
                 <button class="botao_menu_atual" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                     Tela inicial
+                    Tela inicial
                 </button>
 
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
@@ -82,7 +82,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                 </button>
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                Usuários cadastrados
+                    Usuários cadastrados
                 </button>
 
             </div>
@@ -90,6 +90,8 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
 
 
         <div class="conteudo_principal">
+
+            <img src="../assets/img/banner_trem.jpg" alt="trem" class="banner_trem">
 
             <div class="area_boas_vindas">
 
@@ -103,51 +105,9 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
                     </p>
                 </div>
 
-                <img src="../assets/img/trem_boas_vindas.png" alt="trem" class="imagem_trem_boas_vindas">
-
             </div>
-
-
-            <div class="container_botoes">
-
-                <button class="botao_tela_inicial" onclick="visualizacaoSensores()">
-                    <img src="../assets/img/cadastro_sensores.png" alt="cadastro_de_sensores_e_trens"
-                        class="imagem_cadastro_sensores">
-                    <span>Cadastro de Sensores e Trens</span>
-                </button>
-
-                <button class="botao_tela_inicial" onclick="monitoramentoTempoReal()">
-                    <img src="../assets/img/monitoramento_tempo.png" alt="monitoramento_em_tempo_real"
-                        class="imagem_cadastro_sensores">
-                    <span>Monitoramento em Tempo Real</span>
-                </button>
-
-                <button class="botao_tela_inicial" onclick="cadastroRelatorios()">
-                    <img src="../assets/img/cadastro_relatorios.png" alt="cadastro_de_relatorios"
-                        class="imagem_cadastro_sensores">
-                    <span>Cadastro de Relatórios</span>
-                </button>
-
-                <?php
-
-                if ($_SESSION['tipo'] === 'admin') {
-
-                    $cod = "<button class='botao_tela_inicial' onclick='usuariosCadastrados()'>
-                    <img src='../assets/img/usuarios.png' alt='usuarios_cadastrados' class='imagem_cadastro_sensores'>
-                    <span>Usuários cadastrados</span>
-                </button>";
-
-                    echo $cod;
-                }
-
-                ?>
-
-            </div>
-
-        </div>
 
     </main>
-
 
     <script src="../scripts/script.js"></script>
 

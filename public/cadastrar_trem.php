@@ -12,7 +12,7 @@ if (!isset($_SESSION['usuario'])) {
 $nome = $_POST["nome"];
 $modelo = $_POST["modelo"];
 $capacidade = $_POST["capacidade"];
-$status = $_POST["status"];
+$status = ucfirst($_POST["status"]);
 $usuario = $_POST["funcionario"];
 
 
@@ -37,7 +37,7 @@ if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
     </script>";
     exit;
 
-} else if (!in_array($status, ['ativo', 'inativo'])) {
+} else if (!in_array($status, ['Ativo', 'Inativo'])) {
     echo "<script>
         alert('Status inválido! Escolha um status válido.');
         window.location.href = 'cadastro_trens.php';
