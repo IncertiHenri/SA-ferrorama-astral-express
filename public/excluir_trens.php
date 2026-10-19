@@ -11,6 +11,12 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
 $id = $_GET["id"];
 
+$sql = "DELETE FROM trem_rota WHERE id_trem = ?";
+
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+
 $sql = "DELETE FROM trem WHERE id_trem = ?";
 
 $stmt = mysqli_prepare($conn, $sql);
