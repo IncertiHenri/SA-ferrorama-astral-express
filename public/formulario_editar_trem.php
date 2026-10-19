@@ -60,22 +60,22 @@ $id = $_GET["id"];
                         <div class="flex" id="campos_cadastro_trens">
                             <div class="flex_column">
                                 <label for="nome" class="texto_cadastros">Nome</label>
-                                <input type="text" name="nome" class="campo_cadastros">
+                                <input type="text" name="nome" class="campo_cadastros" required>
                             </div>
 
                             <div class="flex_column">
                                 <label for="modelo" class="texto_cadastros">Modelo</label>
-                                <input type="text" name="modelo" class="campo_cadastros">
+                                <input type="text" name="modelo" class="campo_cadastros" required>
                             </div>
 
                             <div class="flex_column">
                                 <label for="capacidade" class="texto_cadastros">Capacidade</label>
-                                <input type="number" name="capacidade" class="campo_cadastros">
+                                <input type="number" name="capacidade" class="campo_cadastros" required>
                             </div>
 
                             <div class="flex_column">
                                 <label for="status" class="texto_cadastros">Status do trem</label>
-                                <select name="status" class="campo_cadastros">
+                                <select name="status" class="campo_cadastros" required>
                                     <option value="">Selecione</option>
                                     <option value="ativo">Ativo</option>
                                     <option value="inativo">Inativo</option>
