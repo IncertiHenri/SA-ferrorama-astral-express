@@ -129,27 +129,27 @@ if ($resultado_usuario === false) {
                                 <div class="flex" id="campos_editar_rota">
                                     <div class="flex_column">
                                         <label for="hora" class="texto_cadastros">Data de Criação</label>
-                                        <input type="date" name="hora" class="campo_cadastros">
+                                        <input type="date" name="hora" class="campo_cadastros" required>
                                     </div>
 
                                     <div class="flex_column">
                                         <label for="origem" class="texto_cadastros">Origem</label>
-                                        <input type="text" name="origem" class="campo_cadastros">
+                                        <input type="text" name="origem" class="campo_cadastros" required>
                                     </div>
 
                                     <div class="flex_column">
                                         <label for="destino" class="texto_cadastros">Destino</label>
-                                        <input type="text" name="destino" class="campo_cadastros">
+                                        <input type="text" name="destino" class="campo_cadastros" required>
                                     </div>
 
                                     <div class="flex_column">
                                         <label for="tempo" class="texto_cadastros">Tempo</label>
-                                        <input type="time" name="tempo" class="campo_cadastros">
+                                        <input type="time" name="tempo" class="campo_cadastros" required>
                                     </div>
 
                                     <div class="flex_column">
                                         <label for="trem_associado" class="texto_cadastros">Trem Associado</label>
-                                        <select name="trem_associado" class="campo_cadastros">
+                                        <select name="trem_associado" class="campo_cadastros" required>
                                         <option value="">Selecione um Trem</option>
                                         <?php
                                         while ($trem = mysqli_fetch_assoc($resultado_trem)) {
