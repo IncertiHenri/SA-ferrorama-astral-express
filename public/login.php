@@ -24,16 +24,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['usuario'] = $usuario['email'];
             $_SESSION['tipo'] = $usuario['perfil'];
             $_SESSION['user'] = ucfirst($usuario['usuario']);
-
+            
             header('Location: tela_inicial.php');
             exit();
 
         } else {
-            echo "Email ou senha incorretos.";
+            echo "<script>alert('E-mail ou senha incorretos, tente novamente!');
+        window.location.href = '../index.php';
+        </script>";
         }
+        exit();
     } else {
-        echo "Email ou senha incorretos.";
+       echo "<script>alert('E-mail ou senha incorretos, tente novamente!');
+        window.location.href = '../index.php';
+        </script>";
+        }
+        exit();
     }
-}
+
 
 ?>
