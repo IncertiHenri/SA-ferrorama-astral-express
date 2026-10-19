@@ -4,11 +4,10 @@ include("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     header("Location: ../index.php");
     exit();
-    
-} 
+}
 
 ?>
 <html lang="en">
@@ -58,7 +57,7 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin')) {
             <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
                 Visualização de Sensores
             </button>
-s
+            
             <button class='botao_menu_atual' id='botao_menu_cadastro_trens' onclick='visualizacaoTrens()'>
                 Visualização de Trens
                 </button>

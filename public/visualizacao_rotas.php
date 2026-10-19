@@ -4,8 +4,7 @@ include("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
-    
+if (!isset($_SESSION['usuario'])) {
     header("Location: ../index.php");
     exit();
 }
@@ -125,11 +124,14 @@ $rota = $conn->query($sql);
                                 echo "<td>" . $resultado["tempo"] . "</td>";
                                 echo "<td>" . $resultado["trem_associado"] . "</td>";
                                 echo "<td>" . $resultado["usuario_associado"] . "</td>";
-                                echo "<td> <a href='excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+
+                                if ($_SESSION['tipo'] === 'admin') {
+                                    echo "<td> <a href='excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
                                 echo "<td> <a href='formulario_editar_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
+                                }
+
                                 echo "</tr>";
                             }
-
                             ?>
 
                         </table>

@@ -9,10 +9,9 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     header("Location: ../index.php");
     exit();
-    
 }
 
 ?>
@@ -38,8 +37,6 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
     </header>
 
     <div class="menu">
-
-        <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
 
         <div class="conteiner_menu_logo">
             <img src="../assets/img/trem.PNG" alt="trem" class="trem_menu">
