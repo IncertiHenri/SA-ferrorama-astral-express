@@ -126,7 +126,7 @@ $rota = $conn->query($sql);
                                 echo "<td>" . $resultado["usuario_associado"] . "</td>";
 
                                 if ($_SESSION['tipo'] === 'admin') {
-                                    echo "<td> <a href='excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
+                                    echo "<td> <a href='certeza_excluir_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Excluir</button> </a> </td>";
                                 echo "<td> <a href='formulario_editar_rota.php?id=" . $resultado["id_rota"] . "'> <button class='botao_crud'>Atualizar</button> </a> </td>";
                                 }
 
