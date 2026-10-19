@@ -139,8 +139,8 @@ $rota = $conn->query($sql);
 
               <?php if ($_SESSION['tipo'] === 'admin') { ?>
                 <div class="borda_verde_flex">
-                    <a href="cadastro_trens.php">
-                        <button id="botao_sensor_novo" onclick="window.location.href='cadastro_rotas.php'">Cadastrar nova</button>
+                    <a href="cadastro_rotas.php">
+                        <button id="botao_sensor_novo" onclick="window.location.href='cadastro_rotas.php'">Cadastrar nova rota</button>
                     </a>
                 </div>
             <?php } ?>
