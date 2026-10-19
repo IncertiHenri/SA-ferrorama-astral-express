@@ -125,6 +125,15 @@ $id = $_GET["id"];
                                         <input type="password" name="senha" class="campo_cadastros">
                                     </div>
 
+                                    <div class="flex_column">
+                                        <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
+                                        <select name="perfil" id="perfil" class="campo_cadastros">
+                                            <option value="funcionario">Funcionário</option>
+                                            <option value="admin">Administrador</option>
+                                        </select>
+
+                                    </div>
+
                                 </div>
                                 <button type="submit" class="botao_formulario_cadastro_sensor">Atualizar</button>
 
