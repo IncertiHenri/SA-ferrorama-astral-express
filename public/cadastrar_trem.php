@@ -4,7 +4,7 @@ include ("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     header("Location: ../index.php");
     exit();
 }

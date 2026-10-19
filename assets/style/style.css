@@ -304,7 +304,8 @@ main{
 
 #cadastro_sensores {
     margin: 0;
-    background-color: var(--verde-musgo);
+    background-image: url("../../assets/img/fundo.png");
+    background-size: cover;
 }
 
 .titulo_cadastro_sensores {

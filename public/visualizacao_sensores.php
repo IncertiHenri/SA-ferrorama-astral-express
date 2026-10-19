@@ -9,11 +9,6 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
-if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION['tipo'] !== 'funcionario')) {
-    header("Location: ../index.php");
-    exit();
-    
-}
 
 ?>
 <html lang="en">
@@ -110,12 +105,13 @@ if (!isset($_SESSION['usuario']) || ($_SESSION['tipo'] !== 'admin' && $_SESSION[
 
                     </div>
                 </div>
-
+                <?php if ($_SESSION['tipo'] === 'admin') { ?>
                 <div class="borda_verde_flex">
-                    <a href="cadastro_sensores.php"><button id="botao_sensor_novo" onclick="cadastroUsuarios()">
+                    <a href="cadastro_sensores.php"><button id="botao_sensor_novo">
                             Cadastrar Novo Sensor
                         </button></a>
                 </div>
+            <?php } ?>
 
             </div>
         </div>

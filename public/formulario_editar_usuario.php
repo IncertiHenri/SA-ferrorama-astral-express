@@ -4,7 +4,7 @@ include("../infra/conexao.php");
 
 session_start();
 
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     header("Location: ../index.php");
     exit();
 }
@@ -123,6 +123,15 @@ $id = $_GET["id"];
                                     <div class="flex_column">
                                         <label for="senha" class="texto_cadastros">Senha</label>
                                         <input type="password" name="senha" class="campo_cadastros">
+                                    </div>
+
+                                    <div class="flex_column">
+                                        <label for="tipo_perfil" class="texto_cadastros">Tipo de cargo</label>
+                                        <select name="perfil" id="perfil" class="campo_cadastros">
+                                            <option value="funcionario">Funcionário</option>
+                                            <option value="admin">Administrador</option>
+                                        </select>
+
                                     </div>
 
                                 </div>
