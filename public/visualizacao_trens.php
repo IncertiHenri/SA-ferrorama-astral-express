@@ -90,12 +90,13 @@ if (!isset($_SESSION['usuario'])) {
                     <table>
 
                         <tr>
-                            <td>Trem</td>
-                            <td>Nome</td>
+                            <td>ID</td>
+                            <td>Funcionário</td>
+                            <td>Nome do Trem</td>
                             <td>Modelo</td>
                             <td>Capacidade</td>
                             <td>Status</td>
-                            <td>Funcionário</td>
+                            <td>Ação</td>
                         </tr>
 
                         <?php
@@ -107,7 +108,8 @@ if (!isset($_SESSION['usuario'])) {
                         while ($resultado = mysqli_fetch_assoc($trens)) {
                             echo "<tr>";
                             echo "<td>" . $resultado["id_trem"] . "</td>";
-                            echo "<td>" . $resultado["nome"] . "</td>";
+                            echo "<td>" . $resultado["usuario"] . "</td>";
+                            echo "<td>" . $resultado["nome_trem"] . "</td>";
                             echo "<td>" . $resultado["modelo"] . "</td>";
                             echo "<td>" . $resultado["capacidade"] . "</td>";
                             echo "<td>" . $resultado["status"] . "</td>";

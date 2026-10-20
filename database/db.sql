@@ -13,7 +13,7 @@ CREATE TABLE usuario (
 
 CREATE TABLE trem (
     id_trem INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL,
+    nome_trem VARCHAR(45) NOT NULL,
     modelo VARCHAR(45) NOT NULL,
     capacidade INT NOT NULL,
     status VARCHAR(45) NOT NULL,

@@ -94,9 +94,10 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
                     <div class="flex_column">
                         <div class="flex" id="campos_cadastro_trens">
+
                             <div class="flex_column">
-                                <label for="nome" class="texto_cadastros">Nome</label>
-                                <input type="text" name="nome" class="campo_cadastros" required>
+                                <label for="nome_trem" class="texto_cadastros">Nome do Trem</label>
+                                <input type="text" name="nome_trem" class="campo_cadastros" required>
                             </div>
 
                             <div class="flex_column">
