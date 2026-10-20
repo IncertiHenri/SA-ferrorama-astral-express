@@ -28,20 +28,10 @@ O método PATCH é utilizado para aplicar modificações parciais em um recurso
 O método DELETE remove um recurso específico. 
 
 ## Requisição de HTTP
- A primeira linha de uma requisição contém três de seus elementos:
-
-GET / HTTP/1.1
-GET significa o método HTTP utilizado, algumas vezes também chamado de verbo HTTP. Ele diz que ação o cliente espera que seja executada pelo servidor. Neste caso, que lhe traga algo.
-Após GET vemos um que é o caminho para o recurso que estamos buscando no servidor. Por exemplo, se desejamos acessar a página de contatos de um site esse caminho poderia se parecer com algo como /contatos.html.
-Logo após o caminho temos a versão do protocolo HTTP utilizada. Nesse caso estamos utilizando a versão 1.1, a mais comum atualmente.
+ Requisições HTTP são mensagens enviadas pelo cliente para iniciar uma ação no servidor. Suas linhas iniciais contêm três elementos
 
 ## Resposta HTTP 
- Uma resposta contém a seguinte estrutura:
-
-HTTP/1.1 200 OK Cache-Control: no-cache, must-revalidate Content-Type: text/html; charset=ISO-8859-1 ...
-A primeira informação que identificamos na linha 1 contém a versão do protocolo HTTP, HTTP/1.1.
-Após isso vemos seguido do código de retorno e seu significado. 200 significa que a requisição foi recebida e processada pelo servidor com sucesso.
-Temos abaixo desta linha os headers da resposta, a exemplo de Cache-Control e Content-Type.
+A resposta HTTP é uma mensagem enviada por um servidor a um cliente em resposta a uma solicitação HTTP.
 
 ## O que são endpoints?
 
