@@ -9,14 +9,14 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     exit();
 }
 
-$nome = $_POST["nome"];
+$nome_trem = $_POST["nome_trem"];
 $modelo = $_POST["modelo"];
 $capacidade = $_POST["capacidade"];
 $status = ucfirst($_POST["status"]);
 $usuario = $_POST["funcionario"];
 
 
-if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
+if (mb_strlen($nome_trem) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome_trem)) {
     echo "<script>
         alert('Nome inválido! O nome do trem deve conter apenas letras e no mínimo 3 caracteres.');
         window.location.href = 'cadastro_trens.php';
@@ -45,11 +45,11 @@ if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
     exit;
 }
 
-$sql = "INSERT INTO trem (nome, modelo, capacidade, status, id_usuario) VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO trem (nome_trem, modelo, capacidade, status, id_usuario) VALUES (?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("ssssi", $nome, $modelo, $capacidade, $status, $usuario);
+$stmt->bind_param("ssssi", $nome_trem, $modelo, $capacidade, $status, $usuario);
 
 $stmt->execute();
 

@@ -58,9 +58,27 @@ $id = $_GET["id"];
 
                             <div class="flex_column">
                         <div class="flex" id="campos_cadastro_trens">
+
                             <div class="flex_column">
-                                <label for="nome" class="texto_cadastros">Nome</label>
-                                <input type="text" name="nome" class="campo_cadastros" required>
+                                <label for="funcionario" class="texto_cadastros">Funcionário</label>
+                                <select name="funcionario" class="campo_cadastros" required>
+                                    <option value="">Selecione</option>
+                                    <?php 
+                                    
+                                    $sql = "SELECT id_usuario, usuario FROM usuario";
+
+                                    $busca = $conn->query($sql);
+
+                                    while($usuario = mysqli_fetch_assoc($busca)){
+                                        echo "<option value='" . $usuario["id_usuario"] . "'>" . $usuario["usuario"] . "</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+
+                            <div class="flex_column">
+                                <label for="nome_trem" class="texto_cadastros">Nome do Trem</label>
+                                <input type="text" name="nome_trem" class="campo_cadastros" required>
                             </div>
 
                             <div class="flex_column">

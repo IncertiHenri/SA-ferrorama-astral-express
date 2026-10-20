@@ -9,14 +9,14 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
     exit();
 }
 
-$nome = $_POST["nome"];
+$usuario = $_POST["funcionario"];
+$nome_trem = $_POST["nome_trem"];
 $modelo = $_POST["modelo"];
 $capacidade = $_POST["capacidade"];
 $status = $_POST["status"];
 $id = $_GET["id"];
-$id_usuario = $_SESSION['id_usuario'];
 
-if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
+if (mb_strlen($nome_trem) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome_trem)) {
     echo "<script>
         alert('Nome inválido! O nome do trem deve conter apenas letras e no mínimo 3 caracteres.');
         window.location.href = 'formulario_editar_trem.php';
@@ -46,11 +46,11 @@ if (mb_strlen($nome) < 3 || !preg_match('/^[\p{L} ]+$/u', $nome)) {
 }
 
 
-$sql = "UPDATE trem SET nome = ?, modelo = ?, capacidade = ?, status = ? WHERE id_trem = ?";
+$sql = "UPDATE trem SET id_usuario = ?, nome_trem = ?, modelo = ?, capacidade = ?, status = ? WHERE id_trem = ?";
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("ssisi",$nome,$modelo,$capacidade,$status,$id);
+$stmt->bind_param("issisi", $usuario, $nome_trem, $modelo, $capacidade, $status, $id);
 
 $stmt->execute();
 
