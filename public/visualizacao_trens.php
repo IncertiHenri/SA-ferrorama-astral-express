@@ -96,7 +96,7 @@ if (!isset($_SESSION['usuario'])) {
                             <td>Modelo</td>
                             <td>Capacidade</td>
                             <td>Status</td>
-                            <td>Ação</td>
+                            <?php if ($_SESSION['tipo'] === 'admin') { echo "<td>Ação</td>"; } ?>
                         </tr>
 
                         <?php

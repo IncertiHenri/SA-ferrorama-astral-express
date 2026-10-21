@@ -111,7 +111,7 @@ $rota = $conn->query($sql);
                                 <td>Tempo</td>
                                 <td>Trem Associado</td>
                                 <td>Usuário Associado</td>
-                                <td>Ação</td>
+                                <?php if ($_SESSION['tipo'] === 'admin') { echo "<td>Ação</td>"; } ?>
                             </tr>
                             <?php
 

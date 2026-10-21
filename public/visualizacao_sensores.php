@@ -97,7 +97,7 @@ if (!isset($_SESSION['usuario'])) {
                                 <td>ID do Sensor</td>
                                 <td>Localização</td>
                                 <td>Tipo de Dado</td>
-                                <td>Ação</td>
+                                <?php if ($_SESSION['tipo'] === 'admin') { echo "<td>Ação</td>"; } ?>
                             </tr>
 
 
