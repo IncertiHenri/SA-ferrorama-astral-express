@@ -91,7 +91,7 @@ if (!isset($_SESSION['usuario'])) {
             <div class="area_boas_vindas">
 
                 <div>
-                    <h2 class="titulo_boas_vindas">Bem vindo(a), Admin!</h2>
+                    <h2 class="titulo_boas_vindas">Bem vindo(a), <?php echo $_SESSION['user']; ?>!</h2>
 
                     <p class="descricao_boas_vindas">
                         Acompanhe em tempo real o desempenho da malha ferroviária, gerencie
