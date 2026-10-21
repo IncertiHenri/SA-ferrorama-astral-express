@@ -10,7 +10,7 @@ if (!isset($_SESSION['usuario'])) {
 }
 
 $sql = "SELECT rota.*, usuario.nome AS usuario_associado,
-        trem.nome AS trem_associado
+        trem.nome_trem AS trem_associado
         FROM rota
         LEFT JOIN usuario ON rota.id_usuario = usuario.id_usuario
         LEFT JOIN trem_rota ON rota.id_rota = trem_rota.id_rota
