@@ -67,9 +67,30 @@ CREATE TABLE registro_sensor (
 );
 
 
-insert into usuario(nome, usuario, senha, email, perfil) values
+INSERT INTO usuario(nome, usuario, senha, email, perfil) VALUES
 ('Natan', 'Natanzinho', '$2y$10$wmtRpjrvQfXSJ4y9UcyfdueWcN.92UdF2i2TmF3gOXloX/qiH0HN.', 'natan@gmail.com', 'admin'),
 ('Serenna', 'cebola', '$2y$10$92Y2OpAFRMUsnXQZTcEgx.QB2uNflA7EHnpqix2Zil9yzxSr45mf.', 'serenna@gmail.com', 'admin'),
 ('Henrique', 'batata', '$2y$10$kAtK23ian.cXW2Ei9ucjf.e.xj2ucxlCqc.IbTyOpLjT6.RYy9UUm', 'henrique@gmail.com', 'admin'),
 ('Thais', 'café', '$2y$10$Ht39mfCNSlOrKZHDv5IpO.DTBo8PvmKk1IX3Mws6pRIf2yYbd5ZAe', 'thais@gmail.com', 'admin'),
 ('icaro', 'icaro botelho', '$2y$10$XklNHlwJHAldi.eWQgasU.cE4t7hMIaBcs0F8h7QPLpgTM/GJ4Rj6', 'icaro@gmail.com', 'funcionario');
+
+INSERT INTO rota (origem, tempo, destino, hora, id_usuario) VALUES
+('Curitiba', '05:00:00', 'Rio de Janeiro', '2026-10-15', 2),
+('Joinville', '07:00:00', 'Porto Alegre', '2026-10-15', 1),
+('Torres', '10:00:00', 'Maceió', '2026-10-15', 3),
+('São Paulo', '15:00:00', 'Salvador', '2026-10-15', 4),
+('Manaus', '20:00:00', 'Fortaleza', '2026-10-15', 1);
+
+INSERT INTO trem (nome_trem, modelo, capacidade, status, id_usuario) VALUES
+('Penacony', 'AA-100', 1000, 'Ativo', 2),
+('Amphoreus', 'AB-100', 500, 'Inativo', 3),
+('Planarcadia', 'AC-100', 400, 'Inativo', 4),
+('Astrópolis', 'AD-100', 900, 'Ativo', 4),
+('Xianzou', 'AE-100', 250, 'Ativo', 4);
+
+INSERT INTO trem_rota (id_trem, id_rota) VALUES
+(1, 1),
+(2, 3),
+(3, 2),
+(4, 4),
+(5, 5);
