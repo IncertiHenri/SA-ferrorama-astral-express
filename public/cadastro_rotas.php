@@ -144,7 +144,7 @@ if ($resultado_usuario === false) {
                                   <option value="">Selecione um Trem</option>
                                   <?php
                                   while ($trem = mysqli_fetch_assoc($resultado_trem)) {
-                                    echo "<option value='{$trem['id_trem']}'>{$trem['nome']}</option>";
+                                    echo "<option value='{$trem['id_trem']}'>{$trem['nome_trem']}</option>";
                                     }
                                     ?>
                                     </select>
