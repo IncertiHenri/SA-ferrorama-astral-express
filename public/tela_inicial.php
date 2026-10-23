@@ -82,6 +82,10 @@ if (!isset($_SESSION['usuario'])) {
                     Usuários cadastrados
                 </button>
 
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='landingPage ()'>
+                    Landing Page 
+                </button>
+
             </div>
         </div>
 
