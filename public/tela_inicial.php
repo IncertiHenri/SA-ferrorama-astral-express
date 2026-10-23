@@ -58,6 +58,10 @@ if (!isset($_SESSION['usuario'])) {
                     Tela inicial
                 </button>
 
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='landingPage ()'>
+                    Landing Page 
+                </button>
+
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
                     Monitoramento em tempo real
                 </button>
@@ -80,10 +84,6 @@ if (!isset($_SESSION['usuario'])) {
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                     Usuários cadastrados
-                </button>
-
-                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='landingPage ()'>
-                    Landing Page 
                 </button>
 
             </div>
