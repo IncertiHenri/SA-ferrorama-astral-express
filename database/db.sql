@@ -69,10 +69,10 @@ CREATE TABLE registro_sensor (
 
 INSERT INTO usuario(nome, usuario, senha, email, perfil) VALUES
 ('Natan', 'Natanzinho', '$2y$10$wmtRpjrvQfXSJ4y9UcyfdueWcN.92UdF2i2TmF3gOXloX/qiH0HN.', 'natan@gmail.com', 'admin'),
-('Serenna', 'cebola', '$2y$10$92Y2OpAFRMUsnXQZTcEgx.QB2uNflA7EHnpqix2Zil9yzxSr45mf.', 'serenna@gmail.com', 'admin'),
-('Henrique', 'batata', '$2y$10$kAtK23ian.cXW2Ei9ucjf.e.xj2ucxlCqc.IbTyOpLjT6.RYy9UUm', 'henrique@gmail.com', 'admin'),
-('Thais', 'café', '$2y$10$Ht39mfCNSlOrKZHDv5IpO.DTBo8PvmKk1IX3Mws6pRIf2yYbd5ZAe', 'thais@gmail.com', 'admin'),
-('icaro', 'icaro botelho', '$2y$10$XklNHlwJHAldi.eWQgasU.cE4t7hMIaBcs0F8h7QPLpgTM/GJ4Rj6', 'icaro@gmail.com', 'funcionario');
+('Serenna', 'Cebola', '$2y$10$92Y2OpAFRMUsnXQZTcEgx.QB2uNflA7EHnpqix2Zil9yzxSr45mf.', 'serenna@gmail.com', 'admin'),
+('Henrique', 'Batata', '$2y$10$kAtK23ian.cXW2Ei9ucjf.e.xj2ucxlCqc.IbTyOpLjT6.RYy9UUm', 'henrique@gmail.com', 'admin'),
+('Thais', 'Café', '$2y$10$iyM.K3s6MFO/c7YES4ej.eLpVO6ebYscExVNu0K9fHvIsOMF.JHD2', 'thais@gmail.com', 'admin'),
+('Icaro', 'Icaro Botelho', '$2y$10$XklNHlwJHAldi.eWQgasU.cE4t7hMIaBcs0F8h7QPLpgTM/GJ4Rj6', 'icaro@gmail.com', 'funcionario');
 
 INSERT INTO rota (origem, tempo, destino, hora, id_usuario) VALUES
 ('Curitiba', '05:00:00', 'Rio de Janeiro', '2026-10-15', 2),
