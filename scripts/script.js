@@ -46,6 +46,9 @@ function cadastroTrens() {
     window.location.href = "../public/cadastro_trens.php";
 }
 
+function landingPage () {
+    window.location.href = "../public/landing_page.php";
+}
 
 
 

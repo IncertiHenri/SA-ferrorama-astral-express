@@ -52,7 +52,7 @@ if (!isset($_SESSION['usuario'])) {
             </div>
 
             <div id="botoes_menu">
-                <button class="botao_menu_atual" id="botao_menu_tela_inicial" onclick="telaInicial()">
+                <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
                     Tela inicial
                 </button>
 
@@ -80,7 +80,7 @@ if (!isset($_SESSION['usuario'])) {
                     Usuários cadastrados
                 </button>
 
-                <button class="botao_menu" id="botao_menu_landing_page" onclick="landingPage()">
+                <button class='botao_menu_atual' id='botao_menu_landing_page' onclick='landingPage()'>
                     Landing page
                 </button>
 
@@ -90,7 +90,6 @@ if (!isset($_SESSION['usuario'])) {
 
         <div class="conteudo_principal">
 
-            <img src="../assets/img/banner_trem.jpg" alt="trem" class="banner_trem">
 
             <div class="area_boas_vindas">
 
@@ -98,7 +97,7 @@ if (!isset($_SESSION['usuario'])) {
                     <h2 class="titulo_boas_vindas">Bem vindo(a), <?php echo $_SESSION['user']; ?>!</h2>
 
                     <p class="descricao_boas_vindas">
-                        Acompanhe em tempo real o desempenho da malha ferroviária, gerencie
+                         em tempo real o desempenho da malha ferroviária, gerencie
                         sensores e trens, visualize relatórios e monitore os usuários do sistema
                         de forma prática, rápida e eficiente.
                     </p>
