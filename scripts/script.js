@@ -46,10 +46,16 @@ function cadastroTrens() {
     window.location.href = "../public/cadastro_trens.php";
 }
 
+fetch("https://api.open-meteo.com/v1/forecast?latitude=-26.3045&longitude=-48.8487&current=temperature_2m")
+    .then(resposta => resposta.json())
+    .then(dados => {
+        const temperatura = dados.current.temperature_2m;
 
-
-
-
+        document.getElementById("temperatura").textContent = temperatura + " °C";
+    })
+    .catch(() => {
+        document.getElementById("temperatura").textContent = "Indisponível";
+    });
 
 
 
