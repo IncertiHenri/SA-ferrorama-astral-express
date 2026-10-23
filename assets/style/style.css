@@ -92,6 +92,12 @@
     padding: 5px;
     border-radius: 5px;
     font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+#botao_login:hover{
+    background-color: var(--amarelo-dourado);
+    color: var(--branco);
 }
 
 #email {
@@ -193,10 +199,14 @@ label {
     align-items: center;
     justify-content: left;
     font-size: 20px;
-    
     gap: 10px;
     margin-bottom: 15px;
     width: 100%;
+    transition-duration: 0.4s;
+}
+
+.botao_menu:hover{
+    background-color: var(--verde-musgo);
 }
 
 .botao_menu_atual {
@@ -493,6 +503,13 @@ main{
     font-size: large;
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid var(--verde-musgo);
+    transition-duration: 0.4s;
+}
+
+.botao_crud:hover{
+    background-color: var(--verde-medio-musgo);
+    
 }
 
 /* SERENNA */
@@ -533,6 +550,11 @@ main{
     display: flex;
     gap: 30px;
     margin-top: 30px;
+    padding: 0px 10px 10px 10px;
+}
+
+a{
+    text-decoration: none;
 }
 
 #navbar {
@@ -553,16 +575,24 @@ main{
     margin-left: 10px;
 }
 
+.sem_flex{
+    display: block;
+}
+
 #botao_sair {
+    margin-top: 15px;
     background-color: var(--fundo);
     color: var(--branco);
     border-radius: 5px;
     border: none;
-    font-size: 15px;
     padding: 10px;
     cursor: pointer;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+#botao_sair:hover{
+    background-color: var(--verde-musgo);
 }
 
 .fundo_tabela_monitoramento {
@@ -775,12 +805,17 @@ table {
     background-color: var(--verde-medio-musgo);
     place-items: center;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     display: inline-flex;
     margin-top: 300px;
     margin-left: 1000px;
+}
+
+.texto_certeza_exclusao{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
 }
 
 .confirmacao_exclusao {
@@ -791,7 +826,7 @@ table {
     place-items: center;
     width: fit-content;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -850,12 +885,20 @@ td {
 }
 
 #botao_sensor_novo {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: var(--verde-musgo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--verde-medio-musgo);
     border-radius: 5px;
     color: var(--branco);
     border: none;
-    padding: 10px 20px;
+    transition-duration: 0.4s;
+    border: 2px solid var(--verde-medio-musgo);
+    font-size: 15px;
+    padding: 10px;
+}
+
+#botao_sensor_novo:hover {
+    background-color: var(--verde-musgo);
+    color: var(branco);
 }
 
 .borda_verde {
@@ -938,5 +981,12 @@ td {
     margin: 50px auto;
     background-color: var(--verde-musgo);
 }
+
+h1, h2, h3, h4, p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+
 
 /* NATAN */

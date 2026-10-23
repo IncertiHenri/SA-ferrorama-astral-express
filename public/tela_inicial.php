@@ -31,7 +31,9 @@ if (!isset($_SESSION['usuario'])) {
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
             <p class="clima">Joinville | <span id="temperatura">Carregando...</span></p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+            <div class="sem_flex">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+            </div>
         </div>
     </header>
 
@@ -79,6 +81,10 @@ if (!isset($_SESSION['usuario'])) {
 
                 <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
                     Usuários cadastrados
+                </button>
+
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='landingPage ()'>
+                    Landing Page 
                 </button>
 
             </div>

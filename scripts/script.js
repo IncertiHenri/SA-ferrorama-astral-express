@@ -46,6 +46,7 @@ function cadastroTrens() {
     window.location.href = "../public/cadastro_trens.php";
 }
 
+<<<<<<< HEAD
 fetch("https://api.open-meteo.com/v1/forecast?latitude=-26.3045&longitude=-48.8487&current=temperature_2m")
     .then(resposta => resposta.json())
     .then(dados => {
@@ -56,6 +57,15 @@ fetch("https://api.open-meteo.com/v1/forecast?latitude=-26.3045&longitude=-48.84
     .catch(() => {
         document.getElementById("temperatura").textContent = "Indisponível";
     });
+=======
+function landingPage () {
+    window.location.href = "../public/landing_page.php";
+}
+
+
+
+
+>>>>>>> be613b37952783225fd834c44cbff1406932094f
 
 
 
