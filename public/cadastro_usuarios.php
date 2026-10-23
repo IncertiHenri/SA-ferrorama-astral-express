@@ -53,11 +53,15 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
 
             <div id="botoes_menu">
                 <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                    Tela inicial
+                    Tela Inicial
+                </button>
+
+                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
+                    Landing Page
                 </button>
 
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                    Monitoramento em tempo real
+                    Monitoramento em Tempo Real
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
@@ -65,11 +69,11 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                    Visualização de trens
+                    Visualização de Trens
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
-                    Visualização de rotas
+                    Visualização de Rotas
                 </button>
 
                 <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
@@ -77,7 +81,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
                 </button>
 
                 <button class='botao_menu_atual' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                Usuários cadastrados
+                    Usuários Cadastrados
                 </button>
 
             </div>

@@ -46,35 +46,39 @@ if (!isset($_SESSION['usuario'])) {
         </div>
 
         <div id="botoes_menu">
-            <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
-                Tela inicial
-            </button>
-
-            <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
-                Monitoramento em tempo real
-            </button>
-
-            <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
-                Visualização de Sensores
-            </button>
-
-            <button class="botao_menu_atual" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
-                Visualização de trens
-            </button>
-
-            <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
-                Visualização de rotas
-            </button>
-
-            <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
-                Visualização de Relatórios
-            </button>
-
-            <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
-                Usuários cadastrados
+                <button class="botao_menu" id="botao_menu_tela_inicial" onclick="telaInicial()">
+                    Tela Inicial
                 </button>
 
-        </div>
+                <button class='botao_menu' id='botao_menu_landing_page' onclick='landingPage()'>
+                    Landing Page
+                </button>
+
+                <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
+                    Monitoramento em Tempo Real
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_sensores" onclick="visualizacaoSensores()">
+                    Visualização de Sensores
+                </button>
+
+                <button class="botao_menu_atual" id="botao_menu_cadastro_trens" onclick="visualizacaoTrens()">
+                    Visualização de Trens
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_rotas" onclick="visualizacaoRotas()">
+                    Visualização de Rotas
+                </button>
+
+                <button class="botao_menu" id="botao_menu_cadastro_relatorios" onclick="cadastroRelatorios()">
+                    Visualização de Relatórios
+                </button>
+
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='usuariosCadastrados()'>
+                    Usuários Cadastrados
+                </button>
+
+            </div>
     </div>
 
     <div class="fundo_cadastros">
