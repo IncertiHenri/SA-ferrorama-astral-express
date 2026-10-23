@@ -26,7 +26,9 @@ $resultado = mysqli_query($conn, $sql);
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+            <div class="sem_flex">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+            </div>
         </div>
     </header>
 
@@ -126,9 +128,11 @@ $resultado = mysqli_query($conn, $sql);
             </div>
                 
                 <?php if ($_SESSION['tipo'] === 'admin') { ?>
+                <div class="borda_verde_flex">
                     <button id="botao_sensor_novo" onclick="cadastroUsuarios()">
-                        Cadastrar Usuário
+                       Cadastrar Usuário
                     </button>
+                    </div>
                 <?php } ?>
 
             </div>

@@ -29,8 +29,11 @@ if (!isset($_SESSION['usuario'])) {
     <header>
         <div id="navbar">
             <p class="acesso_admin">Olá, <?php echo $_SESSION['user']; ?>!</p>
+            <p class="clima">Joinville | <span id="temperatura">Carregando...</span></p>
             <img src="../assets/img/usuario.png" alt="admin" class="imagem_usuario">
+            <div class="sem_flex">
             <button id="botao_sair" onclick="sair()">Sair do Sistema</button>
+            </div>
         </div>
     </header>
 
@@ -54,6 +57,10 @@ if (!isset($_SESSION['usuario'])) {
             <div id="botoes_menu">
                 <button class="botao_menu_atual" id="botao_menu_tela_inicial" onclick="telaInicial()">
                     Tela inicial
+                </button>
+
+                <button class='botao_menu' id='botao_menu_usuarios_cadastrados' onclick='landingPage ()'>
+                    Landing Page 
                 </button>
 
                 <button class="botao_menu" id="botao_menu_monitoramento" onclick="monitoramentoTempoReal()">
