@@ -61,41 +61,35 @@ function landingPage () {
     window.location.href = "../public/landing_page.php";
 }
 
-async function consultarCEP(cep) {
-  // Remove caracteres que não sejam números
+document.getElementById('informacoes').style.display = 'none';
+
+async function consultarCEP() {
+  const cep = document.getElementById('cep').value;
   const cepLimpo = cep.replace(/\D/g, '');
 
-
-  // Validação: verifica se tem exatamente 8 dígitos
   if (cepLimpo.length !== 8) {
     alert('Formato de CEP inválido! Digite 8 números.');
     return;
   }
 
-
   const url = `https://viacep.com.br/ws/${cepLimpo}/json/`;
-
 
   try {
     const resposta = await fetch(url);
     const dados = await resposta.json();
 
-
-    // Verifica se a API retornou erro (CEP não existe)
     if (dados.erro) {
       alert('CEP não encontrado.');
       return;
     }
 
-
     console.log(dados);
-    // Exemplo de campos retornados:
-    // dados.logradouro, dados.bairro, dados.localidade (cidade), dados.uf, dados.ibge
-    return cep;
-    return dados.logradouro;
-    return dados.bairro;
-    return dados.cidade;
-    return dados.uf;
+    document.getElementById('logradouro').value = dados.logradouro;
+    document.getElementById('bairro').value = dados.bairro;
+    document.getElementById('cidade').value = dados.localidade;
+    document.getElementById('uf').value = dados.uf;
+
+document.getElementById('informacoes').style.display = 'block';
    
   } catch (erro) {
     console.error('Erro ao buscar o CEP:', erro);

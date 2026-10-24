@@ -105,6 +105,39 @@ if (!isset($_SESSION['usuario'])) {
 
             </div>
 
+        <div class="fundo_cep">
+                <div>
+                    <label for="CEP" class="texto_cadastros">CEP:</label>
+                    <input type="text" id="cep" class="campo_cadastros">
+                    <br>
+                    <div>
+                        <button class="borda_verde_flex" type="button" onclick="consultarCEP()">Consultar CEP</button>
+                    </div>
+
+                    <br><br>
+
+                    <div id="informacoes" style="display: none;">
+                        <label for="logradouro" class="texto_cadastros">Logradouro: </label>
+                        <input type="text" id="logradouro" class="campo_cadastros">
+
+                        <br><br>
+
+                        <label for="bairro" class="texto_cadastros">Bairro: </label>
+                        <input type="text" id="bairro" class="campo_cadastros">
+
+                        <br><br>
+
+                        <label for="cidade" class="texto_cadastros">Cidade: </label>
+                        <input type="text" id="cidade" class="campo_cadastros">
+
+                        <br><br>
+
+                        <label for="uf" class="texto_cadastros">UF: </label>
+                        <input type="text" id="uf" class="campo_cadastros">
+                    </div> 
+                </div>                    
+        </div>
+
     </main>
 
     <script src="../scripts/script.js"></script>
