@@ -109,10 +109,6 @@ if (!isset($_SESSION['usuario'])) {
                 <div>
                     <label for="CEP" class="texto_cadastros">CEP:</label>
                     <input type="text" id="cep" class="campo_cadastros">
-                    <br>
-                    <div>
-                        <button class="borda_verde_flex" type="button" onclick="consultarCEP()">Consultar CEP</button>
-                    </div>
 
                     <br><br>
 
@@ -135,6 +131,9 @@ if (!isset($_SESSION['usuario'])) {
                         <label for="uf" class="texto_cadastros">UF: </label>
                         <input type="text" id="uf" class="campo_cadastros">
                     </div> 
+                    <div>
+                        <button class="borda_verde_flex" type="button" onclick="consultarCEP()">Consultar CEP</button>
+                    </div>
                 </div>                    
         </div>
 
